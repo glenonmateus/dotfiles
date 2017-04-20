@@ -44,6 +44,8 @@ set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
 "set hidden		" Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
+set hlsearch		" Resultado da busca grifado
+"set spell spelllang=pt,en
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
@@ -54,40 +56,37 @@ endif
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " " search in a singe file. This will confuse Latex-Suite. Set your grep
 " " program to always generate a file-name.
-"set grepprg=grep\ -nH\ $*
+set grepprg=grep\ -nH\ $*
 
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " " The following changes the default filetype back to 'tex':
-"let g:tex_flavor='latex'
-"
+let g:tex_flavor='latex'
+
 " this is mostly a matter of taste. but LaTeX looks good with just a bit
 " " of indentation.
-set sw=2
+set sw=1
+
 " " TIP: if you write your \label's as \label{fig:something}, then if you
 " " type in \ref{fig: and press <C-n> you will automatically cycle through
 " " all the figure labels. Very useful!
-"set iskeyword+=:
+set iskeyword+=:
 
 " Minhas configurações
-" let g:Tex_BibtexFlavor = 'bibtex'
-" let g:Tex_BIBINPUTS = "%\.bib"
-" let g:Tex_DefaultTargetFormat='pdf'
-" let g:Imap_UsePlaceHolders = 0 "desabilitando PlaceHolders
-"
-" " Desabilitando atalhos chatos como é para /item e outros
-" let g:Tex_AdvancedMath = 0 "desabilitando o ~a criar mathcal ou \cite
-" let g:Tex_EnvironmentMaps=0
-" let g:Tex_EnvironmentMenus=0
-" let g:Tex_FontMaps=0
-" let g:Tex_FontMenus=0
-" let g:Tex_SectionMaps=0
-" let g:Tex_SectionMenus=0
+let g:Tex_BibtexFlavor = 'bibtex'
+let g:Tex_BIBINPUTS = "%\.bib"
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Imap_UsePlaceHolders = 0 "desabilitando PlaceHolders
 
-" let Tex_FoldedSections=""
-" let Tex_FoldedEnvironments=""
-" let Tex_FoldedMisc=""
+" Desabilitando atalhos chatos como é para /item e outros
+let g:Tex_AdvancedMath = 0 "desabilitando o ~a criar mathcal ou \cite
+let g:Tex_EnvironmentMaps=0
+let g:Tex_EnvironmentMenus=0
+let g:Tex_FontMaps=0
+let g:Tex_FontMenus=0
+let g:Tex_SectionMaps=0
+let g:Tex_SectionMenus=0
+let Tex_FoldedSections=""
+let Tex_FoldedEnvironments=""
+let Tex_FoldedMisc=""
 
-" set spell spelllang=pt,en
-"" Resultados da busca sejam grifados
- set hlsearch
