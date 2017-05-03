@@ -177,8 +177,8 @@ set $urgent-bg-color     #E53935
 # finds out, if available)
 bar {
         status_command i3blocks -c ~/.i3/i3blocks.conf
-	mode hide
-	#position top
+	#mode hide
+	position top
 	colors {
 	  background $bg-color
 	  separator #757575
