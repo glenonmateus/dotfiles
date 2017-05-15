@@ -1,37 +1,31 @@
 runtime! debian.vim
 execute pathogen#infect()
 syntax on
-set background=dark
+
 if has("autocmd")
-filetype plugin indent on
+ filetype plugin indent on
 endif
-set incsearch		
-set hlsearch		
+
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
+
+set background=dark
+set sps=10
+set incsearch		
+set hlsearch		
+set number
 set sw=1
 set iskeyword+=:
-let g:Tex_BibtexFlavor = 'bibtex'
-let g:Tex_BIBINPUTS = "%\.bib"
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Imap_UsePlaceHolders = 0 
-let g:Tex_AdvancedMath = 0 
-let g:Tex_EnvironmentMaps=0
-let g:Tex_EnvironmentMenus=0
-let g:Tex_FontMaps=0
-let g:Tex_FontMenus=0
-let g:Tex_SectionMaps=0
-let g:Tex_SectionMenus=0
-let Tex_FoldedSections=""
-let Tex_FoldedEnvironments=""
-let Tex_FoldedMisc=""
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set spell spelllang=pt
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:vimtex_compiler_latexmk = {'callback' : 0}
+let g:tex_flavor='latex'
+let g:spell_auto_type='tex,doc,mail'
