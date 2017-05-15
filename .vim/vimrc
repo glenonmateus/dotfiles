@@ -10,6 +10,8 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+autocmd FileType latex,tex,text set spell spelllang=pt 
+
 set background=dark
 set sps=10
 set incsearch		
@@ -20,7 +22,6 @@ set iskeyword+=:
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-set spell spelllang=pt
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -28,4 +29,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:vimtex_compiler_latexmk = {'callback' : 0}
 let g:tex_flavor='latex'
-let g:spell_auto_type='tex,doc,mail'
+
+hi clear SpellBad 
+hi SpellBad cterm=underline,bold ctermfg=red 
