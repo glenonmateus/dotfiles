@@ -196,6 +196,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id volumeicon 
 exec --no-startup-id xfce4-power-manager
+exec --no-startup-id usb-unmounter-start 
 
 # Pulse Audio controls
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
