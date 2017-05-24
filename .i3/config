@@ -45,6 +45,7 @@ bindsym Print exec gnome-screenshot -i
 # Lock screen with xscreensave
 exec xscreensaver -no-splash &
 bindsym $mod+Delete exec xscreensaver-command -lock
+bindsym $mod+Shift+Delete exec xscreensaver-command -lock && systemctl suspend
 
 # change focus
 bindsym $mod+j focus left
