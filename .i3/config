@@ -45,7 +45,7 @@ set $workspace2 "2  Chrome"
 set $workspace3 "3  Spotify"
 set $workspace4 "4  VLC"
 set $workspace5 "5  Transmission"
-set $workspace6 "6"
+set $workspace6 "6  Firefox"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
@@ -77,6 +77,7 @@ assign [class="Google-chrome"] $workspace2
 for_window [class="Spotify"] move to workspace $workspace3
 assign [class="vlc"] $workspace4
 assign [class="Transmission-gtk"] $workspace5
+assign [class="Firefox-esr"] $workspace6
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -102,6 +103,7 @@ bar {
         status_command i3blocks -c ~/.i3/i3blocks.conf
 	position top
 	tray_padding 0 
+	strip_workspace_numbers yes
 	colors {
 	  background $bg-color
 	  separator #757575
