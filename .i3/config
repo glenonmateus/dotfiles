@@ -42,14 +42,14 @@ bindsym $mod+d exec rofi -show run
 
 set $workspace1 "1  Terminal"  
 set $workspace2 "2  Chrome"
-set $workspace3 "3  Spotify"
+set $workspace3 "3  Firefox"
 set $workspace4 "4  VLC"
 set $workspace5 "5  Transmission"
-set $workspace6 "6  Firefox"
+set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
-set $workspace10 "0"
+set $workspace10 "0  Spotify"
 
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2 
@@ -74,10 +74,10 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10 
 
 assign [class="Google-chrome"] $workspace2
-for_window [class="Spotify"] move to workspace $workspace3
+assign [class="Firefox-esr"] $workspace3
 assign [class="vlc"] $workspace4
 assign [class="Transmission-gtk"] $workspace5
-assign [class="Firefox-esr"] $workspace6
+for_window [class="Spotify"] move to workspace $workspace10
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
