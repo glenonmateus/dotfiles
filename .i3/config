@@ -40,16 +40,16 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+d exec rofi -show run 
 
-set $workspace1 "1  Terminal"  
-set $workspace2 "2  Chrome"
-set $workspace3 "3  Firefox"
-set $workspace4 "4  VLC"
-set $workspace5 "5  Transmission"
+set $workspace1 "1  "  
+set $workspace2 "2  "
+set $workspace3 "3  "
+set $workspace4 "4  "
+set $workspace5 "5  "
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
-set $workspace10 "10  Spotify"
+set $workspace10 "10 "
 
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2 
@@ -103,7 +103,7 @@ bar {
         status_command i3blocks -c ~/.i3/i3blocks.conf
 	position top
 	tray_padding 0 
-	strip_workspace_numbers yes
+	#strip_workspace_numbers yes
 	colors {
 	  background $bg-color
 	  separator #757575
