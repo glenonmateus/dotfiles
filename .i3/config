@@ -5,6 +5,17 @@ set $text-color #C5C8C6
 set $inactive-text-color #676E7D
 set $urgent-bg-color #E53935
 set $indicator #C5C8C6 
+set $workspace1 "1  "  
+set $workspace2 "2  "
+set $workspace3 "3  "
+set $workspace4 "4  "
+set $workspace5 "5  "
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10 "
+
 font pango: Noto Mono Bold 9 
 floating_modifier $mod
 
@@ -31,18 +42,18 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+d exec rofi -show run 
-
-set $workspace1 "1  "  
-set $workspace2 "2  "
-set $workspace3 "3  "
-set $workspace4 "4  "
-set $workspace5 "5  "
-set $workspace6 "6"
-set $workspace7 "7"
-set $workspace8 "8"
-set $workspace9 "9"
-set $workspace10 "10 "
-
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2 
 bindsym $mod+3 workspace $workspace3
@@ -53,7 +64,6 @@ bindsym $mod+7 workspace $workspace7
 bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
-
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
@@ -70,10 +80,6 @@ assign [class="Firefox-esr"] $workspace3
 assign [class="vlc"] $workspace4
 assign [class="Transmission-gtk"] $workspace5
 for_window [class="Spotify"] move to workspace $workspace10
-
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 mode "resize" {
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -112,15 +118,5 @@ exec feh --bg-scale ~/Dropbox/Wallpapers/matrix.png
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id volumeicon 
-exec --no-startup-id xfce4-power-manager
+exec --no-startup-id xfce4-power-manager --no-daemon 
 exec --no-startup-id xscreensaver -no-splash 
-
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
