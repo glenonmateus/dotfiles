@@ -25,6 +25,7 @@ set statusline+=%*
 set rtp+=~/.local/lib/python3.5/site-packages/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
+set tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
