@@ -34,7 +34,49 @@ echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > $AP
 apt update && apt -y upgrade && apt -y autoremove 2>&1
 echo
 echo "=> Instalando pacotes básicos ..."
-apt -y install vim aptitude firmware-linux-nonfree lightdm bash-completion accountsservice plymouth xorg xfce4-terminal sudo git xfce4-clipman network-manager-gnome python-gpgme thunar xfce4-notifyd volumeicon-alsa xscreensaver p7zip genisoimage libxslt1.1 google-chrome-stable dropbox gnome-screenshot qpdfview mirage texlive-publishers texlive-lang-portuguese texlive-latex-extra texlive-fonts-recommended latexmk unzip rar vim-gtk python-pip python-dev xfburn python-wheel python-setuptools linux-headers-$(uname -r) byobu ssh
+apt -y install vim \
+    aptitude \
+    firmware-linux-nonfree \
+    lightdm \
+    bash-completion \
+    accountsservice \
+    plymouth \
+    xorg \
+    xfce4-terminal \
+    sudo \
+    git \
+    xfce4-clipman \
+    network-manager-gnome \
+    python-gpgme \
+    thunar \
+    xfce4-notifyd \
+    pasystray \
+    xscreensaver \
+    p7zip \
+    genisoimage \
+    libxslt1.1 \
+    google-chrome-stable \
+    dropbox \
+    gnome-screenshot \
+    qpdfview \
+    mirage \
+    texlive-publishers \
+    texlive-lang-portuguese \
+    texlive-latex-extra \
+    texlive-fonts-recommended \
+    latexmk \
+    unzip \
+    rar \
+    vim-gtk \
+    python-pip \
+    python-dev \
+    xfburn \
+    python-wheel \
+    python-setuptools \
+    linux-headers-$(uname -r) \
+    byobu \
+    ssh \
+    gtk2-engines-pixbuf
 echo 
 
 if [ ! -d "$HOME/git" ]; then
@@ -55,7 +97,11 @@ done
 case $OPCAO in 
     i3) 
         echo "=> Instalando i3 ..."
-        apt install i3 lxappearance i3blocks rofi arandr
+        apt install i3 \
+            lxappearance \
+            i3blocks \
+            rofi \
+            arandr
         if [ -d "$HOME/.i3/" ]; then
             rm -rf $HOME/.i3/
         else
