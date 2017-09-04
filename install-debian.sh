@@ -21,10 +21,11 @@ echo "deb http://security.debian.org/ stable/updates main contrib non-free" >> $
 echo
 echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf
 echo "=> Atualizando repositório ..."
-apt update && apt -y upgrade && apt -y autoremove
+apt update && apt -y upgrade && apt -y autoremove 2>&1
 echo 
 echo "=> Instalando gnupg ..."
 apt -y install gnupg dirmngr
+echo 
 echo "=> Importando chaves ..."
 apt-key adv --keyserver pgpkeys.mit.edu --receive-keys FC918B335044912E 
 apt-key adv --keyserver pgpkeys.mit.edu --receive-keys 1397BC53640DB551 
@@ -90,7 +91,7 @@ while true; do
     if [ "$OPCAO" = "i3" -o "$OPCAO" = "xfce4" ]; then 
         break 
     else 
-        echo "Error: Opção inválida"
+        echo "Error: Opção inválida\n"
         echo 
     fi 
 done 
@@ -139,13 +140,16 @@ else
     ln -s $HOME/git/files/.bash* $HOME
 fi
 
-cd $HOME/.vim/bundle/ && git clone https://github.com/lervag/vimtex.git 2>&1
-cd $HOME/.vim/bundle/ && git clone https://github.com/scrooloose/nerdtree.git 2>&1
-cd $HOME/.vim/bundle/ && git clone https://github.com/vim-syntastic/syntastic.git 2>&1
-cd $HOME/.vim/bundle/ && git clone https://github.com/jiangmiao/auto-pairs.git 2>&1
+cd $HOME/git/ && git clone https://github.com/lervag/vimtex.git 2>&1
+ln -s $HOME/git/vimtex/ $HOME/.vim/bundle/
+cd $HOME/git/ && git clone https://github.com/scrooloose/nerdtree.git 2>&1
+ln -s $HOME/git/nerdtree/$HOME/.vim/bundle/
+cd $HOME/git/ && git clone https://github.com/vim-syntastic/syntastic.git 2>&1
+ln -s $HOME/git/syntastic/ $HOME/.vim/bundle/
+cd $HOME/git/ && git clone https://github.com/jiangmiao/auto-pairs.git 2>&1
+ln -s $HOME/git/auto-pairs/ $HOME/.vim/bundle/
 cd $HOME/git/ && git clone https://github.com/thearakattack/adwaita-xfce.git 2>&1
 cd $HOME/git/ && git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git 2>&1
-
 $HOME/git/papirus-icon-theme/install-papirus-root.sh 2>&1
 
 if [ -d "/usr/share/themes/Adwaita-Xfce" ]; then 
@@ -159,11 +163,11 @@ cd $HOME/git/ && git clone https://github.com/powerline/fonts.git 2>&1
 $HOME/git/fonts/install.sh 2>&1
 echo 
 while true; do
-read -p "Você quer reiniciar agora (y/n)" -n 1 OPCAO
+read -p "Você quer reiniciar agora (y/n)" OPCAO
 if [ $OPCAO = "y" -o $OPCAO = "n" ]; then 
     break
 else 
-    echo "Error: Opção inválida "
+    echo "Error: Opção inválida\n"
 fi
 done 
 case $OPCAO in 
