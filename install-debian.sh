@@ -110,8 +110,10 @@ case $OPCAO in
             feh 
         if [ -d "$HOME/.config/i3/" ]; then
             rm -rf $HOME/.config/i3/
+            ln -s $HOME/git/files/i3 $HOME/.config/
+            ln -s $HOME/git/files/i3/.Xresources $HOME
         else
-            ln -s $HOME/git/files/i3 $HOME/.config
+            ln -s $HOME/git/files/i3 $HOME/.config/
             ln -s $HOME/git/files/i3/.Xresources $HOME
         fi
         echo
@@ -124,7 +126,7 @@ case $OPCAO in
 esac
 echo
 echo "=> Removendo pacotes desnecessários ..."
-apt purge dunst vim-tiny 
+apt purge dunst vim-tiny && apt autoremove
 echo  
 echo "=> Adicionando usuário no grupo sudo ..."
 adduser glenonmateus sudo 

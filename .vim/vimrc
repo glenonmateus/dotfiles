@@ -22,11 +22,13 @@ set iskeyword+=:
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-set rtp+=~/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
-set laststatus=2
+set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set t_Co=256
 set tabstop=8 expandtab shiftwidth=4 softtabstop=4
 set mouse-=a
+set laststatus=2
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)"
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
