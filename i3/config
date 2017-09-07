@@ -15,6 +15,7 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10"
+set $image ~/Dropbox/Wallpapers/matrix.png
 
 font pango: Noto Mono for Powerline bold 10 
 floating_modifier $mod
@@ -22,8 +23,8 @@ floating_modifier $mod
 bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+q kill
 bindsym Print exec gnome-screenshot -i
-bindsym $mod+Delete exec xscreensaver-command -lock
-bindsym $mod+Shift+Delete exec xscreensaver-command -lock && systemctl suspend
+bindsym $mod+Delete exec i3lock -ef -i $image
+bindsym $mod+Shift+Delete exec i3lock -ef -i $image && systemctl suspend
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -107,7 +108,7 @@ bar {
 
 exec setxkbmap -model abnt2 -layout br -variant abnt2
 exec dropbox start
-exec feh --bg-scale ~/Dropbox/Wallpapers/matrix.png
+exec feh --bg-scale $image 
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id pasystray

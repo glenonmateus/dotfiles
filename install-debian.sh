@@ -102,9 +102,10 @@ done
 case $OPCAO in 
     i3) 
         echo "=> Instalando i3 ..."
-        apt install i3 \
+        apt -y install i3 \
             lxappearance \
             i3blocks \
+            i3lock \
             rofi \
             arandr \
             feh 
@@ -120,13 +121,13 @@ case $OPCAO in
         ;;
     xfce4) 
         echo "=> Instalando xfce4 ..."
-        apt install xfce4 \
+        apt -y install xfce4 \
             byobu 
         ;;
 esac
 echo
 echo "=> Removendo pacotes desnecessários ..."
-apt purge dunst vim-tiny && apt autoremove
+apt purge -y dunst vim-tiny && apt autoremove --purge -y
 echo  
 echo "=> Adicionando usuário no grupo sudo ..."
 adduser glenonmateus sudo 
