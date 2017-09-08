@@ -15,8 +15,6 @@ autocmd FileType latex,tex,text set spell spelllang=pt
 set background=dark
 set sps=10
 set incsearch		
-set hlsearch		
-set number
 set sw=1
 set iskeyword+=:
 set statusline+=%#warningmsg#
@@ -27,8 +25,8 @@ set t_Co=256
 set tabstop=8 expandtab shiftwidth=4 softtabstop=4
 set mouse-=a
 set laststatus=2
-set showtabline=2 " Always display the tabline, even if there is only one tab
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)"
+set showtabline=2 
+set noshowmode 
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
