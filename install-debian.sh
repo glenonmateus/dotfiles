@@ -50,7 +50,7 @@ apt -y install \
     sudo \
     git \
     xfce4-clipman \
-    network-manager-gnome \
+    wicd-gtk \
     python-gpgme \
     thunar \
     xfce4-notifyd \

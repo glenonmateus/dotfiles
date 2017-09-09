@@ -109,8 +109,8 @@ bar {
 exec setxkbmap -model abnt2 -layout br -variant abnt2
 exec dropbox start
 exec feh --bg-scale $image 
-exec --no-startup-id nm-applet
+exec --no-startup-id wicd-gtk -t  
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id pasystray
 exec --no-startup-id xfce4-power-manager --no-daemon 
-exec --no-startup-id xscreensaver -no-splash 
+exec --no-startup-id megasync 
