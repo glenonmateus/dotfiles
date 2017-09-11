@@ -54,7 +54,9 @@ apt -y install \
     python-gpgme \
     thunar \
     xfce4-notifyd \
+    avahi-daemon \
     pasystray \
+    pavucontrol \
     pulseaudio \
     pulseaudio-utils \
     avahi-daemon \
@@ -71,6 +73,7 @@ apt -y install \
     texlive-lang-portuguese \
     texlive-latex-extra \
     texlive-fonts-recommended \
+    lmodern \
     latexmk \
     unzip \
     rar \
