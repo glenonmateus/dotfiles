@@ -34,7 +34,7 @@ apt-key adv --keyserver pgpkeys.mit.edu --receive-keys 1397BC53640DB551
 apt-key adv --keyserver pgpkeys.mit.edu --receive-keys A040830F7FAC5991 
 echo "deb [arch=i386,amd64] http://linux.dropbox.com/debian jessie main" > $APTDROPBOXFILE
 echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > $APTGOOGLEFILE
-apt update && apt -y upgrade && apt -y autoremove 2>&1
+apt update && apt -y upgrade && apt -y autoremove 
 echo
 echo "=> Instalando pacotes básicos ..."
 apt -y install \
