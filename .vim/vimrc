@@ -6,12 +6,9 @@ if has("autocmd")
  filetype plugin indent on
 endif
 
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
-endif
-
 autocmd FileType latex,tex,text set spell spelllang=pt 
 
+set encoding=utf-8
 set background=dark
 set sps=10
 set incsearch		
