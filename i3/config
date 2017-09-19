@@ -4,7 +4,8 @@ set $inactive-bg-color #383838
 set $text-color #C5C8C6 
 set $inactive-text-color #676E7D
 set $urgent-bg-color #E53935
-set $indicator #C5C8C6 
+#set $indicator #C5C8C6 
+set $indicator #CC342B 
 set $workspace1 "1"  
 set $workspace2 "2"
 set $workspace3 "3" 
@@ -15,7 +16,7 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10"
-set $image ~/Dropbox/Wallpapers/matrix.png
+set $image ~/Dropbox/Wallpapers/programming-wallpaper-1600x900.png
 
 font pango: Noto Mono for Powerline bold 10 
 floating_modifier $mod
