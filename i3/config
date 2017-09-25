@@ -18,6 +18,14 @@ set $workspace9 "9"
 set $workspace10 "10"
 set $image ~/Dropbox/Wallpapers/programming-wallpaper-1600x900.png
 
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Xfburn"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="(?i)virtualbox"] floating enable
+for_window [class="Wicd-client.py"] floating enable
+for_window [class="Thunar"] floating enable
+for_window [class="Arandr"] floating enable
+
 font pango: Noto Mono for Powerline bold 10 
 floating_modifier $mod
 
@@ -65,7 +73,6 @@ bindsym $mod+6 workspace $workspace6
 bindsym $mod+7 workspace $workspace7
 bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
-bindsym $mod+0 workspace $workspace10
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
@@ -75,8 +82,8 @@ bindsym $mod+Shift+6 move container to workspace $workspace6
 bindsym $mod+Shift+7 move container to workspace $workspace7
 bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
-bindsym $mod+Shift+0 move container to workspace $workspace10 
 
+bindsym $mod+r mode "resize"
 mode "resize" {
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
@@ -85,8 +92,6 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
-bindsym $mod+r mode "resize"
 
 client.focused          $bg-color           $bg-color          $text-color           $indicator
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
@@ -115,3 +120,4 @@ exec --no-startup-id xfce4-clipman
 exec --no-startup-id pasystray
 exec --no-startup-id xfce4-power-manager --no-daemon 
 exec --no-startup-id megasync 
+
