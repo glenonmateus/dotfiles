@@ -16,7 +16,7 @@ call vundle#end()
 filetype plugin indent on    
 
 syntax on
-autocmd FileType latex,tex,text set spell spelllang=pt 
+autocmd FileType latex,tex,markdown set spell spelllang=pt 
 
 set encoding=utf-8
 set background=dark
