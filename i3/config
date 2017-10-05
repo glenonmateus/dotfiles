@@ -98,8 +98,7 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
 
 bar {
-        #status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        status_command i3status
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	position top
 	tray_padding 0
 	colors {
