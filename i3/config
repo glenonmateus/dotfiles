@@ -123,4 +123,4 @@ exec setxkbmap -model abnt2 -layout br -variant abnt2
 exec dropbox start
 exec feh --bg-scale $image 
 exec --no-startup-id megasync 
-exec --no-startup-id dunst -config ./dunstrc
+exec --no-startup-id dunst -config ~/.config/i3/dunstrc
