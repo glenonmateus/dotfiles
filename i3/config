@@ -21,7 +21,7 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10"
-set $image ~/Dropbox/Wallpapers/programming-wallpaper-1600x900.png
+set $image ~/Dropbox/Wallpapers/programming-wallpaper-1920x1080.jpg
 
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Xfburn"] floating enable
@@ -30,6 +30,7 @@ for_window [class="(?i)virtualbox"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="Arandr"] floating enable
 for_window [class="vlc"] floating enable
+for_window [class="Transmission-gtk"] floating enable
 
 font pango:Noto Mono for Powerline 10 
 floating_modifier $mod
