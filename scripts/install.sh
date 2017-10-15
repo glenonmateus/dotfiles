@@ -74,8 +74,7 @@ apt_update(){
 
 install_basic_packages(){
     echo "=> Instalando pacotes básicos ..."
-    apt -y install vim firmware-linux-nonfree lightdm bash-completion accountsservice plymouth xorg xfce4-terminal sudo git xfce4-clipman wicd-gtk python-gpgme thunar xfce4-notifyd avahi-daemon pasystray pavucontrol pulseaudio pulseaudio-utils avahi-daemon p7zip genisoimage libxslt1.1 gnome-screenshot qpdfview mirage texlive-publishers texlive-lang-portuguese texlive-latex-extra texlive-fonts-recommended lmodern latexmk unzip rar vim-gtk python-pip python-dev xfburn python-wheel python-setuptools ssh wget lsb-release libpango1.0-0
-    #linux-headers-$(uname -r) ssh 
+    apt -y install vim firmware-linux-nonfree lightdm bash-completion accountsservice plymouth xorg xfce4-terminal sudo git python-gpgme thunar avahi-daemon pavucontrol pulseaudio pulseaudio-utils avahi-daemon p7zip genisoimage libxslt1.1 gnome-screenshot qpdfview mirage texlive-publishers texlive-lang-portuguese texlive-latex-extra texlive-fonts-recommended lmodern latexmk unzip rar vim-gtk python-pip python-dev xfburn python-wheel python-setuptools ssh wget lsb-release libpango1.0-0
 }
 
 install_files() {
@@ -200,16 +199,16 @@ case $DISTRO in
 esac
 
 apt_update
-#install_basic_packages
-#install_chrome
-#install_dropbox
-#install_docker
-#install_i3
-#install_files
-#install_theme
-#install_icon
-#install_powerline
-#add_sudo
-#add_docker
-#remove_packages
-#create_blacklist
+install_basic_packages
+install_chrome
+install_dropbox
+install_docker
+install_i3
+install_files
+install_theme
+install_icon
+install_powerline
+add_sudo
+add_docker
+remove_packages
+create_blacklist
