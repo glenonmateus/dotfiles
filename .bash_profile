@@ -10,5 +10,3 @@ if [ $(which powerline-daemon) ]; then
     POWERLINE_BASH_SELECT=1
     source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 fi
-
-

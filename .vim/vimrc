@@ -12,6 +12,7 @@ Plugin 'lervag/vimtex'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'valloric/youcompleteme'
 call vundle#end()            
 filetype plugin indent on    
 
