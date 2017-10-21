@@ -20,17 +20,8 @@ set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
-set $workspace10 "10"
-set $image ~/Dropbox/Wallpapers/programming-wallpaper-1920x1080.jpg
-
-for_window [class="Pavucontrol"] floating enable
-for_window [class="Xfburn"] floating enable
-for_window [class="Lxappearance"] floating enable
-for_window [class="(?i)virtualbox"] floating enable
-for_window [class="Thunar"] floating enable
-for_window [class="Arandr"] floating enable
-for_window [class="vlc"] floating enable
-for_window [class="Transmission-gtk"] floating enable
+set $workspace10 ""
+set $image ~/Dropbox/Wallpapers/programming-wallpaper-1920x1080.png
 
 font pango:Noto Mono for Powerline 10 
 floating_modifier $mod
@@ -79,6 +70,7 @@ bindsym $mod+6 workspace $workspace6
 bindsym $mod+7 workspace $workspace7
 bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
@@ -88,6 +80,17 @@ bindsym $mod+Shift+6 move container to workspace $workspace6
 bindsym $mod+Shift+7 move container to workspace $workspace7
 bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Xfburn"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="(?i)virtualbox"] floating enable
+for_window [class="Thunar"] floating enable
+for_window [class="Arandr"] floating enable
+for_window [class="vlc"] floating enable
+for_window [class="Transmission-gtk"] floating enable
+for_window [class="Spotify"] move workspace $workspace10
 
 bindsym $mod+r mode "resize"
 mode "resize" {
