@@ -55,7 +55,9 @@ install_chrome() {
 
 install_gpg() {
     echo "=> Install gnupg ..."
-    apt -y install gnupg dirmngr
+    apt -y install \ 
+        gnupg \
+        dirmngr
     install_chrome
 }
 
@@ -69,12 +71,54 @@ install_dropbox() {
 
 apt_update(){
     echo "Atualizando repositório e removendo pacotes não usados ..."
-    apt update && apt -y upgrade && apt -y autoremove
+    apt update \
+        && apt -y upgrade \
+        && apt -y autoremove
 }
 
 install_basic_packages(){
     echo "=> Instalando pacotes básicos ..."
-    apt -y install vim firmware-linux-nonfree lightdm bash-completion accountsservice plymouth xorg xfce4-terminal sudo git python-gpgme thunar avahi-daemon pavucontrol pulseaudio pulseaudio-utils avahi-daemon p7zip genisoimage libxslt1.1 gnome-screenshot qpdfview mirage texlive-publishers texlive-lang-portuguese texlive-latex-extra texlive-fonts-recommended lmodern latexmk unzip rar vim-gtk python-pip python-dev xfburn python-wheel python-setuptools ssh wget lsb-release libpango1.0-0
+    apt -y install \
+        vim \
+        firmware-linux-nonfree \
+        lightdm bash-completion \
+        accountsservice \
+        plymouth \ 
+        xorg \
+        xfce4-terminal \
+        sudo \
+        git \
+        python-gpgme \
+        thunar \
+        avahi-daemon \
+        pavucontrol \
+        pulseaudio \
+        pulseaudio-utils \
+        avahi-daemon \
+        p7zip \
+        genisoimage \
+        libxslt1.1 \
+        gnome-screenshot \
+        qpdfview \
+        mirage \
+        texlive-publishers \
+        texlive-lang-portuguese \
+        texlive-latex-extra \
+        texlive-fonts-recommended \
+        lmodern \
+        latexmk \
+        unzip \
+        rar \
+        vim-gtk \
+        python-pip \
+        python-dev \
+        xfburn \
+        python-wheel \
+        python-setuptools \
+        ssh \
+        wget \
+        lsb-release \
+        libpango1.0-0
 }
 
 install_files() {
@@ -126,7 +170,14 @@ install_files() {
 
 install_i3(){
     echo "=> Instalando i3 ..."
-    apt -y install i3 lxappearance i3blocks i3lock rofi arandr feh
+    apt -y install \ 
+        i3 \
+        lxappearance \
+        i3blocks \
+        i3lock \
+        rofi \
+        arandr \
+        feh
 }
 
 install_xfce4(){
@@ -138,7 +189,11 @@ install_xfce4(){
 
 remove_packages(){
     echo "=> Removendo pacotes desnecessários ..."
-    apt -y purge dunst vim-tiny && apt -y --purge autoremove
+    apt -y purge \
+        vim-tiny \ 
+        mesa-vdpau-drivers \
+        mesa-vdpau-drivers \
+        && apt -y --purge autoremove
 }
 
 add_sudo(){
@@ -153,11 +208,18 @@ add_docker(){
 
 install_docker(){
     echo "=> Instalando docker-ce e docker-compose ..."
-    apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+    apt -y install \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        gnupg2 \
+        software-properties-common
     curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
     echo "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" > /etc/apt/sources.list.d/docker.list
     apt update
-    apt -y install docker-ce docker-compose
+    apt -y install \
+        docker-ce \
+        docker-compose
 }
 
 install_icon(){
