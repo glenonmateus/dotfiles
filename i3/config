@@ -35,7 +35,7 @@ for_window [class="Gimp"] floating enable
 font pango:Noto Mono for Powerline 10 
 floating_modifier $mod
 
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec x-terminal-emulator
 bindsym $mod+Shift+q kill
 bindsym Print exec gnome-screenshot -i
 bindsym $mod+Delete exec i3lock -ef -i $image

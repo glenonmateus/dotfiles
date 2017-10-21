@@ -8,3 +8,44 @@ rofi.color-active: #1d1d1f, #0087af, #fdfcfa, #0087af, #1d1d1f
 rofi.color-urgent: #1d1d1f, #dc322f, #383838, #dc322f, #fdf6e3
 rofi.lines: 3
 rofi.width: 20 
+
+XTerm*faceName: Noto Mono for Powerline:style=Regular
+XTerm*faceSize: 10
+XTerm*vt100.cursorBlink: true
+
+! special
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #1d1f21
+*.color8:       #969896
+
+! red
+*.color1:       #cc342b
+*.color9:       #cc342b
+
+! green
+*.color2:       #198844
+*.color10:      #198844
+
+! yellow
+*.color3:       #fba922
+*.color11:      #fba922
+
+! blue
+*.color4:       #3971ed
+*.color12:      #3971ed
+
+! magenta
+*.color5:       #a36ac7
+*.color13:      #a36ac7
+
+! cyan
+*.color6:       #3971ed
+*.color14:      #3971ed
+
+! white
+*.color7:       #c5c8c6
+*.color15:      #ffffff
