@@ -9,6 +9,9 @@ rofi.color-urgent: #1d1d1f, #dc322f, #383838, #dc322f, #fdf6e3
 rofi.lines: 3
 rofi.width: 20 
 
+
+!-- Xterm --
+!-----------
 XTerm*title: Terminal 
 XTerm*faceName: Noto Mono for Powerline:style=Regular
 XTerm*faceSize: 10

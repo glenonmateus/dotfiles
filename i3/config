@@ -147,3 +147,4 @@ exec dropbox start
 exec feh --bg-scale $image 
 exec --no-startup-id megasync 
 exec --no-startup-id dunst -config ~/.config/i3/dunstrc
+exec --no-startup-id xrdb ~/.Xresources
