@@ -85,7 +85,6 @@ install_basic_packages(){
         accountsservice \
         plymouth \ 
         xorg \
-        xfce4-terminal \
         sudo \
         git \
         python-gpgme \
