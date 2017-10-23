@@ -20,7 +20,7 @@ set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 ""
-set $image ~/Dropbox/Wallpapers/programming-wallpaper-1920x1080.jpg
+set $image ~/Dropbox/Wallpapers/programming-wallpaper-1920x1080.png
 
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Xfburn"] floating enable
@@ -32,7 +32,7 @@ for_window [class="vlc"] floating enable
 for_window [class="Transmission-gtk"] floating enable
 for_window [class="Gimp"] floating enable
 
-font pango:Noto Mono for Powerline 10 
+font pango:Noto Mono for Powerline 10
 floating_modifier $mod
 
 bindsym $mod+Return exec x-terminal-emulator
