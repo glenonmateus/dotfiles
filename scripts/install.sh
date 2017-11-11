@@ -183,7 +183,9 @@ install_xfce4(){
     echo "=> Instalando xfce4 ..."
     apt -y install \
         xfce4 \
-        byobu
+        byobu \
+        pasystray \
+        wicd
 } 
 
 remove_packages(){
