@@ -1,0 +1,5 @@
+auto wlp18s0
+	iface wlp18s0 inet dhcp
+	pre-up wpa_supplicant -i wlp18s0 -Dwext -c /etc/wpa_supplicant/malware.conf -B
+	pre-down kill $(pgrep wpa_supplicant)
+	dns-nameservers 8.8.8.8 8.8.4.4
