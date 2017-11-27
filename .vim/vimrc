@@ -7,11 +7,13 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'lervag/vimtex'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'valloric/youcompleteme'
+Plugin 'itchyny/lightline.vim'
 call vundle#end()            
 filetype plugin indent on    
 
@@ -24,20 +26,16 @@ set sps=10
 set incsearch		
 set sw=1
 set iskeyword+=:
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set t_Co=256
 set tabstop=8 expandtab shiftwidth=4 softtabstop=4
 set mouse-=a
 set laststatus=2
 set showtabline=2 
 set noshowmode 
+
 set cursorline
 hi CursorLine term=bold cterm=bold ctermbg=236
-
-"guibg=grey
+hi LineNr cterm=bold ctermfg=grey ctermbg=234
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -47,6 +45,11 @@ let g:vimtex_compiler_latexmk = {'callback' : 0}
 let g:tex_flavor='latex'
 let vim_markdown_preview_github=1
 let g:vim_markdown_folding_disabled = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeAutoDeleteBuffer = 1
 
 hi clear SpellBad 
 hi SpellBad cterm=underline,bold ctermfg=red 
+
+nmap <Leader><Leader>n :NERDTreeToggle<CR>
