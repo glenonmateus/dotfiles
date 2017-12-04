@@ -1,16 +1,13 @@
 set $mod Mod4
+
 set $bg-color #0087af
-set $text-color #fdfcfa 
 set $bg-bar-color #1d1f21
-set $inactive-bg-color #585858 
-set $inactive-text-color #c3c7c6
-set $urgent-bg-color #e53935
-set $indicator  
-#set $text-color #C5C8C6 
-#set $inactive-bg-color #383838 
-#set $inactive-text-color #676E7D
-#set $urgent-bg-color #E53935
-#set $indicator #05C616
+set $text-color #C5C8C6 
+set $inactive-bg-color #383838 
+set $inactive-text-color #676E7D
+set $urgent-bg-color #E53935
+set $indicator #05C616
+
 set $workspace1 "1"  
 set $workspace2 "2"
 set $workspace3 "3" 
@@ -46,7 +43,8 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
-bindsym $mod+d exec rofi -show run 
+#bindsym $mod+d exec rofi -show run 
+bindsym $mod+d exec dmenu_run -b
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -134,8 +132,9 @@ bar {
 }
 
 exec setxkbmap -model abnt2 -layout br -variant abnt2
-exec dropbox start
 exec feh --bg-scale $image 
+exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
+exec --no-startup-id xfce4-clipman
 exec --no-startup-id dunst -config ~/.config/i3/dunstrc
 exec --no-startup-id xrdb ~/.Xresources
