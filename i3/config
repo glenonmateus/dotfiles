@@ -18,7 +18,7 @@ set $workspace7 "7"
 set $workspace8 ""
 set $image ~/Dropbox/Wallpapers/programming-wallpaper-1920x1080.png
 
-font pango:Noto Mono for Powerline 10
+font pango:Noto Mono for Powerline 9
 floating_modifier $mod
 
 bindsym $mod+Return exec x-terminal-emulator
