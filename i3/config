@@ -122,7 +122,6 @@ bar {
         position top
 	tray_padding 0
         mode dock
-        height 18
 	colors {
 	  background $bg-bar-color
 	  separator #757575
