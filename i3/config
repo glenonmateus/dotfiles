@@ -2,7 +2,8 @@ set $mod Mod4
 
 set $bg-color #0087af
 set $bg-bar-color #1d1f21
-set $text-color #C5C8C6 
+set $text-color #FFFFFF
+#set $text-color #C5C8C6 
 set $inactive-bg-color #383838 
 set $inactive-text-color #676E7D
 set $urgent-bg-color #E53935
@@ -48,9 +49,9 @@ bindsym $mod+d exec dmenu_run -b
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 
 bindsym XF86AudioPlay exec playerctl play
