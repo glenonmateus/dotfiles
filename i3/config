@@ -139,3 +139,4 @@ exec --no-startup-id megasync
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id dunst -config ~/.config/i3/dunstrc
 exec --no-startup-id xrdb ~/.Xresources
+exec --no-startup-id xrandr --output LVDS1 --primary --right-of HDMI1
