@@ -3,7 +3,6 @@ set $mod Mod4
 set $bg-color #0087af
 set $bg-bar-color #1d1f21
 set $text-color #FFFFFF
-#set $text-color #C5C8C6 
 set $inactive-bg-color #383838 
 set $inactive-text-color #676E7D
 set $urgent-bg-color #E53935
@@ -18,8 +17,9 @@ set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 ""
 set $image ~/Dropbox/Wallpapers/programming-wallpaper-1920x1080.png
+set $fonte pango:Noto Mono for Powerline 9
 
-font pango:Noto Mono for Powerline 9
+font $fonte
 floating_modifier $mod
 
 bindsym $mod+Return exec x-terminal-emulator
@@ -44,8 +44,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
-#bindsym $mod+d exec rofi -show run 
-bindsym $mod+d exec dmenu_run -b
+bindsym $mod+d exec dmenu_run -b -fn '$fonte' -nb '#000000'
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
