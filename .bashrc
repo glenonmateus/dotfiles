@@ -110,3 +110,5 @@ if ! shopt -oq posix; then
 fi
 
 [ -e ~/.bash_profile ]; source ~/.bash_profile
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
