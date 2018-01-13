@@ -93,7 +93,7 @@ export LC_CTYPE=$LANG
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-HOSTNAME=hostname
+HOSTNAME=$(hostname)
 export SSH_KEY_PATH="~/.ssh/$HOSTNAME"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
