@@ -74,6 +74,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 export LC_CTYPE=$LANG
+export PAGER=most
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
