@@ -64,7 +64,6 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir vcs)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  bgnotify
   docker
   docker-compose
   ssh
