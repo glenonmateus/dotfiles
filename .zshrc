@@ -64,7 +64,6 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir vcs)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  bgnotify
   docker
   docker-compose
   ssh
@@ -75,6 +74,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 export LC_CTYPE=$LANG
+export PAGER=most
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

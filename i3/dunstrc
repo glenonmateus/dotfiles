@@ -1,5 +1,5 @@
 [global]
-    font = Noto Mono for Powerline 10
+    font = Hack Nerd Font Regular 9
     allow_markup = yes
     format = "<b>%s %p</b>\n%b"
     sort = yes

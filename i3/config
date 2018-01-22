@@ -17,7 +17,7 @@ set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 ""
 set $image ~/Dropbox/Wallpapers/programming-wallpaper-1920x1080.png
-set $fonte pango:Noto Mono for Powerline 9
+set $fonte pango:Hack Nerd Font Regular 9
 
 font $fonte
 floating_modifier $mod
@@ -44,7 +44,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
-bindsym $mod+d exec dmenu_run -b -fn '$fonte' -nb '#000000'
+bindsym $mod+d exec dmenu_run -b -nb '$bg-color' -nf '$text-color'
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -116,8 +116,8 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
 
 bar {
-        #status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        status_command i3status -c ~/.config/i3/i3status.conf
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        #status_command i3status -c ~/.config/i3/i3status.conf
         position top
 	tray_padding 0
         mode dock
