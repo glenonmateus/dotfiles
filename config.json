@@ -1,16 +1,19 @@
 {
+   "install_cmd": "sudo apt install",
+    "install": [
+        "zsh",
+        "vim"
+    ], 
+    
     "link": {
         "zshrc": "~/.zshrc",
         "vim": "~/.vim"
     },
-    
-    "install_cmd": "sudo apt install",
-    "install": [
-        "zsh",
-        "vim"
-    ],
 
     "commands": [
+        "curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh; zsh",
+        "git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k",
+        "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install",
         "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim",
         "vim +PluginInstall +qall"
     ]
