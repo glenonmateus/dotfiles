@@ -1,0 +1,17 @@
+{
+    "link": {
+        "zshrc": "~/.zshrc",
+        "vim": "~/.vim"
+    },
+    
+    "install_cmd": "sudo apt install",
+    "install": [
+        "zsh",
+        "vim"
+    ],
+
+    "commands": [
+        "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim",
+        "vim +PluginInstall +qall"
+    ]
+}
