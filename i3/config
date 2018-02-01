@@ -139,3 +139,5 @@ exec --no-startup-id parcellite
 exec --no-startup-id dunst -config ~/.config/i3/dunstrc
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xrandr --output LVDS1 --primary --right-of HDMI1
+
+bindsym $mod+p exec playonlinux /home/glenonmateus/.PlayOnLinux/wineprefix/WorldRAG/drive_c/WorldRAG\ Full/WORLDRAG.exe
