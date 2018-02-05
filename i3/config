@@ -115,21 +115,20 @@ client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
 
-bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        #status_command i3status -c ~/.config/i3/i3status.conf
-        position top
-	tray_padding 0
-        mode dock
-	colors {
-	  background $bg-bar-color
-	  separator #757575
-	  #                  border             background         text
-	  focused_workspace  $bg-color          $bg-color          $text-color
-	  inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-	  urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
-}
+#bar {
+#        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#        position top
+#	tray_padding 0
+#        mode dock
+#	colors {
+#	  background $bg-bar-color
+#	  separator #757575
+#	  #                  border             background         text
+#	  focused_workspace  $bg-color          $bg-color          $text-color
+#	  inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#	  urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#	}
+#}
 
 exec setxkbmap -model abnt2 -layout br -variant abnt2
 exec feh --bg-scale $image 
@@ -140,4 +139,4 @@ exec --no-startup-id dunst -config ~/.config/i3/dunstrc
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xrandr --output LVDS1 --primary --right-of HDMI1
 
-bindsym $mod+p exec playonlinux /home/glenonmateus/.PlayOnLinux/wineprefix/WorldRAG/drive_c/WorldRAG\ Full/WORLDRAG.exe
+exec_always --no-startup-id ~/.config/polybar/launch
