@@ -69,6 +69,7 @@ plugins=(
   ssh
   zsh-syntax-highlighting
   zsh-autosuggestions
+  bgnotify
 )
 
 source $ZSH/oh-my-zsh.sh
