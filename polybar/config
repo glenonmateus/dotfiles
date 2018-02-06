@@ -13,8 +13,10 @@ background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
+foreground-alt = #fff
+#foreground-alt = #555
+;primary = #ffb52a
+primary = #0087af
 secondary = #e60053
 alert = #bd2c40
 
@@ -53,7 +55,7 @@ modules-center = mpd
 modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
-tray-padding = 2
+tray-padding = 0
 ;tray-transparent = true
 ;tray-background = #0063ff
 
@@ -165,6 +167,11 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
+host = 127.0.0.1
+port = 6600
+;password = JXLVao8ENzyb5cI
+interval = 2
+
 icon-prev = 
 icon-stop = 
 icon-play = 
@@ -266,14 +273,14 @@ format-underline = #0a6cf5
 
 label = %date% %time%
 
-[module/alsa]
+[module/volume]
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = ""
+format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
@@ -292,7 +299,8 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+#bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-empty-foreground = #555
 
 [module/battery]
 type = internal/battery
@@ -347,9 +355,9 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open =  power
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close = cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}

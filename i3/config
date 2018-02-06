@@ -2,11 +2,12 @@ set $mod Mod4
 
 set $bg-color #0087af
 set $bg-bar-color #1d1f21
-set $text-color #FFFFFF
 set $inactive-bg-color #383838 
 set $inactive-text-color #676E7D
 set $urgent-bg-color #E53935
 set $indicator #05C616
+set $text-color #ffffff
+set $dmenu-bg-color #222222
 
 set $workspace1 "1"  
 set $workspace2 "2"
@@ -44,7 +45,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
-bindsym $mod+d exec dmenu_run -b -nb '$bg-color' -nf '$text-color'
+bindsym $mod+d exec dmenu_run -b -nb '$dmenu-bg-color' -nf '$text-color' -sb '$bg-color'
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -86,7 +87,6 @@ for_window [class="vlc"] floating enable
 for_window [class="Transmission-gtk"] floating enable
 for_window [class="Gimp"] floating enable
 for_window [class="System-config-printer.py"] floating enable
-for_window [class="Spotify"] move container to workspace $workspace8
 
 bindsym $mod+r mode "resize"
 mode "resize" {
@@ -118,16 +118,16 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 #bar {
 #        status_command i3blocks -c ~/.config/i3/i3blocks.conf
 #        position top
-#	tray_padding 0
+#	 tray_padding 0
 #        mode dock
-#	colors {
-#	  background $bg-bar-color
-#	  separator #757575
-#	  #                  border             background         text
-#	  focused_workspace  $bg-color          $bg-color          $text-color
-#	  inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-#	  urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-#	}
+#	 colors {
+#	 background $bg-bar-color
+#	 separator #757575
+#	 #                  border             background         text
+#	 focused_workspace  $bg-color          $bg-color          $text-color
+#	 inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#	 urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#	 }
 #}
 
 exec setxkbmap -model abnt2 -layout br -variant abnt2
