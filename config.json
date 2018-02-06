@@ -1,8 +1,31 @@
 {
-   "install_cmd": "sudo apt install",
+   "install_cmd": "sudo apt install -y",
     "install": [
         "zsh",
-        "vim-gtk"
+        "vim-gtk",
+        "cmake",
+        "cmake-data",
+        "libcairo2-dev", 
+        "libxcb1-dev", 
+        "libxcb-ewmh-dev", 
+        "libxcb-icccm4-dev", 
+        "libxcb-image0-dev", 
+        "libxcb-randr0-dev", 
+        "libxcb-util0-dev",
+        "libxcb-xkb-dev", 
+        "pkg-config", 
+        "python-xcbgen", 
+        "xcb-proto", 
+        "libxcb-xrm-dev", 
+        "i3-wm", 
+        "libasound2-dev", 
+        "libpulse-dev", 
+        "libmpdclient-dev", 
+        "libiw-dev",
+        "libcurl4-openssl-dev", 
+        "libxcb-cursor-dev",
+        "build-essential",
+        "python-dev"
     ], 
     
     "link": {
@@ -13,10 +36,10 @@
     },
 
     "commands": [
-        "curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh; zsh",
+        "curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh",
         "git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k",
         "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install",
-        "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qall && /.vim/bundle/youcompleteme/install.py",
-        "git clone --recursive https://github.com/jaagr/polybar.git ~/git/polybar && ~/git/polybar/build.sh"
+        "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qall && ~/.vim/bundle/youcompleteme/install.py",
+        "git clone --recursive https://github.com/jaagr/polybar.git ~/git/polybar && cd ~/git/polybar && ~/git/polybar/build.sh"
     ]
 }
