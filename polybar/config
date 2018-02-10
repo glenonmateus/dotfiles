@@ -90,7 +90,7 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 format = <label> <bar>
-label = BL
+label = 
 bar-width = 10
 bar-indicator = |
 bar-indicator-foreground = #ff
@@ -100,7 +100,8 @@ bar-fill-font = 2
 bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
+;bar-empty-foreground = ${colors.foreground-alt}
+bar-empty-foreground = #555
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -159,7 +160,7 @@ label = %date% %time%
 [module/volume]
 type = internal/pulseaudio
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+label-volume = 
 label-volume-foreground = ${root.foreground}
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
