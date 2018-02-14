@@ -88,6 +88,7 @@ for_window [class="Transmission-gtk"] floating enable
 for_window [class="Gimp"] floating enable
 for_window [class="System-config-printer.py"] floating enable
 for_window [class="Wine"] floating enable
+for_window [class="Mainwindow.py"] floating enable
 
 bindsym $mod+r mode "resize"
 mode "resize" {
