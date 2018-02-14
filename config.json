@@ -3,36 +3,14 @@
     "install": [
         "zsh",
         "vim-gtk",
-        "cmake",
-        "cmake-data",
-        "libcairo2-dev", 
-        "libxcb1-dev", 
-        "libxcb-ewmh-dev", 
-        "libxcb-icccm4-dev", 
-        "libxcb-image0-dev", 
-        "libxcb-randr0-dev", 
-        "libxcb-util0-dev",
-        "libxcb-xkb-dev", 
-        "pkg-config", 
-        "python-xcbgen", 
-        "xcb-proto", 
-        "libxcb-xrm-dev", 
-        "i3-wm", 
-        "libasound2-dev", 
-        "libpulse-dev", 
-        "libmpdclient-dev", 
-        "libiw-dev",
-        "libcurl4-openssl-dev", 
-        "libxcb-cursor-dev",
-        "build-essential",
-        "python-dev"
+        "i3blocks"
     ], 
     
     "link": {
         "zshrc": "~/.zshrc",
         "vim": "~/.vim",
         "i3": "~/.config/i3",
-        "polybar": "~/.config/polybar"
+        "Xresources": "~/.Xresources"
     },
 
     "commands": [
@@ -41,7 +19,6 @@
         "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install",
         "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
         "git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions",
-        "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qall && ~/.vim/bundle/youcompleteme/install.py",
-        "git clone --recursive https://github.com/jaagr/polybar.git ~/git/polybar && cd ~/git/polybar && ~/git/polybar/build.sh"
+        "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qall && ~/.vim/bundle/youcompleteme/install.py"
     ]
 }
