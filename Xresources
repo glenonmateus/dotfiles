@@ -8,7 +8,8 @@ XTerm.vt100.translations: #override \n\
 
 ! Google Dark color scheme
 ! special
-*.foreground:   #c5c8c6
+!*.foreground:   #c5c8c6
+*.foreground:   #66FF66
 *.background:   #1d1f21
 *.cursorColor:  #c5c8c6
 
