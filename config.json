@@ -2,7 +2,8 @@
    "install_cmd": "sudo apt install -y",
     "install": [
         "vim-gtk",
-        "i3blocks"
+        "i3blocks",
+        "cmake"
     ], 
     
     "link": {
