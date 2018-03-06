@@ -15,6 +15,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'valloric/youcompleteme'
 Plugin 'itchyny/lightline.vim'
+Plugin 'mattn/emmet-vim'
 call vundle#end()            
 filetype plugin indent on    
 
