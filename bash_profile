@@ -5,4 +5,4 @@ if [ -d "$HOME/.local/bin"  ] ; then
      PATH="$HOME/.local/bin:$PATH"
 fi
 
-export PS1="\[\e[32m\]\u\[\e[m\] in \[\e[31;40m\]\h\[\e[m\]\[\e[36m\][\[\e[m\]\[\e[36m\]\w\[\e[m\]\[\e[36m\]]\[\e[m\]\\$ "
+export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] in \[$(tput sgr0)\]\[\033[38;5;9m\]\h\[$(tput sgr0)\]\[\033[38;5;12m\][\w]\[$(tput sgr0)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0)\]"
