@@ -1,5 +1,10 @@
 export TERM='xterm-256color'
-export PAGER=most
+
+if [ $(which most) ]; then
+    export PAGER=most
+else 
+    export PAGER=less
+fi
 
 if [ -d "$HOME/.local/bin"  ] ; then
      PATH="$HOME/.local/bin:$PATH"

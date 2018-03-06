@@ -1,4 +1,5 @@
 [global]
+    icon_path = /usr/share/icons/Papirus-Dark/16x16/status:/usr/share/icons/Papirus-Dark/16x16/devices:/usr/share/icons/Papirus-Dark/16x16/apps
     font = Hack Nerd Font Regular 9
     allow_markup = yes
     format = "<b>%s %p</b>\n%b"
@@ -41,4 +42,4 @@
 [urgency_critical]
     background = "#900000"
     foreground = "#ffffff"
-    timeout = 0
+    timeout = 10
