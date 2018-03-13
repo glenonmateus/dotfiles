@@ -3,7 +3,9 @@
     "install": [
         "vim-gtk",
         "i3blocks",
-        "cmake"
+        "cmake",
+        "python-dev",
+        "python3-dev"
     ], 
     
     "link": {
