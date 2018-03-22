@@ -1,6 +1,7 @@
 set $mod Mod4
 
-set $bg-color #0087af
+#set $bg-color #0087af
+set $bg-color #01c601
 set $bg-bar-color #1d1f21
 set $inactive-bg-color #383838 
 set $inactive-text-color #676E7D
@@ -17,7 +18,7 @@ set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 ""
-set $image ~/Dropbox/Wallpapers/programming-wallpaper-1920x1080.png
+set $image ~/Dropbox/Wallpapers/matrix.png
 set $fonte pango:Hack Nerd Font Regular 9
 
 font $fonte
