@@ -1,6 +1,7 @@
 ! TLH color scheme
 ! special
-*.foreground:   #66ff66
+!*.foreground:   #66ff66
+*.foreground:   #01c601
 *.background:   #101010
 *.cursorColor:  #66ff66
 
