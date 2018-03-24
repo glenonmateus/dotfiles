@@ -1,14 +1,15 @@
 set $mod Mod4
 
 #set $bg-color #0087af
-#set $bg-color #01c601
-set $bg-color #005100
+#set $bg-color #005100
+set $bg-color #AFD700
 set $bg-bar-color #1d1f21
 set $inactive-bg-color #383838 
 set $inactive-text-color #676E7D
 set $urgent-bg-color #E53935
 set $indicator #05C616
-set $text-color #ffffff
+#set $text-color #ffffff
+set $text-color #016500
 set $dmenu-bg-color #222222
 
 set $workspace1 "1"  
