@@ -11,6 +11,7 @@ set $indicator #05C616
 #set $text-color #ffffff
 set $text-color #016500
 set $dmenu-bg-color #222222
+set $dmenu-nf-color #c5c8c6
 
 set $workspace1 "1"  
 set $workspace2 "2"
@@ -21,7 +22,7 @@ set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 ""
 set $image ~/Dropbox/Wallpapers/matrix.png
-set $fonte pango:Hack Nerd Font Regular 9
+set $fonte pango:Hack Nerd Font Regular 9 
 
 font $fonte
 floating_modifier $mod
@@ -48,7 +49,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
-bindsym $mod+d exec dmenu_run -b -nb '$dmenu-bg-color' -nf '$text-color' -sb '$bg-color'
+bindsym $mod+d exec dmenu_run -b -nb '$dmenu-bg-color' -nf '$dmenu-nf-color' -sb '$bg-color' -sf '$text-color' 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -123,7 +124,6 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        #status_command i3status -c ~/.config/i3/i3status.conf
         position top
 	tray_padding 0
         mode dock

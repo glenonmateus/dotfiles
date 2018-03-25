@@ -1,5 +1,4 @@
 [global]
-    icon_path = /usr/share/icons/Papirus-Dark/16x16/status:/usr/share/icons/Papirus-Dark/16x16/devices:/usr/share/icons/Papirus-Dark/16x16/apps
     font = Hack Nerd Font Regular 9
     allow_markup = yes
     format = "<b>%s %p</b>\n%b"
@@ -27,19 +26,19 @@
     startup_notification = false
 [frame]
     width = 3
-    color = "#0087af"
+    color = "#afd700"
 [shortcuts]
     close = ctrl+space
     close_all = ctrl+shift+space
 [urgency_low]
     background = "#1d1d1f"
-    foreground = "#fdfcfa"
+    foreground = "#c5c8c6"
     timeout = 10
 [urgency_normal]
-    background = "#285577"
-    foreground = "#ffffff"
+    background = "#1d1d1f"
+    foreground = "#c5c8c6"
     timeout = 10
 [urgency_critical]
     background = "#900000"
-    foreground = "#ffffff"
+    foreground = "#c5c8c6"
     timeout = 10
