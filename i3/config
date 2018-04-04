@@ -10,15 +10,15 @@ set $text-color #016500
 set $dmenu-bg-color #222222
 set $dmenu-nf-color #c5c8c6
 
-set $workspace1 "1"  
-set $workspace2 "2"
+set $workspace1 "1"  
+set $workspace2 "2"
 set $workspace3 "3" 
 set $workspace4 "4"
 set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
-set $workspace9 ""
+set $workspace9 "9"
 set $image ~/Dropbox/Wallpapers/matrix.png
 set $fonte pango:Hack Nerd Font Regular 9 
 
@@ -84,7 +84,8 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 
 for_window [class="[.]*"] floating enable
 for_window [class="XTerm"] floating disable
-
+assign [class="Google-chrome"] $workspace1
+for_window [class="Google-chrome"] floating disable
 for_window [class="Spotify"] move to workspace $workspace9
 for_window [class="Spotify"] floating disable
 
@@ -120,6 +121,7 @@ bar {
         position top
 	tray_padding 0
         mode dock
+        strip_workspace_numbers yes
 	colors {
 	background $bg-bar-color
 	separator #757575
