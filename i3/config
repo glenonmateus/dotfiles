@@ -89,6 +89,8 @@ for_window [class="Google-chrome"] floating disable
 for_window [class="Spotify"] move to workspace $workspace9
 for_window [class="Spotify"] floating disable
 
+workspace $workspace1 output HDMI1
+
 bindsym $mod+r mode "resize"
 mode "resize" {
         bindsym Left resize shrink width 10 px or 10 ppt
