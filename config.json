@@ -2,7 +2,6 @@
    "install_cmd": "sudo apt install -y",
     "install": [
         "vim-gtk",
-        "i3blocks",
         "cmake",
         "python-dev",
         "python3-dev"
@@ -10,7 +9,6 @@
     
     "link": {
         "vim": "~/.vim",
-        "i3": "~/.config/i3",
         "Xresources": "~/.Xresources",
         "bashrc": "~/.bashrc",
         "bash_aliases": "~/.bash_aliases",
