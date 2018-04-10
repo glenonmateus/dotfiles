@@ -3,7 +3,9 @@
     "install": [
         "i3",
         "i3blocks",
+        "feh",
         "vim-gtk",
+        "xterm",
         "cmake",
         "python-dev",
         "python3-dev",
