@@ -120,7 +120,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        position top
+        position bottom
 	tray_padding 0
         mode hide
         strip_workspace_numbers yes
