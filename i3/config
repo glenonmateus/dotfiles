@@ -123,6 +123,7 @@ bar {
         position bottom
 	tray_padding 0
         mode hide
+        modifier Mod1
         strip_workspace_numbers yes
 	colors {
 	background $bg-bar-color
