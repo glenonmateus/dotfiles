@@ -84,7 +84,6 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 
 for_window [class="[.]*"] floating enable
 for_window [class="XTerm"] floating disable
-assign [class="Google-chrome"] $workspace1
 for_window [class="Google-chrome"] floating disable
 for_window [class="Spotify"] move to workspace $workspace9
 for_window [class="Spotify"] floating disable
