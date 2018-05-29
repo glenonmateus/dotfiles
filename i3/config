@@ -121,9 +121,6 @@ bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
         position top
 	tray_padding 0
-        mode hide
-        modifier Mod1
-        strip_workspace_numbers yes
 	colors {
 	background $bg-bar-color
 	separator #757575
