@@ -83,7 +83,7 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 
 for_window [class="[.]*"] floating enable
-for_window [class="XTerm"] floating disable
+for_window [class="Xfce4-terminal"] floating disable
 for_window [class="Google-chrome"] floating disable
 for_window [class="Spotify"] move to workspace $workspace9
 for_window [class="Spotify"] floating disable
@@ -137,6 +137,6 @@ exec feh --bg-scale $image
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id parcellite
-exec --no-startup-id dunst -config ~/.config/i3/dunstrc
+#exec --no-startup-id dunst -config ~/.config/i3/dunstrc
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xrandr --output LVDS-1 --primary --right-of HDMI-1
