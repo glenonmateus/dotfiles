@@ -110,12 +110,3 @@ if ! shopt -oq posix; then
 fi
 
 [ -e ~/.bash_profile ]; source ~/.bash_profile
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-if [ -f $(which powerline-daemon) ]; then
-    powerline-daemon -q
-    POWERLINE_BASH_CONTINUATION=1
-    POWERLINE_BASH_SELECT=1
-    source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-fi
