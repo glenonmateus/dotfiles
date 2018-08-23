@@ -66,7 +66,7 @@ plugins=(
   git
   docker
   docker-compose
-  ssh
+  ssh-agent
   zsh-syntax-highlighting
   zsh-autosuggestions
   bgnotify
