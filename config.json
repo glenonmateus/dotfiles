@@ -12,7 +12,7 @@
         "python-pip",
         "xfce4-terminal",
         "xfce4-clipman",
-        "zshrc",
+        "zsh",
         "lxappearance"
     ], 
     
