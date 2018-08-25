@@ -103,7 +103,10 @@ export SSH_KEY_PATH="~/.ssh/$HOSTNAME"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias cfgvim="vim ~/.vim/vimrc"
+alias apt-update="sudo apt update"
+alias apt-upgrade="sudo apt upgrade --auto-remove -y"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
