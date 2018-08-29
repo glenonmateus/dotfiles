@@ -26,7 +26,7 @@ set $fonte pango:Hack Nerd Font Regular 9
 font $fonte
 floating_modifier $mod
 
-bindsym $mod+Return exec x-terminal-emulator
+bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 bindsym Print exec gnome-screenshot -i
 bindsym $mod+Delete exec i3lock -ef -i $image
@@ -90,8 +90,9 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace0
 
 for_window [class="[.]*"] floating enable
-for_window [class="Xfce4-terminal"] floating disable
+for_window [class="Xterm"] floating disable
 for_window [class="Google-chrome"] floating disable
+for_window [class="Firefox-esr"] floating disable
 for_window [class="Spotify"] move to workspace $workspace9
 for_window [class="Spotify"] floating disable
 
@@ -140,8 +141,10 @@ bar {
 }
 
 exec setxkbmap -model abnt2 -layout br -variant abnt2
+exec xrdb .Xresources
+exec dunst -conf ~/.config/i3/dunstrc
 exec feh --bg-scale $image 
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
-exec --no-startup-id xfce4-clipman
+exec --no-startup-id parcellite
 exec --no-startup-id xrandr --output LVDS-1 --primary --right-of HDMI-1
