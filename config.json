@@ -10,25 +10,22 @@
         "python-dev",
         "python3-dev",
         "python-pip",
-        "xfce4-terminal",
-        "xfce4-clipman",
-        "zsh",
+        "xterm",
+        "parcellite",
         "lxappearance"
     ], 
     
     "link": {
         "i3": "~/.config/i3",
         "vim": "~/.vim",
-        "zshrc": "~/.zshrc",
+        "bashrc": "~/.bashrc",
+        "bash_aliases": "~/.bash_aliases",
+        "bash_profile": "~/.bash_profile",
         "fonts": "~/.fonts"
     },
 
     "commands": [
-        "curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh -",
-        "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting",
-        "git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions",
         "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install",
-        "git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k",
         "vim +PluginInstall +qall && ~/.vim/bundle/youcompleteme/install.py",
         "fc-cache -vf"
     ]
