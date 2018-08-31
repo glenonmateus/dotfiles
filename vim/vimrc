@@ -22,6 +22,7 @@ filetype plugin indent on
 
 syntax on
 autocmd FileType latex,tex,markdown set spell spelllang=pt 
+autocmd FileType html,css EmmetInstall
 
 set encoding=utf-8
 set background=dark
@@ -51,6 +52,8 @@ let g:vim_markdown_folding_disabled = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
+let g:user_emmet_install_global = 0
+let g:user_emmet_mode='a'
 
 hi clear SpellBad 
 hi SpellBad cterm=underline,bold ctermfg=red 
