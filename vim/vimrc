@@ -59,3 +59,5 @@ hi clear SpellBad
 hi SpellBad cterm=underline,bold ctermfg=red 
 
 nmap <Leader><Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
