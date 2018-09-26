@@ -1,8 +1,6 @@
-! TLH color scheme
 ! special
-!*.foreground:   #66ff66
-*.foreground:   #01c601
-*.background:   #101010
+*.foreground:   #66ff66
+*.background:   #282828
 *.cursorColor:  #66ff66
 
 ! black
@@ -12,11 +10,11 @@
 ! red
 *.color1:       #d81860
 *.color9:       #f00060
-!
+
 ! green
 *.color2:       #60ff60
 *.color10:      #70ff70
-!
+
 ! yellow
 *.color3:       #f9fd75
 *.color11:      #f9fd80
