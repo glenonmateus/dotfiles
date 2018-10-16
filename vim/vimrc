@@ -23,6 +23,7 @@ filetype plugin indent on
 syntax on
 autocmd FileType latex,tex,markdown set spell spelllang=pt 
 autocmd FileType html,css EmmetInstall
+au BufNewFile, BufRead *.py set tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 autoindent expandtab fileformat=unix
 
 set encoding=utf-8
 set background=dark
@@ -31,7 +32,6 @@ set incsearch
 set sw=1
 set iskeyword+=:
 set t_Co=256
-set tabstop=8 expandtab shiftwidth=4 softtabstop=4
 set mouse-=r
 set laststatus=2
 set showtabline=2 
