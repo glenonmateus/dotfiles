@@ -10,7 +10,8 @@
         "python-dev",
         "python3-dev",
         "python-pip",
-        "xterm",
+        "xfce4-terminal",
+        "thunar",
         "parcellite",
         "lxappearance"
     ], 
