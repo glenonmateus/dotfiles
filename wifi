@@ -1,0 +1,4 @@
+auto wlan0
+iface wlan0 inet dhcp
+  pre-up wpa_supplicant -c /etc/network/ransomware.conf -i wlan0 -Dwext -B
+  pos-down kill $(pgrep -f wpa_supplicant)
