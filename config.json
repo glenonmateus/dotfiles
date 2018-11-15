@@ -2,7 +2,6 @@
    "install_cmd": "sudo apt install -y",
     "install": [
         "i3",
-        "i3blocks",
         "feh",
         "vim-gtk",
         "cmake",
