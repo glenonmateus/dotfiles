@@ -142,6 +142,7 @@ bar {
 }
 
 exec setxkbmap -model abnt2 -layout br -variant abnt2
+exec xinput set-prop 15 "Synaptics Tap Action" 1, 1, 1, 1, 1, 1, 1
 #exec xrdb ~/.Xresources
 exec dunst -conf ~/.config/i3/dunstrc
 exec feh --bg-scale $image 
