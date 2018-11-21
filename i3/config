@@ -146,6 +146,7 @@ exec xinput set-prop 15 "Synaptics Tap Action" 1, 1, 1, 1, 1, 1, 1
 #exec xrdb ~/.Xresources
 exec dunst -conf ~/.config/i3/dunstrc
 exec feh --bg-scale $image 
+exec xcompmgr -c -f -n
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id parcellite
