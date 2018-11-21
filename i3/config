@@ -129,7 +129,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 bar {
         status_command i3status -c ~/.config/i3/i3status.conf
         position top
-	tray_padding 0
+	separator_symbol ""
 	colors {
 	     background $bg-bar-color
 	     statusline #C5C8C6 
