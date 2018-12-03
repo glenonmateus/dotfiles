@@ -93,7 +93,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace0
 
 new_window 1pixel
 for_window [class="[.]*"] floating enable
-for_window [class="Xfce4-terminal"] floating disable
+for_window [class="XTerm"] floating disable
 for_window [class="Spotify"] move to workspace $workspace9
 for_window [class="Spotify"] floating disable
 
