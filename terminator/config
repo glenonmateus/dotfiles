@@ -1,5 +1,4 @@
 [global_config]
-  borderless = True
   scroll_tabbar = True
   tab_position = hidden
   title_hide_sizetext = True
@@ -67,7 +66,7 @@
   [[default]]
     background_color = "#1d1f21"
     cursor_color = "#c5c8c6"
-    font = Operator Mono weight=330 11
+    font = Operator Mono weight=330 10
     foreground_color = "#c5c8c6"
     palette = "#1d1f21:#cc342b:#198844:#fba922:#3971ed:#a36ac7:#3971ed:#c5c8c6:#969896:#cc342b:#198844:#fba922:#3971ed:#a36ac7:#3971ed:#ffffff"
     scrollbar_position = hidden
