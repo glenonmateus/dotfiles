@@ -92,7 +92,7 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace0
 
 for_window [class="[.]*"] floating enable
-for_window [class="XTerm"] floating disable border 1pixel
+for_window [class="X-terminal-emulator"] floating disable border 1pixel
 for_window [class="Spotify"] move to workspace $workspace9
 for_window [class="Spotify"] floating disable
 for_window [class="Google-chrome"] border 1pixel 
