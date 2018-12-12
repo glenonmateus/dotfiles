@@ -69,6 +69,9 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Sleep exec systemctl suspend
 
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2 
 bindsym $mod+3 workspace $workspace3
