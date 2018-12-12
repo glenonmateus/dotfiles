@@ -66,11 +66,11 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#101010"
-    cursor_color = "#66ff66"
     font = Operator Mono weight=330 10
-    foreground_color = "#66ff66"
-    palette = "#1c1c1c:#d81860:#60ff60:#f9fd75:#4695c8:#a78edb:#43afce:#f3ebe2:#4d4d4d:#f00060:#70ff70:#f9fd80:#5a9dc8:#b29fdb:#69b8ce:#eeeeee"
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
+    palette = "#1d1f21:#cc342b:#198844:#fba922:#3971ed:#a36ac7:#3971ed:#c5c8c6:#969896:#cc342b:#198844:#fba922:#3971ed:#a36ac7:#3971ed:#ffffff"
+    foreground_color = "#c5c8c6"
+    background_color = "#1d1f21"
+    cursor_color = "#c5c8c6"
