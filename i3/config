@@ -121,7 +121,6 @@ mode "$mode_launcher" {
     bindsym R exec systemctl reboot
     bindsym S exec systemctl suspend
     bindsym H exec systemctl hibernate
-
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
@@ -132,7 +131,8 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
 
 bar {
-        status_command i3status -c ~/.config/i3/i3status.conf
+        #status_command i3status -c ~/.config/i3/i3status.conf
+        status_command ~/.config/i3/conkyi3
         position top
 	separator_symbol ""
 	colors {
