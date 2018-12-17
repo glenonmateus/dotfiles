@@ -94,11 +94,10 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace0
 
+hide_edge_borders both 
 for_window [class="[.]*"] floating enable
-for_window [class="X-terminal-emulator"] floating disable
-for_window [class="X-terminal-emulator"] border 1pixel
-for_window [class="Spotify"] move to workspace $workspace9
-for_window [class="Spotify"] floating disable
+for_window [class="X-terminal-emulator"] floating disable, border 1pixel
+for_window [class="Spotify"] move to workspace $workspace9, floating disable
 for_window [class="Google-chrome"] border 1pixel 
 
 workspace $workspace1 output LVDS-1
