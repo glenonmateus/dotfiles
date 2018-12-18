@@ -26,7 +26,6 @@
         "bashrc": "~/.bashrc",
         "bash_aliases": "~/.bash_aliases",
         "bash_profile": "~/.bash_profile",
-        "Xresources": "~/.Xresources",
         "terminator/config": "~/.config/terminator/config",
         "fonts": "~/.fonts"
     },
