@@ -10,13 +10,17 @@
         "python3-dev",
         "python-pip",
         "terminator",
-        "thunar",
         "parcellite",
+	"ranger",
         "arandr",
         "xcompmgr",
         "gnome-screenshot",
-        "papirus-icon-theme",
         "git",
+        "terminator",
+        "dbus-x11",
+        "libxslt1.1",
+        "gnome-themes-standard",
+        "pavucontrol",
         "lxappearance"
     ], 
     
@@ -31,6 +35,7 @@
     },
 
     "commands": [
+        "rmdir vim/bundle/Vundle.vim && git clone git clone https://github.com/VundleVim/Vundle.vim.git -o vim/bundle/",
         "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install",
         "vim +PluginInstall +qall && ~/.vim/bundle/youcompleteme/install.py",
         "fc-cache -vf"

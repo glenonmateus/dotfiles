@@ -96,7 +96,6 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace0
 
-hide_edge_borders both 
 for_window [class="[.]*"] border 1pixel
 
 workspace $workspace1 output LVDS-1
