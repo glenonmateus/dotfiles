@@ -14,9 +14,11 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'valloric/youcompleteme'
-Plugin 'itchyny/lightline.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()            
 filetype plugin indent on    
 
@@ -54,6 +56,7 @@ let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
 let g:user_emmet_install_global = 0
 let g:user_emmet_mode='a'
+let g:airline_theme='simple'
 
 hi clear SpellBad 
 hi SpellBad cterm=underline,bold ctermfg=red 
