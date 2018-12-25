@@ -54,3 +54,4 @@ PS1+="\$(git_branch)"
 PS1+="\[$COLOR_WHITE\]\$\[$COLOR_RESET\] "
 
 export PS1
+_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
