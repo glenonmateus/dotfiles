@@ -20,7 +20,7 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
-set $image ~/Dropbox/Wallpapers/matrix.png
+set $image ~/Dropbox/Wallpapers/debian-green-1600-900.png
 set $fonte pango:Hack Nerd Font Regular 9 
 
 font $fonte
