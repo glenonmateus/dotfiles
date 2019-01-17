@@ -35,7 +35,7 @@
     },
 
     "commands": [
-        "rmdir vim/bundle/Vundle.vim && git clone git clone https://github.com/VundleVim/Vundle.vim.git -o vim/bundle/",
+        "rmdir vim/bundle/Vundle.vim && git clone https://github.com/VundleVim/Vundle.vim.git -o vim/bundle/Vundle.vim",
         "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install",
         "vim +PluginInstall +qall && ~/.vim/bundle/youcompleteme/install.py",
         "fc-cache -vf"
