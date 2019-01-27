@@ -1,5 +1,8 @@
 set $mod Mod4
 
+gaps inner 10
+gaps outer 2
+
 set $bg-color #AFD700
 set $bg-bar-color #1d1f21
 set $inactive-bg-color #383838 
