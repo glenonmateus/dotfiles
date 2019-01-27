@@ -16,7 +16,7 @@
         "xcompmgr",
         "gnome-screenshot",
         "git",
-        "terminator",
+        "xfce4-terminal",
         "dbus-x11",
         "libxslt1.1",
         "gnome-themes-standard",
@@ -30,7 +30,6 @@
         "bashrc": "~/.bashrc",
         "bash_aliases": "~/.bash_aliases",
         "bash_profile": "~/.bash_profile",
-        "terminator/config": "~/.config/terminator/config",
         "fonts": "~/.fonts"
     },
 
