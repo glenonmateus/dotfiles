@@ -2,5 +2,3 @@ auto wlp18s0
 iface wlp18s0 inet dhcp
    wpa-essid "Ransomware"
    wpa-psk "c8cd0b9907337f07cc2025233b1f3d98123080c86bb147d2a349cea99c820e54"
-#  pre-up wpa_supplicant -c /etc/network/ransomware.conf -i wlp18s0 -Dwext -B
-#  pos-down kill $(pgrep -f wpa_supplicant)
