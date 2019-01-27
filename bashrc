@@ -112,3 +112,9 @@ fi
 [ -e ~/.bash_profile ]; source ~/.bash_profile
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# VIRTUALENV
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
+source /usr/local/bin/virtualenvwrapper.sh
+
