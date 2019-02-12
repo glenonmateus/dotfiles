@@ -19,13 +19,14 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'nvie/vim-flake8'
 call vundle#end()            
 filetype plugin indent on    
 
 syntax on
 autocmd FileType latex,tex,markdown set spell spelllang=pt 
 autocmd FileType html,css EmmetInstall
-au BufNewFile, BufRead *.py set tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 autoindent expandtab fileformat=unix
+autocmd BufNewFile, BufRead *.py set tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 autoindent expandtab fileformat=unix
 
 set encoding=utf-8
 set background=dark
