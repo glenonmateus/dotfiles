@@ -23,7 +23,7 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
-set $image ~/Dropbox/Wallpapers/debian-green-1600-900.png
+set $image ~/Dropbox/Wallpapers/planet_clouds_light_star_94996_1920x1080.png
 set $fonte pango:Hack Nerd Font Regular 9 
 
 font $fonte
@@ -72,7 +72,7 @@ bindsym XF86Sleep exec systemctl suspend
 bindsym $mod+i exec x-terminal-emulator -e htop
 bindsym $mod+p exec arandr
 bindsym $mod+a exec pavucontrol
-bindsym $mod+r exec x-terminal-emulator -e ranger
+bindsym $mod+r exec thunar
 bindsym $mod+Shift+w exec x-www-browser
 bindsym $mod+Shift+v exec vlc
 
