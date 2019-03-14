@@ -10,7 +10,7 @@
         "python3-dev",
         "python-pip",
         "parcellite",
-	"ranger",
+	"thunar",
         "arandr",
         "xcompmgr",
         "gnome-screenshot",
@@ -20,7 +20,9 @@
         "libxslt1.1",
         "gnome-themes-standard",
         "pavucontrol",
-        "lxappearance"
+        "lxappearance",
+	"wicd",
+	"pasystray"
     ], 
     
     "link": {
