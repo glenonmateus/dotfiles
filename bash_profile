@@ -10,6 +10,10 @@ if [ -d "$HOME/.local/bin"  ] ; then
      PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "/opt/pycharm-community-2018.3.5/bin"  ] ; then
+     PATH="/opt/pycharm-community-2018.3.5/bin:$PATH"
+fi
+
 COLOR_RED="\033[38;5;9m"
 COLOR_YELLOW="\033[38;5;11m"
 COLOR_GREEN="\033[0;32m"
