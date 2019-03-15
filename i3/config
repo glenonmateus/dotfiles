@@ -105,7 +105,7 @@ bindsym $mod+Shift+i resize shrink height 10 px or 10 ppt
 bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
 
 for_window [class="[.]*"] floating enable
-for_window [class="Xfce4-terminal"] floating disable
+for_window [class="X-terminal-emulator"] floating disable
 for_window [class="Google-chrome"] floating disable
 
 set $mode_launcher [D]esligar [R]einiciar [S]uspender [H]ibernar
