@@ -15,7 +15,7 @@
         "xcompmgr",
         "gnome-screenshot",
         "git",
-        "xfce4-terminal",
+        "terminator",
         "dbus-x11",
         "libxslt1.1",
         "gnome-themes-standard",
