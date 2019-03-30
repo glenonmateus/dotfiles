@@ -105,7 +105,7 @@ bindsym $mod+Shift+i resize shrink height 10 px or 10 ppt
 bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
 
 for_window [class="[.]*"] floating enable
-for_window [class="X-terminal-emulator"] floating disable
+for_window [class="Xfce4-terminal"] floating disable
 for_window [class="Google-chrome"] floating disable
 
 set $mode_launcher [D]esligar [R]einiciar [S]uspender [H]ibernar
@@ -149,4 +149,5 @@ exec --no-startup-id megasync
 exec --no-startup-id parcellite
 exec --no-startup-id pasystray
 exec --no-startup-id wicd-gtk --tray
+exec --no-startup-id xfce4-power-manager
 exec --no-startup-id xrandr --output LVDS-1 --primary --right-of HDMI-1
