@@ -11,19 +11,19 @@
         "python-pip",
         "parcellite",
 	"thunar",
+	"qpdfview",
+	"mirage",
         "arandr",
         "xcompmgr",
-        "gnome-screenshot",
+        "flameshot",
         "git",
-        "xfce4-terminal",
-        "xfce4-power-manager",
+        "sakura",
         "dbus-x11",
         "libxslt1.1",
         "gnome-themes-standard",
         "pavucontrol",
         "lxappearance",
-	"wicd",
-	"pasystray"
+	"wicd"
     ], 
     
     "link": {

@@ -20,15 +20,15 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
-set $image ~/Dropbox/Wallpapers/planet_clouds_light_star_94996_1920x1080.png
+set $image ~/Dropbox/Wallpapers/agua-ao-ar-livre-aurora-boreal-1819662.png
 set $fonte pango:Hack Nerd Font Regular 9 
 
 font $fonte
 floating_modifier $mod
 
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec x-terminal-emulator -t Terminal
 bindsym $mod+q kill
-bindsym Print exec gnome-screenshot -i
+bindsym Print exec flameshot gui
 bindsym $mod+Delete exec i3lock -ef -i $image
 bindsym $mod+Shift+Delete exec i3lock -ef -i $image && systemctl suspend
 bindsym $mod+Left focus left
@@ -105,7 +105,7 @@ bindsym $mod+Shift+i resize shrink height 10 px or 10 ppt
 bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
 
 for_window [class="[.]*"] floating enable
-for_window [class="Xfce4-terminal"] floating disable
+for_window [class="X-terminal-emulator"] floating disable
 for_window [class="Google-chrome"] floating disable
 
 set $mode_launcher [D]esligar [R]einiciar [S]uspender [H]ibernar
@@ -147,7 +147,6 @@ exec xcompmgr -c -f -n
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id parcellite
-exec --no-startup-id pasystray
 exec --no-startup-id wicd-gtk --tray
-exec --no-startup-id xfce4-power-manager
 exec --no-startup-id xrandr --output LVDS-1 --primary --right-of HDMI-1
+exec --no-startup-id flameshot
