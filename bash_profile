@@ -25,3 +25,10 @@ PS1+="\[$(tput bold)\]\[$COLOR_BLUE\][\W]\[$(tput sgr0)\]" # directory
 PS1+="\[$COLOR_WHITE\]\$\[$COLOR_RESET\] "
 
 export PS1
+
+if [ $(which powerline) ]; then
+ powerline-daemon -q
+ POWERLINE_BASH_CONTINUATION=1
+ POWERLINE_BASH_SELECT=1
+ . /usr/share/powerline/bindings/bash/powerline.sh
+fi
