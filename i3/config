@@ -1,12 +1,18 @@
 set $mod Mod4
 
-set $bg-color #AFD700
+# set $bg-color #AFD700
+# set $text-color #016500
+# set $inactive-bg-color #383838 
+# set $inactive-text-color #676E7D
+# set $indicator #05C616
+
+set $bg-color #0087AF 
+set $text-color #F7FDF2
 set $bg-bar-color #1d1f21
 set $inactive-bg-color #383838 
 set $inactive-text-color #676E7D
 set $urgent-bg-color #E53935
-set $indicator #05C616
-set $text-color #016500
+set $indicator #F7FDF2
 set $dmenu-bg-color #222222
 set $dmenu-nf-color #c5c8c6
 
@@ -49,7 +55,8 @@ bindsym $mod+e layout toggle split
 bindsym $mod+space floating toggle
 bindsym --whole-window $mod+button1 floating toggle
 bindsym --whole-window $mod+button2 kill
-bindsym $mod+d exec dmenu_run -b -nb '$dmenu-bg-color' -nf '$dmenu-nf-color' -sb '$bg-color' -sf '$text-color' 
+#bindsym $mod+d exec dmenu_run -b -nb "$inactive-bg-color" -nf "$inactive-text-color" -sb "$bg-color" -sf "$text-color" 
+bindsym $mod+d exec dmenu_run -b -nb "#383838" -nf "#F7FDF2" -sb "#0087AF" -sf "#F7FDF2" 
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -105,7 +112,7 @@ bindsym $mod+Shift+i resize shrink height 10 px or 10 ppt
 bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
 
 for_window [class="[.]*"] floating enable
-for_window [class="Xfce4-terminal"] floating disable
+for_window [class="Xfce4-terminal"] floating disable, border pixel 1
 for_window [class="Google-chrome"] floating disable
 
 set $mode_launcher [D]esligar [R]einiciar [S]uspender [H]ibernar
@@ -125,7 +132,8 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
 
 bar {
-        status_command i3status -c ~/.config/i3/i3status.conf
+        # status_command i3status -c ~/.config/i3/i3status.conf
+        status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
         position top
 	separator_symbol ""
 	colors {
@@ -141,6 +149,7 @@ bar {
 
 exec setxkbmap -model abnt2 -layout br -variant abnt2
 exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[' -f 1) "libinput Tapping Enabled" 1
+exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[' -f 1) "libinput Accel Speed" 0.5
 exec dunst -conf ~/.config/i3/dunstrc
 exec feh --bg-scale $image 
 exec xcompmgr -c -f -n
