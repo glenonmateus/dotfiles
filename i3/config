@@ -60,12 +60,12 @@ bindsym $mod+d exec dmenu_run -b -nb "#383838" -nf "#F7FDF2" -sb "#0087AF" -sf "
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym $mod+Home exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym $mod+End exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym $mod+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse set Master on > /dev/null && amixer -D pulse set Master 5%+ > /dev/null
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse set Master on > /dev/null && amixer -D pulse set Master 5%- > /dev/null
+bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master off > /dev/null
+bindsym $mod+Home exec --no-startup-id amixer -D pulse set Master on > /dev/null && amixer -D pulse set Master 5%+ > /dev/null
+bindsym $mod+End exec --no-startup-id amixer -D pulse set Master on > /dev/null && amixer -D pulse set Master 5%- > /dev/null
+bindsym $mod+m exec --no-startup-id amixer -D pulse set Master off > /dev/null
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 
 bindsym XF86AudioPlay exec playerctl play
@@ -158,6 +158,6 @@ exec xcompmgr -c -f -n
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id parcellite
-exec --no-startup-id wicd-gtk --tray
+exec --no-startup-id pasystray
 exec --no-startup-id xrandr --output LVDS-1 --primary --right-of HDMI-1
 exec --no-startup-id flameshot

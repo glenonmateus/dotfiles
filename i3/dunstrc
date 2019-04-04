@@ -26,7 +26,7 @@
     separator_color = frame 
     startup_notification = false
     browser = /usr/bin/google-chrome
-    icon_position = off
+    icon_position = left
     icon_path = /usr/share/icons/Numix/16/status/:/usr/share/icons/Numix/16/devices/
     frame_width = 3
     frame_color = "#0087AF"
