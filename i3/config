@@ -62,11 +62,11 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/git/dotfiles/volume up
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/git/dotfiles/volume down
-bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master off > /dev/null
+bindsym XF86AudioMute exec --no-startup-id ~/git/dotfiles/volume mute
 
 bindsym $mod+Home exec --no-startup-id ~/git/dotfiles/volume up
 bindsym $mod+End exec --no-startup-id ~/git/dotfiles/volume down
-bindsym $mod+m exec --no-startup-id amixer -D pulse set Master off > /dev/null
+bindsym $mod+m exec --no-startup-id  ~/git/dotfiles/volume mute
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 
