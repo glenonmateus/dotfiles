@@ -160,6 +160,5 @@ exec xcompmgr -c -f -n
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id parcellite
-exec --no-startup-id pasystray
 exec --no-startup-id xrandr --output LVDS-1 --primary --right-of HDMI-1
 exec --no-startup-id flameshot
