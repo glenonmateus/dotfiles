@@ -33,6 +33,7 @@ function send_notification {
  if [ "$(is_muted)" ]; then
   ICON="$ICON_PATH/audio-volume-muted.svg"
   BAR=""
+  VOLUME=0
  fi
  ~/.local/bin/notify-send.sh "$VOLUME%"" ""$BAR" --icon=$ICON -t 2000 -r 1 
 }
