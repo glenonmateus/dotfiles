@@ -12,10 +12,12 @@
 			},
 			{
 				"function": "powerline.segments.common.sys.system_load",
-				"priority": 50
+				"priority": 50,
+				"before": " "
 			},
 			{
-				"function": "powerline.segments.common.time.date"
+				"function": "powerline.segments.common.time.date",
+				"before": " "
 			},
 			{
 				"function": "powerline.segments.common.time.date",
@@ -23,7 +25,8 @@
 				"args": {
 					"format": "%H:%M",
 					"istime": true
-				}
+				},
+				"before": " "
 			}
 		]
 	}

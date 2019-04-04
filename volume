@@ -12,7 +12,7 @@ function is_muted {
 
 function send_notification {
  VOLUME=$(get_volume)
- BAR=$(seq -s "-" $(($VOLUME/7)) | sed 's/[0-9]//g')
+ BAR=$(seq -s "-" $(($VOLUME/6)) | sed 's/[0-9]//g')
  if [ "$VOLUME" -eq 0 ]; then
   ICON="$ICON_PATH/audio-volume-low-zero.svg"
  else 
