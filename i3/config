@@ -1,10 +1,6 @@
-set $mod Mod4
+# i3 configuration file
 
-# set $bg-color #AFD700
-# set $text-color #016500
-# set $inactive-bg-color #383838 
-# set $inactive-text-color #676E7D
-# set $indicator #05C616
+set $mod Mod4
 
 set $bg-color #0087AF 
 set $text-color #F7FDF2
@@ -27,12 +23,12 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
 set $image ~/Dropbox/Wallpapers/agua-ao-ar-livre-aurora-boreal-1819662.png
-set $fonte pango:Hack Nerd Font Regular 9 
+set $fonte pango:Droid Sans Mono for Powerline 9
 
 font $fonte
 floating_modifier $mod
 
-bindsym $mod+Return exec x-terminal-emulator -t Terminal
+bindsym $mod+Return exec x-terminal-emulator
 bindsym $mod+q kill
 bindsym Print exec flameshot gui
 bindsym $mod+Delete exec i3lock -ef -i $image
@@ -55,8 +51,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+space floating toggle
 bindsym --whole-window $mod+button1 floating toggle
 bindsym --whole-window $mod+button2 kill
-#bindsym $mod+d exec dmenu_run -b -nb "$inactive-bg-color" -nf "$inactive-text-color" -sb "$bg-color" -sf "$text-color" 
-bindsym $mod+d exec dmenu_run -b -nb "#383838" -nf "#F7FDF2" -sb "#0087AF" -sf "#F7FDF2" 
+bindsym $mod+d exec dmenu_run -b -nb "#1D1F21" -nf "#F7FDF2" -sb "#0087AF" -sf "#F7FDF2" 
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -115,8 +110,8 @@ bindsym $mod+Shift+i resize shrink height 10 px or 10 ppt
 bindsym $mod+Shift+y resize grow width 10 px or 10 ppt
 
 for_window [class="[.]*"] floating enable
-for_window [class="Xfce4-terminal"] floating disable, border pixel 1
 for_window [class="Google-chrome"] floating disable
+for_window [class="XTerm"] floating disable, border pixel 1
 
 set $mode_launcher [D]esligar [R]einiciar [S]uspender [H]ibernar
 bindsym $mod+o mode "$mode_launcher"
@@ -135,7 +130,6 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
 
 bar {
-        # status_command i3status -c ~/.config/i3/i3status.conf
         status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
         position top
 	separator_symbol ""
@@ -157,6 +151,7 @@ exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[
 exec dunst -conf ~/.config/i3/dunstrc
 exec feh --bg-scale $image 
 exec xcompmgr -c -f -n
+exec xrdb ~/git/dotfiles/Xresource
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id parcellite
