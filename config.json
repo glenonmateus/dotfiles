@@ -39,6 +39,7 @@
         "rmdir vim/bundle/Vundle.vim && git clone https://github.com/VundleVim/Vundle.vim.git -o vim/bundle/Vundle.vim",
         "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install",
         "vim +PluginInstall +qall && ~/.vim/bundle/youcompleteme/install.py",
+	"git clone https://github.com/powerline/fonts.git ~/git/ && sh ~/git/fonts/install.sh",
         "fc-cache -vf"
     ]
 }
