@@ -51,7 +51,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+space floating toggle
 bindsym --whole-window $mod+button1 floating toggle
 bindsym --whole-window $mod+button2 kill
-bindsym $mod+d exec dmenu_run -b -nb "#1D1F21" -nf "#F7FDF2" -sb "#0087AF" -sf "#F7FDF2" 
+bindsym $mod+d exec rofi -show run
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 

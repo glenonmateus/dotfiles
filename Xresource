@@ -11,3 +11,4 @@ XTerm.vt100.translations: #override \n\
     Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 
 #include "/home/glenonmateus/git/dotfiles/Xresources.d/google-dark.colorscheme"
+#include "/home/glenonmateus/git/dotfiles/Xresources.d/rofi.config"
