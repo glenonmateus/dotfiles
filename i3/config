@@ -48,7 +48,7 @@ bindsym $mod+f fullscreen
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-bindsym $mod+space floating toggle
+bindsym $mod+space floating toggle, resize set 640 420, move position center
 bindsym --whole-window $mod+button1 floating toggle
 bindsym --whole-window $mod+button2 kill
 bindsym $mod+d exec rofi -show run
@@ -71,7 +71,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Sleep exec systemctl suspend
 
-bindsym $mod+i exec x-terminal-emulator -e htop
+bindsym $mod+i exec x-terminal-emulator -title htop -e htop 
 bindsym $mod+p exec arandr
 bindsym $mod+a exec pavucontrol
 bindsym $mod+r exec thunar
@@ -109,9 +109,10 @@ bindsym $mod+Shift+i resize grow height 10 px or 10 ppt
 bindsym $mod+Shift+u resize shrink height 10 px or 10 ppt
 bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
 
-for_window [class="[.]*"] floating enable
+for_window [class="[.]*"] floating enable, move position center
 for_window [class="Google-chrome"] floating disable
 for_window [class="XTerm"] floating disable, border pixel 1
+for_window [title="htop"] floating enable, move position center
 
 set $mode_launcher [D]esligar [R]einiciar [S]uspender [H]ibernar
 bindsym $mod+o mode "$mode_launcher"
