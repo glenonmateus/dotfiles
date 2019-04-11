@@ -104,10 +104,10 @@ bindsym $mod+Shift+0 move container to workspace $workspace0
 workspace $workspace1 output LVDS-1
 workspace $workspace2 output HDMI-1
 
-bindsym $mod+Shift+o resize shrink width 10 px or 10 ppt
-bindsym $mod+Shift+u resize grow height 10 px or 10 ppt
-bindsym $mod+Shift+i resize shrink height 10 px or 10 ppt
-bindsym $mod+Shift+y resize grow width 10 px or 10 ppt
+bindsym $mod+Shift+y resize shrink width 10 px or 10 ppt
+bindsym $mod+Shift+i resize grow height 10 px or 10 ppt
+bindsym $mod+Shift+u resize shrink height 10 px or 10 ppt
+bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
 
 for_window [class="[.]*"] floating enable
 for_window [class="Google-chrome"] floating disable
