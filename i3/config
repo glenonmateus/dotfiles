@@ -111,7 +111,7 @@ bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
 
 for_window [class="[.]*"] floating enable, move position center
 for_window [class="Google-chrome"] floating disable
-for_window [class="XTerm"] floating disable, border pixel 1
+for_window [class="XTerm"] floating disable, border pixel 2
 for_window [title="htop"] floating enable, move position center
 
 set $mode_launcher [D]esligar [R]einiciar [S]uspender [H]ibernar
