@@ -1,7 +1,11 @@
 # i3 configuration file
 
-set $mod Mod4
+client.focused          $bg-color           $bg-color          $text-color           $indicator
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
 
+set $mod Mod4
 set $bg-color #0087AF 
 set $text-color #F7FDF2
 set $bg-bar-color #1d1f21
@@ -11,6 +15,24 @@ set $urgent-bg-color #E53935
 set $indicator #F7FDF2
 set $dmenu-bg-color #222222
 set $dmenu-nf-color #c5c8c6
+set $default_windowsize 800 600
+set $default_bordersize 2
+
+gaps inner 5
+gaps outer 5
+
+default_border pixel 2
+for_window [class="Thunar"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+for_window [class="Arandr"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+
+# for_window [class="[.]*"] border pixel 2
+# for_window [class="[.]*"] floating enable, move position center, border pixel 2
+# for_window [class="Google-chrome"] floating disable
+# for_window [class="XTerm"] floating disable, border pixel 2
+# for_window [title="htop"] floating enable, move position center
 
 set $workspace1 "1"  
 set $workspace2 "2"
@@ -22,62 +44,67 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
-set $image ~/Dropbox/Wallpapers/agua-ao-ar-livre-aurora-boreal-1819662.png
+set $image ~/Dropbox/Wallpapers/greg-rakozy-38802-unsplash.png
 set $fonte pango:Droid Sans Mono for Powerline 9
 
 font $fonte
 floating_modifier $mod
 
-bindsym $mod+Return exec x-terminal-emulator
+# Basics Controll
 bindsym $mod+q kill
-bindsym Print exec flameshot gui
-bindsym $mod+Delete exec i3lock -ef -i $image
-bindsym $mod+Shift+Delete exec i3lock -ef -i $image && systemctl suspend
+bindsym $mod+Delete exec i3lock -ef -c "#000000"
+bindsym $mod+Shift+Delete exec i3lock -ef -c "#000000" && systemctl suspend
+
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-bindsym $mod+h split h
-bindsym $mod+v split v
+
+bindsym $mod+t split t
 bindsym $mod+Shift+a focus parent
 bindsym $mod+f fullscreen
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-bindsym $mod+space floating toggle, resize set 640 420, move position center
+bindsym $mod+space floating toggle, resize set $default_windowsize, move position center
 bindsym --whole-window $mod+button1 floating toggle
 bindsym --whole-window $mod+button2 kill
-bindsym $mod+d exec rofi -show run
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# Media Controll
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/git/dotfiles/volume up
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/git/dotfiles/volume down
 bindsym XF86AudioMute exec --no-startup-id ~/git/dotfiles/volume mute
+bindsym $mod+Prior exec --no-startup-id ~/git/dotfiles/volume up
+bindsym $mod+Next exec --no-startup-id ~/git/dotfiles/volume down
+bindsym $mod+End exec --no-startup-id  ~/git/dotfiles/volume mute
+bindsym $mod+a exec pavucontrol
 
-bindsym $mod+Home exec --no-startup-id ~/git/dotfiles/volume up
-bindsym $mod+End exec --no-startup-id ~/git/dotfiles/volume down
-bindsym $mod+m exec --no-startup-id  ~/git/dotfiles/volume mute
-
+# Backlight Controll
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86Sleep exec systemctl suspend
 
+# Run Application Binds
+bindsym $mod+Return exec x-terminal-emulator
 bindsym $mod+i exec x-terminal-emulator -title htop -e htop 
 bindsym $mod+p exec arandr
-bindsym $mod+a exec pavucontrol
 bindsym $mod+r exec thunar
 bindsym $mod+Shift+w exec x-www-browser
 bindsym $mod+Shift+v exec vlc
+bindsym Print exec flameshot gui
+bindsym $mod+d exec rofi -show run
 
+# Workspaces Controll
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+1 workspace $workspace1
@@ -100,19 +127,14 @@ bindsym $mod+Shift+7 move container to workspace $workspace7
 bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace0
-
 workspace $workspace1 output LVDS-1
 workspace $workspace2 output HDMI-1
 
+# Resize Controll
 bindsym $mod+Shift+y resize shrink width 10 px or 10 ppt
+bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
 bindsym $mod+Shift+i resize grow height 10 px or 10 ppt
 bindsym $mod+Shift+u resize shrink height 10 px or 10 ppt
-bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
-
-for_window [class="[.]*"] floating enable, move position center
-for_window [class="Google-chrome"] floating disable
-for_window [class="XTerm"] floating disable, border pixel 2
-for_window [title="htop"] floating enable, move position center
 
 set $mode_launcher [D]esligar [R]einiciar [S]uspender [H]ibernar
 bindsym $mod+o mode "$mode_launcher"
@@ -124,11 +146,6 @@ mode "$mode_launcher" {
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
-
-client.focused          $bg-color           $bg-color          $text-color           $indicator
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
 
 bar {
         status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
@@ -146,9 +163,12 @@ bar {
 	}
 }
 
+# Setup Input
 exec setxkbmap -model abnt2 -layout br -variant abnt2
 exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[' -f 1) "libinput Tapping Enabled" 1
 exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[' -f 1) "libinput Accel Speed" 0.5
+
+# Autostart
 exec dunst -conf ~/.config/i3/dunstrc
 exec feh --bg-scale $image 
 exec xcompmgr -c -f -n
@@ -156,5 +176,5 @@ exec xrdb ~/git/dotfiles/Xresource
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id parcellite
-exec --no-startup-id xrandr --output LVDS-1 --primary --right-of HDMI-1
 exec --no-startup-id flameshot
+exec --no-startup-id xrandr --output LVDS-1 --primary --right-of HDMI-1
