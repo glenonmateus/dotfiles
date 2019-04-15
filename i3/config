@@ -1,10 +1,5 @@
 # i3 configuration file
 
-client.focused          $bg-color           $bg-color          $text-color           $indicator
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
-
 set $mod Mod4
 set $bg-color #0087AF 
 set $text-color #F7FDF2
@@ -18,6 +13,11 @@ set $dmenu-nf-color #c5c8c6
 set $default_windowsize 800 600
 set $default_bordersize 2
 
+client.focused          $bg-color           $bg-color          $text-color           $indicator
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
+
 gaps inner 5
 gaps outer 5
 
@@ -25,6 +25,7 @@ default_border pixel 2
 for_window [class="Thunar"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [class="Arandr"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+for_window [title="htop"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 
@@ -96,7 +97,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 # Run Application Binds
 bindsym $mod+Return exec x-terminal-emulator
-bindsym $mod+i exec x-terminal-emulator -title htop -e htop 
+bindsym $mod+i exec x-terminal-emulator -t htop -e htop 
 bindsym $mod+p exec arandr
 bindsym $mod+r exec thunar
 bindsym $mod+Shift+w exec x-www-browser
@@ -172,7 +173,7 @@ exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[
 exec dunst -conf ~/.config/i3/dunstrc
 exec feh --bg-scale $image 
 exec xcompmgr -c -f -n
-exec xrdb ~/git/dotfiles/Xresource
+exec xrdb ~/git/dotfiles/Xresources
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id parcellite

@@ -18,27 +18,30 @@
         "xcompmgr",
         "flameshot",
         "git",
-        "xterm",
+        "tilix",
+        "zsh",
         "dbus-x11",
         "libxslt1.1",
         "gnome-themes-standard",
         "pavucontrol",
-        "lxappearance",
-	"wicd"
+        "lxappearance"
     ], 
     
     "link": {
         "i3": "~/.config/i3",
         "vim": "~/.vim",
-        "bashrc": "~/.bashrc",
-        "bash_aliases": "~/.bash_aliases",
-        "bash_profile": "~/.bash_profile",
-        "fonts": "~/.fonts"
+        "fonts": "~/.fonts",
+	"zshrc": "~/.zshrc"
     },
 
     "commands": [
-        "rmdir vim/bundle/Vundle.vim && git clone https://github.com/VundleVim/Vundle.vim.git -o vim/bundle/Vundle.vim",
+     	"sudo usermod --shell $(which zsh) $USER",
+	"curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh",
+	"git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
+	"git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions",
+	"git clone https://github.com/bhilburn/powerlevel9k.git $ZSH_CUSTOM/themes/powerlevel9k",
         "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install",
+        "rmdir vim/bundle/Vundle.vim && git clone https://github.com/VundleVim/Vundle.vim.git -o vim/bundle/Vundle.vim",
         "vim +PluginInstall +qall && ~/.vim/bundle/youcompleteme/install.py",
 	"git clone https://github.com/powerline/fonts.git ~/git/ && sh ~/git/fonts/install.sh",
         "fc-cache -vf"

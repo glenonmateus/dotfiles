@@ -11,7 +11,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs status root_indicator background_jobs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vcs status root_indicator background_jobs)
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -110,3 +110,11 @@ alias apt-update="sudo apt update"
 alias apt-upgrade="sudo apt upgrade --auto-remove -y"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte-2.91.sh
+fi
+
+# VIRTUALENV
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source ~/.local/bin/virtualenvwrapper.sh
