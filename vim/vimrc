@@ -5,26 +5,18 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'lervag/vimtex'
 Plugin 'myusuf3/numbers.vim'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'valloric/youcompleteme'
-Plugin 'mattn/emmet-vim'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'nvie/vim-flake8'
 call vundle#end()            
 filetype plugin indent on    
 
 syntax on
 autocmd FileType latex,tex,markdown set spell spelllang=pt 
-autocmd BufNewFile, BufRead *.html, *.css EmmetInstall set tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile, BufRead *.py set tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79 autoindent expandtab fileformat=unix
 
 set encoding=utf-8
@@ -49,13 +41,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:vimtex_compiler_latexmk = {'callback' : 0}
 let g:tex_flavor='latex'
-let vim_markdown_preview_github=1
-let g:vim_markdown_folding_disabled = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
-let g:user_emmet_install_global = 0
-let g:user_emmet_mode='a'
 let g:airline_theme='powerlineish'
 let g:airline#extensions#tabline#enabled = 1
 let python_highlight_all = 1
