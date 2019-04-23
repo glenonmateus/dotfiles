@@ -1,7 +1,8 @@
 {
    "install_cmd": "sudo apt install -y",
     "install": [
-        "i3",
+        "i3-wm",
+        "i3lock",
         "feh",
         "vim-gtk",
         "cmake",
@@ -10,7 +11,8 @@
         "python3-dev",
         "python-pip",
         "parcellite",
-	"thunar",
+        "powerline",
+	"ranger",
 	"qpdfview",
 	"rofi",
 	"dunst",
