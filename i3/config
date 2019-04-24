@@ -25,8 +25,8 @@ default_border pixel 2
 for_window [class="Pomello"] floating enable, resize set 230 56, move position center, border pixel $default_bordersize
 for_window [class="Arandr"] floating enable, resize set 348 249, move position center, border pixel $default_bordersize
 for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
-for_window [title="htop"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
-for_window [title="ranger"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+for_window [title="^htop$" class="Tilix"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+for_window [title="^ranger$" class="Tilix"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 
@@ -128,10 +128,10 @@ workspace $workspace1 output LVDS-1
 workspace $workspace2 output HDMI-1
 
 # Resize Controll
-bindsym $mod+Shift+y resize shrink width 10 px or 10 ppt
-bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
-bindsym $mod+Shift+i resize grow height 10 px or 10 ppt
-bindsym $mod+Shift+u resize shrink height 10 px or 10 ppt
+bindsym $mod+Shift+y resize shrink width 10 px
+bindsym $mod+Shift+o resize grow width 10 px
+bindsym $mod+Shift+i resize grow height 10 px
+bindsym $mod+Shift+u resize shrink height 10 px
 
 set $mode_launcher [D]esligar [R]einiciar [S]uspender [H]ibernar
 bindsym $mod+o mode "$mode_launcher"
