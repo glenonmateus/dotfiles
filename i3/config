@@ -23,18 +23,12 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 default_border pixel 2
 for_window [class="Pomello"] floating enable, resize set 230 56, move position center, border pixel $default_bordersize
-for_window [class="Thunar"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
-for_window [class="Arandr"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+for_window [class="Arandr"] floating enable, resize set 348 249, move position center, border pixel $default_bordersize
 for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [title="htop"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+for_window [title="ranger"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
-
-# for_window [class="[.]*"] border pixel 2
-# for_window [class="[.]*"] floating enable, move position center, border pixel 2
-# for_window [class="Google-chrome"] floating disable
-# for_window [class="XTerm"] floating disable, border pixel 2
-# for_window [title="htop"] floating enable, move position center
 
 set $workspace1 "1"  
 set $workspace2 "2"
@@ -99,9 +93,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 # Run Application Binds
 bindsym $mod+Return exec x-terminal-emulator
-bindsym $mod+i exec x-terminal-emulator -t htop -e htop 
+bindsym $mod+i exec tilix -t htop -e htop
 bindsym $mod+p exec arandr
-bindsym $mod+r exec thunar
+bindsym $mod+r exec tilix -t ranger -e ranger
 bindsym $mod+Shift+w exec x-www-browser
 bindsym $mod+Shift+v exec vlc
 bindsym Print exec flameshot gui
