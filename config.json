@@ -12,6 +12,7 @@
         "python-pip",
         "parcellite",
         "powerline",
+        "powerline-gitstatus",
 	"ranger",
 	"qpdfview",
 	"rofi",
