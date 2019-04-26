@@ -25,8 +25,8 @@ default_border pixel 2
 for_window [class="Pomello"] floating enable, resize set 230 56, move position center, border pixel $default_bordersize
 for_window [class="Arandr"] floating enable, resize set 348 249, move position center, border pixel $default_bordersize
 for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
-for_window [title="^htop$" class="Tilix"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
-for_window [title="^ranger$" class="Tilix"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+for_window [title="^htop$"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
+for_window [title="^ranger$"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 
@@ -93,9 +93,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 # Run Application Binds
 bindsym $mod+Return exec x-terminal-emulator
-bindsym $mod+i exec tilix -t htop -e htop
+bindsym $mod+i exec x-terminal-emulator -T htop -e htop
 bindsym $mod+p exec arandr
-bindsym $mod+r exec tilix -t ranger -e ranger
+bindsym $mod+r exec x-terminal-emulator -T ranger -e ranger
 bindsym $mod+Shift+w exec x-www-browser
 bindsym $mod+Shift+v exec vlc
 bindsym Print exec flameshot gui
@@ -169,7 +169,7 @@ exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[
 exec dunst -conf ~/.config/i3/dunstrc
 exec feh --bg-scale $image 
 exec xcompmgr -c -f -n
-exec xrdb ~/git/dotfiles/Xresources
+exec xrdb ~/.Xresources
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id parcellite
