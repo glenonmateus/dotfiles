@@ -22,7 +22,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 #gaps outer 5
 
 default_border pixel 2
-for_window [class="Pomello"] floating enable, resize set 230 56, move position center, border pixel $default_bordersize
+for_window [class="Pomello"] floating enable, resize set 230 56, move position 1133 23, border pixel $default_bordersize
 for_window [class="Arandr"] floating enable, resize set 348 249, move position center, border pixel $default_bordersize
 for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [title="^htop$"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
