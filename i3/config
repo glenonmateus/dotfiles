@@ -95,7 +95,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 bindsym $mod+Return exec x-terminal-emulator
 bindsym $mod+i exec x-terminal-emulator -T htop -e htop
 bindsym $mod+p exec arandr
-bindsym $mod+r exec x-terminal-emulator -T ranger -e ranger
+bindsym $mod+r exec x-terminal-emulator -T ranger -e ranger -r ~/.config/ranger
 bindsym $mod+Shift+w exec x-www-browser
 bindsym $mod+Shift+v exec vlc
 bindsym Print exec flameshot gui
