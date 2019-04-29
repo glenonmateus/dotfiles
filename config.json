@@ -25,7 +25,8 @@
         "xterm",
         "dbus-x11",
         "libxslt1.1",
-        "gnome-themes-standard",
+        "lightdm",
+        "lightdm-gtk-greeter-settings",
         "pavucontrol",
         "lxappearance"
     ], 
