@@ -22,12 +22,13 @@
         "xcompmgr",
         "flameshot",
         "git",
-        "xterm",
+        "terminator",
         "dbus-x11",
         "libxslt1.1",
         "lightdm",
         "lightdm-gtk-greeter-settings",
         "pavucontrol",
+        "zshrc",
         "lxappearance"
     ], 
     
@@ -35,14 +36,16 @@
         "i3": "~/.config/i3",
         "vim": "~/.vim",
         "fonts": "~/.fonts",
-	"bashrc": "~/.bashrc",
-	"bash_aliases": "~/.bash_aliases",
-	"bash_profile": "~/.bash_profile",
-	"Xresources": "~/.Xresources"
+	"zshrc": "~/.zshrc",
+	"Xresources": "~/.Xresources",
+	"terminator": "~/.config/terminator"
     },
 
     "commands": [
-        "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install",
+     	"rm -rf ~/.oh-my-zsh &&s sh -c '$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)'",
+	"git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions",
+	"git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
+     	"git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install",
         "rmdir vim/bundle/Vundle.vim && git clone https://github.com/VundleVim/Vundle.vim.git -o vim/bundle/Vundle.vim",
         "vim +PluginInstall +qall && ~/.vim/bundle/youcompleteme/install.py",
 	"git clone https://github.com/powerline/fonts.git ~/git/ && sh ~/git/fonts/install.sh",
