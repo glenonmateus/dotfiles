@@ -3,6 +3,7 @@
     "install": [
         "i3-wm",
         "i3lock",
+        "i3status",
         "feh",
         "vim-gtk",
         "cmake",
@@ -11,8 +12,6 @@
         "python3-dev",
         "python-pip",
         "parcellite",
-        "powerline",
-        "powerline-gitstatus",
 	"ranger",
 	"qpdfview",
 	"rofi",
