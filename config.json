@@ -3,7 +3,7 @@
     "install": [
         "i3-wm",
         "i3lock",
-        "i3status",
+        "py3status",
         "feh",
         "vim-gtk",
         "cmake",
@@ -42,6 +42,7 @@
     },
 
     "commands": [
+     	"git clone https://github.com/Airblader/i3.git ~/git/i3-gaps",
      	"git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install",
         "rmdir vim/bundle/Vundle.vim && git clone https://github.com/VundleVim/Vundle.vim.git -o vim/bundle/Vundle.vim",
         "vim +PluginInstall +qall && ~/.vim/bundle/youcompleteme/install.py",

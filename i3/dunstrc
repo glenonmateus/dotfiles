@@ -11,10 +11,10 @@
     timeout = 5
     ignore_newline = no
     frame_width = 2
-    frame_color = "#0087AF"
+    frame_color = "#3bc5db"
     geometry = "250x5-0+20"
     shrink = no
-    transparency = 0
+    transparency = 20
     idle_threshold = 0
     monitor = 0
     follow = mouse
