@@ -1,15 +1,16 @@
 # i3 configuration file
 
+gaps inner 3
+gaps outer 3
+
 set $mod Mod4
-set $bg-color #0087AF 
-set $text-color #F7FDF2
-set $bg-bar-color #1d1f21
-set $inactive-bg-color #383838 
-set $inactive-text-color #676E7D
-set $urgent-bg-color #E53935
+set $bg-color #3bc5db99
+set $text-color #edf1f2
+set $bg-bar-color #1d1f2199
+set $inactive-bg-color #38383899
+set $inactive-text-color #676E7D99
+set $urgent-bg-color #E5393599
 set $indicator #F7FDF2
-set $dmenu-bg-color #222222
-set $dmenu-nf-color #c5c8c6
 set $default_windowsize 800 600
 set $default_bordersize 2
 
@@ -18,10 +19,7 @@ client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
 
-#gaps inner 5
-#gaps outer 5
-
-default_border pixel 2
+default_border pixel $default_bordersize
 for_window [class="Pomello"] floating enable, resize set 230 56, move position 1133 23, border pixel $default_bordersize
 for_window [class="Arandr"] floating enable, resize set 348 249, move position center, border pixel $default_bordersize
 for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
@@ -29,7 +27,6 @@ for_window [title="^htop$"] floating enable, resize set $default_windowsize, mov
 for_window [title="^ranger$"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
-for_window [class="Wicd-client.py"] floating enable, resize set $default_windowsize, move position center, border pixel $default_bordersize
 
 set $workspace1 "1"  
 set $workspace2 "2"
@@ -146,13 +143,13 @@ mode "$mode_launcher" {
 }
 
 bar {
-        status_command i3status -c ~/.config/i3/i3status.conf
+        status_command py3status -c ~/.config/i3/i3status.conf
+	i3bar_command i3bar -t
 	position top
-	separator_symbol ""
 	colors {
 	     background $bg-bar-color
-	     statusline #C5C8C6 
-	     separator #757575
+	     statusline #C5C8C699
+	     separator #75757599
 	     #                  border             background         text
 	     focused_workspace  $bg-color          $bg-color          $text-color
 	     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
