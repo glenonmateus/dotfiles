@@ -38,7 +38,7 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
-set $image ~/Dropbox/Wallpapers/greg-rakozy-38802-unsplash.png
+set $image ~/Dropbox/Wallpapers/adam-kool-11868-unsplash.jpg
 set $fonte pango:Droid Sans Mono for Powerline 9
 
 font $fonte
@@ -145,6 +145,7 @@ mode "$mode_launcher" {
 bar {
         status_command py3status -c ~/.config/i3/i3status.conf
 	i3bar_command i3bar -t
+	tray_output none
 	position top
 	colors {
 	     background $bg-bar-color
@@ -172,5 +173,4 @@ exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id parcellite
 exec --no-startup-id flameshot
-exec --no-startup-id wicd-gtk -t
 exec --no-startup-id xrandr --output LVDS-1 --primary --right-of HDMI-1
