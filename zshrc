@@ -9,10 +9,9 @@ export ZSH=/home/glenonmateus/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir dir_writable)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vcs status root_indicator background_jobs)
-
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir dir_writable virtualenv vcs root_indicator background_jobs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_PROMPT_ON_NEWLINE="true"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random

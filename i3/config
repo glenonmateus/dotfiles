@@ -144,7 +144,8 @@ mode "$mode_launcher" {
 }
 
 bar {
-        status_command py3status -c ~/.config/i3/i3status.conf
+        # status_command py3status -c ~/.config/i3/i3status.conf
+        status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
 	# i3bar_command i3bar -t
 	tray_output none
 	position top
@@ -168,7 +169,7 @@ exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[
 # Autostart
 exec dunst -conf ~/.config/i3/dunstrc
 exec feh --bg-scale $image 
-exec xcompmgr -c -f -n
+# exec xcompmgr -c -f -n
 exec xrdb ~/.Xresources
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
