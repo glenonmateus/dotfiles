@@ -34,9 +34,7 @@
         "i3": "~/.config/i3",
         "vim": "~/.vim",
         "fonts": "~/.fonts",
-	"bashrc": "~/.bashrc",
-	"bash_profile": "~/.bash_profile",
-	"bash_aliases": "~/.bash_aliases",
+	"zshrc": "~/.zshrc",
 	"Xresources": "~/.Xresources",
 	"terminator": "~/.config/terminator"
     },

@@ -6,7 +6,7 @@
 set $mod Mod4
 set $bg-color #3bc5db99
 set $text-color #edf1f2
-set $bg-bar-color #1d1f2199
+set $bg-bar-color #383C4A99
 set $inactive-bg-color #38383899
 set $inactive-text-color #676E7D99
 set $urgent-bg-color #E5393599
@@ -19,7 +19,7 @@ client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color  $indicator
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color           $indicator
 
-# default_border pixel $default_bordersize
+default_border pixel $default_bordersize
 for_window [class="Pomello"] floating enable, resize set 230 56, move position 1133 23
 for_window [class="Arandr"] floating enable, resize set 348 249, move position center
 for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center
@@ -144,10 +144,7 @@ mode "$mode_launcher" {
 }
 
 bar {
-        # status_command py3status -c ~/.config/i3/i3status.conf
-        status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
-	# i3bar_command i3bar -t
-	tray_output none
+        status_command py3status -c ~/.config/i3/i3status.conf
 	position top
 	colors {
 	     background $bg-bar-color
@@ -169,7 +166,7 @@ exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[
 # Autostart
 exec dunst -conf ~/.config/i3/dunstrc
 exec feh --bg-scale $image 
-# exec xcompmgr -c -f -n
+exec xcompmgr -c -f -n
 exec xrdb ~/.Xresources
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
