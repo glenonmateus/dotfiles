@@ -117,3 +117,6 @@ fi
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source ~/.local/bin/virtualenvwrapper.sh
+
+# Docker Machine
+source /etc/bash_completion.d/docker-machine-prompt.bash
