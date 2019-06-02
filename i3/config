@@ -4,12 +4,12 @@
 # gaps outer 3
 
 set $mod Mod4
-set $bg-color #3bc5db99
+set $bg-color #3bc5db
 set $text-color #edf1f2
-set $bg-bar-color #383C4A99
-set $inactive-bg-color #38383899
-set $inactive-text-color #676E7D99
-set $urgent-bg-color #E5393599
+set $bg-bar-color #383C4A
+set $inactive-bg-color #383838
+set $inactive-text-color #676E7D
+set $urgent-bg-color #E53935
 set $indicator #F7FDF2
 set $default_windowsize 800 600
 set $default_bordersize 2
@@ -39,7 +39,7 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
-set $image ~/Dropbox/Wallpapers/adam-kool-11868-unsplash.jpg
+set $image ~/Dropbox/Wallpapers/aperture-vintage-346923-unsplash.jpg
 set $fonte pango:Droid Sans Mono for Powerline 9
 
 font $fonte
@@ -143,21 +143,23 @@ mode "$mode_launcher" {
     bindsym Return mode "default"
 }
 
-bar {
-        #status_command py3status -c ~/.config/i3/i3status.conf
-        status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
-	position top
-	colors {
-	     background $bg-bar-color
-	     statusline #C5C8C699
-	     separator #75757599
-	     #                  border             background         text
-	     focused_workspace  $bg-color          $bg-color          $text-color
-	     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-	     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-             binding_mode       $bg-color          $bg-color          $text-color
-	}
-}
+#bar {
+#        #status_command py3status -c ~/.config/i3/i3status.conf
+#        status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
+#	position top
+#	colors {
+#	     background $bg-bar-color
+#	     statusline #C5C8C699
+#	     separator #75757599
+#	     #                  border             background         text
+#	     focused_workspace  $bg-color          $bg-color          $text-color
+#	     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#	     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#             binding_mode       $bg-color          $bg-color          $text-color
+#	}
+#}
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Setup Input
 exec setxkbmap -model abnt2 -layout br -variant abnt2
