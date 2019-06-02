@@ -78,12 +78,12 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Media Controll
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/git/dotfiles/volume up
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/git/dotfiles/volume down
-bindsym XF86AudioMute exec --no-startup-id ~/git/dotfiles/volume mute
-bindsym $mod+Prior exec --no-startup-id ~/git/dotfiles/volume up
-bindsym $mod+Next exec --no-startup-id ~/git/dotfiles/volume down
-bindsym $mod+End exec --no-startup-id  ~/git/dotfiles/volume mute
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse set Master 5%+ -q
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse set Master 5%- -q
+bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1- toggle -q
+bindsym $mod+Prior exec --no-startup-id amixer -D pulse set Master 5%+ -q
+bindsym $mod+Next exec --no-startup-id amixer -D pulse set Master 5%- -q
+bindsym $mod+End exec --no-startup-id amixer -D pulse set Master 1- toggle -q
 bindsym $mod+a exec pavucontrol
 
 # Backlight Controll
