@@ -36,7 +36,7 @@ height = 23
 fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
-line-size = 2
+line-size = 4
 padding-left = 1
 padding-right = 1
 module-margin-left = 1
@@ -44,10 +44,10 @@ module-margin-right = 1
 font-0 = Droid Sans Mono for Powerline:pixelsize=8;0
 font-1 = FontAwesome:style=Regular:pixelsize=8:0
 font-2 = siji:pixelsize=8;1
-modules-left = i3
-modules-right = wlan date powermenu 
-;tray-position = right
-tray-padding = 2
+modules-left = powermenu i3
+modules-right = wlan date 
+tray-position = right
+tray-padding = 1
 cursor-click = pointer
 cursor-scroll = ns-resize
 
@@ -69,6 +69,24 @@ modules-left = cpu memory
 modules-right = xbacklight pulseaudio
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+format-spacing = 1
+label-open = 
+label-open-foreground = ${colors.foreground}
+label-close = 
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = desligar
+menu-0-0-exec = systemctl poweroff
+menu-0-1 = reiniciar
+menu-0-1-exec = systemctl reboot
+menu-0-2 = suspender
+menu-0-2-exec = systemctl suspend
 
 [module/xwindow]
 type = internal/xwindow
@@ -168,10 +186,12 @@ type = internal/network
 interface = wlan0
 interval = 3.0
 format-connected = <ramp-signal> <label-connected>
-label-connected = %signal%% %local_ip%
+label-connected = %local_ip%
+format-connected-underline = ${colors.bar-foreground-0}
 label-connected-foreground = ${colors.bar-foreground-0}
 format-disconnected = <label-disconnected>
 label-disconnected = %ifname% disconnected
+format-disconnected-underline = ${colors.bar-foreground-3}
 label-disconnected-foreground = ${colors.bar-foreground-3}
 ramp-signal-0 = 
 ramp-signal-foreground = ${colors.bar-foreground-0}

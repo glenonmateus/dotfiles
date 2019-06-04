@@ -36,11 +36,11 @@
     close = ctrl+space
     close_all = ctrl+shift+space
 [urgency_low]
-    background = "#1d1d1f"
+    background = "#383C4A"
     foreground = "#c5c8c6"
     timeout = 5
 [urgency_normal]
-    background = "#1d1d1f"
+    background = "#383C4A"
     foreground = "#c5c8c6"
     timeout = 5
 [urgency_critical]
