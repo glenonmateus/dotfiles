@@ -28,6 +28,7 @@ for_window [title="^ranger$"] floating enable, resize set $default_windowsize, m
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center
 for_window [class="X-terminal-emulator"] border pixel $default_bordersize
+for_window [window_type="dialog"] border pixel $default_bordersize, move position center
 
 set $workspace1 "1"  
 set $workspace2 "2"
