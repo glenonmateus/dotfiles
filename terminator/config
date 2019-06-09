@@ -54,7 +54,7 @@
     background_darkness = 0.95
     background_type = transparent
     cursor_color = "#c5c8c6"
-    font = Operator Mono Semi-Light 10
+    font = Droid Sans Mono for Powerline 10
     foreground_color = "#c5c8c6"
     show_titlebar = False
     scrollbar_position = hidden

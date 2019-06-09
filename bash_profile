@@ -32,3 +32,11 @@ if [ $(which powerline) ]; then
  POWERLINE_BASH_SELECT=1
  . /usr/share/powerline/bindings/bash/powerline.sh
 fi
+
+# VIRTUALENV
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source ~/.local/bin/virtualenvwrapper.sh
+
+# Docker Machine
+source /etc/bash_completion.d/docker-machine-prompt.bash
