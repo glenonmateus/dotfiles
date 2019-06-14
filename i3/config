@@ -1,8 +1,5 @@
 # i3 configuration file
 
-# gaps inner 3
-# gaps outer 3
-
 set $mod Mod4
 set $bg-color #3bc5db
 set $text-color #edf1f2
@@ -24,7 +21,7 @@ for_window [class="Pomello"] floating enable, resize set 230 56, move position 1
 for_window [class="Arandr"] floating enable, resize set 348 249, move position center
 for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center
 for_window [title="^htop$"] floating enable, resize set $default_windowsize, move position center
-for_window [title="^ranger$"] floating enable, resize set $default_windowsize, move position center
+for_window [class="^Pcmanfm$"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center
 for_window [class="X-terminal-emulator"] border pixel $default_bordersize
@@ -95,7 +92,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym $mod+Return exec x-terminal-emulator
 bindsym $mod+i exec x-terminal-emulator -T htop -e htop
 bindsym $mod+p exec arandr
-bindsym $mod+r exec x-terminal-emulator -T ranger -e ranger -r ~/.config/ranger
+bindsym $mod+r exec pcmanfm
 bindsym $mod+Shift+w exec x-www-browser
 bindsym $mod+Shift+v exec vlc
 bindsym Print exec flameshot gui
