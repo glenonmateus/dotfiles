@@ -110,6 +110,9 @@ alias apt-update="sudo apt update"
 alias apt-upgrade="sudo apt upgrade --auto-remove -y"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+
 
 # VIRTUALENV
 if [ -f ~/.local/bin/virtualenvwrapper.sh ]; then
