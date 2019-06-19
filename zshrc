@@ -112,16 +112,13 @@ alias apt-upgrade="sudo apt upgrade --auto-remove -y"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # VIRTUALENV
+if [ -f ~/.local/bin/virtualenvwrapper.sh ]; then
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source ~/.local/bin/virtualenvwrapper.sh
+fi
 
 # PATH
 if [ -d "$HOME/.local/bin" ]; then
  PATH="$HOME/.local/bin:$PATH"
-fi
-
-# Tilix
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte-2.91.sh
 fi
