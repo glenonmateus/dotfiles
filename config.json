@@ -36,7 +36,6 @@
         "fonts": "~/.fonts",
 	"zshrc": "~/.zshrc",
 	"Xresources": "~/.Xresources",
-	"ranger": "~/.config/ranger",
 	"terminator": "~/.config/terminator"
     },
 
