@@ -30,6 +30,11 @@ bar-foreground-2 = #f5a70a
 bar-foreground-3 = #ff5555
 bar-empty-foreground = #444444
 
+[fonts]
+font0 = DejaVu Sans Mono for Powerline:style=bold:pixelsize=9
+font1 = FontAwesome:style=Regular:pixelsize=9
+font2 = siji:pixelsize=8
+
 [bar/topbar]
 width = 100%
 height = 23
@@ -41,9 +46,9 @@ padding-left = 1
 padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
-font-0 = Droid Sans Mono for Powerline:pixelsize=9;0
-font-1 = FontAwesome:style=Regular:pixelsize=9:0
-font-2 = siji:pixelsize=8;1
+font-0 = ${fonts.font0}
+font-1 = ${fonts.font1}
+font-2 = ${fonts.font2}
 modules-left = powermenu i3
 modules-right = wlan date 
 tray-position = right
@@ -63,9 +68,9 @@ padding-left = 1
 padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
-font-0 = Droid Sans Mono for Powerline:pixelsize=9;0
-font-1 = FontAwesome:style=Regular:pixelsize=9:0
-font-2 = siji:pixelsize=8;1
+font-0 = ${fonts.font0}
+font-1 = ${fonts.font1}
+font-2 = ${fonts.font2}
 modules-left = cpu memory
 modules-right = xbacklight pulseaudio
 cursor-click = pointer
