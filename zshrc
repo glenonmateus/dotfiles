@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
- export TERM="xterm-256color"
+export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
+export TERM="xterm-256color"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/glenonmateus/.oh-my-zsh
 
@@ -11,8 +12,6 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir dir_writable virtualenv root_indicator background_jobs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs)
-#POWERLEVEL9K_PROMPT_ON_NEWLINE="true"
-#POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 
 # Set list of themes to load
@@ -68,6 +67,11 @@ plugins=(
   git
   docker
   docker-compose
+  docker-machine
+  kubectl
+  minikube
+  sudo
+  systemd
   zsh-syntax-highlighting
   zsh-autosuggestions
   bgnotify
@@ -76,7 +80,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 export LC_CTYPE=$LANG
-export PAGER=most
+[ -f $(which most) ] && export PAGER=most
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -94,10 +99,6 @@ export PAGER=most
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-HOSTNAME=$(hostname)
-export SSH_KEY_PATH="~/.ssh/$HOSTNAME"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -111,18 +112,14 @@ alias apt-update="sudo apt update"
 alias apt-upgrade="sudo apt upgrade --auto-remove -y"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Arch fzf configuration
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 
-
 # VIRTUALENV
-if [ -f ~/.local/bin/virtualenvwrapper.sh ]; then
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh
-fi
-
-# PATH
-if [ -d "$HOME/.local/bin" ]; then
- PATH="$HOME/.local/bin:$PATH"
+if [ -f "$(which virtualenvwrapper.sh)" ]; then
+ export WORKON_HOME=$HOME/.virtualenvs
+ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+ source $(which virtualenvwrapper.sh)
 fi
