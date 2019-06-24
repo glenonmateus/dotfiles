@@ -118,20 +118,8 @@ alias apt-upgrade="sudo apt upgrade --auto-remove -y"
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 
 # VIRTUALENV
-<<<<<<< HEAD
-if [ $(which virtualenv) ]; then
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source $(which virtualenvwrapper.sh)
-fi
-
-# PATH
-if [ -d "$HOME/.local/bin" ]; then
- PATH="$HOME/.local/bin:$PATH"
-=======
 if [ -f "$(which virtualenvwrapper.sh)" ]; then
  export WORKON_HOME=$HOME/.virtualenvs
  export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
  source $(which virtualenvwrapper.sh)
->>>>>>> 1354716cc23808f629dbff05451d091a8bc532a7
 fi
