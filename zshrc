@@ -116,10 +116,10 @@ alias apt-upgrade="sudo apt upgrade --auto-remove -y"
 
 
 # VIRTUALENV
-if [ -f ~/.local/bin/virtualenvwrapper.sh ]; then
+if [ $(which virtualenv) ]; then
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh
+source $(which virtualenvwrapper.sh)
 fi
 
 # PATH

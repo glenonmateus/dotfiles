@@ -1,4 +1,2 @@
 
-#include "/home/glenonmateus/git/dotfiles/Xresources.d/xterm.config"
-#include "/home/glenonmateus/git/dotfiles/Xresources.d/google-dark.colorscheme"
 #include "/home/glenonmateus/git/dotfiles/Xresources.d/rofi.config"
