@@ -1,5 +1,8 @@
 # i3 configuration file
 
+gaps inner 5
+gaps outer 5
+
 set $mod Mod4
 set $bg-color #3bc5db
 set $text-color #edf1f2
