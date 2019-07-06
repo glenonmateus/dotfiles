@@ -31,8 +31,8 @@ bar-foreground-3 = #ff5555
 bar-empty-foreground = #444444
 
 [fonts]
-font0 = Droid Sans Mono for Powerline Bold:style=bold:pixelsize=9
-font1 = FontAwesome:style=Regular:pixelsize=9
+font0 = Droid Sans Mono for Powerline Bold:style=bold:pixelsize=8
+font1 = FontAwesome:style=Regular:pixelsize=8
 font2 = siji:pixelsize=8
 
 [bar/topbar]
