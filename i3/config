@@ -177,3 +177,4 @@ exec --no-startup-id megasync
 exec --no-startup-id parcellite
 exec --no-startup-id flameshot
 exec --no-startup-id xrandr --output HDMI-1 --primary --right-of VGA-1
+exec --no-startup-id xset +fp /home/glenonmateus/.local/share/fonts && xset fp rehash

@@ -31,7 +31,7 @@ bar-foreground-3 = #ff5555
 bar-empty-foreground = #444444
 
 [fonts]
-font0 = DejaVu Sans Mono for Powerline:style=bold:pixelsize=9
+font0 = Droid Sans Mono for Powerline Bold:style=bold:pixelsize=9
 font1 = FontAwesome:style=Regular:pixelsize=9
 font2 = siji:pixelsize=8
 
@@ -105,42 +105,34 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
 label-mode-padding = 1
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
-; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1
-; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
 label-unfocused-padding = 1
-; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
-; urgent = Workspace with urgency hint set
 label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
-; Separator in between workspaces
-; label-separator = |
 
 [module/xbacklight]
 type = internal/xbacklight
 format =  <bar>
 bar-width = 10
-bar-indicator = |
+bar-indicator = ▏
 bar-indicator-foreground = #fff
 bar-indicator-font = 1
-bar-fill = ▐
+bar-fill =▐
 bar-fill-font = 1
 bar-fill-foreground = ${colors.bar-foreground-2}
-bar-empty = ▐
+bar-empty =▐
 bar-empty-font = 1
 bar-empty-foreground = ${colors.foreground-alt}
 
@@ -185,8 +177,8 @@ bar-used-foreground-0 = ${colors.bar-foreground-0}
 bar-used-foreground-1 = ${colors.bar-foreground-1}
 bar-used-foreground-2 = ${colors.bar-foreground-2}
 bar-used-foreground-3 = ${colors.bar-foreground-3}
-bar-used-fill = ▐
-bar-used-empty = ▐
+bar-used-fill =▐
+bar-used-empty =▐
 bar-used-empty-foreground = ${colors.bar-empty-foreground}
 
 [module/wlan]
@@ -221,24 +213,17 @@ ramp-volume-1 = 
 ramp-volume-2 = 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.bar-foreground-0}
-bar-volume-indicator = |
+bar-volume-indicator = ▏
 bar-volume-indicator-font = 1
-bar-volume-fill = ▐
+bar-volume-fill =▐
 bar-volume-fill-font = 1
-bar-volume-empty = ▐
+bar-volume-empty =▐
 bar-volume-empty-font = 1
 bar-volume-empty-foreground = ${colors.bar-empty-foreground}
 
 [settings]
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
 
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-; vim:ft=dosini
