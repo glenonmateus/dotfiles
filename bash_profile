@@ -27,9 +27,13 @@ PS1+="\[$COLOR_WHITE\]\$\[$COLOR_RESET\] "
 export PS1
 
 # VIRTUALENV
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh
+if [ $(which virtualenvswrapper.sh) ]; then
+ export WORKON_HOME=$HOME/.virtualenvs
+ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+ source $(which virtualenvswrapper.sh)
+fi 
 
 # Docker Machine
-source /etc/bash_completion.d/docker-machine-prompt.bash
+if [ -f /etc/bash_completion.d/docker-machine.bash ]; then
+ source /etc/bash_completion.d/docker-machine-prompt.bash
+fi
