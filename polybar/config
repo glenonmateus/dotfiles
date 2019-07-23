@@ -31,9 +31,10 @@ bar-foreground-3 = #ff5555
 bar-empty-foreground = #444444
 
 [fonts]
-font0 = Droid Sans Mono for Powerline Bold:style=bold:pixelsize=8
-font1 = FontAwesome:style=Regular:pixelsize=8
-font2 = siji:pixelsize=8
+font0 = Droid Sans Mono for Powerline Bold:style=Bold:pixelsize=9
+font1 = FontAwesome:style=Regular:pixelsize=9
+font2 = Fira Mono for Powerline:pixelsize=9
+font3 = Noto Sans Symbols2:pixelsize=9
 
 [bar/topbar]
 width = 100%
@@ -49,9 +50,10 @@ module-margin-right = 1
 font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
 font-2 = ${fonts.font2}
+font-3 = ${fonts.font3}
 modules-left = powermenu i3
 modules-center = date
-modules-right = wlan
+modules-right = wlan eth
 tray-position = none
 tray-padding = 1
 cursor-click = pointer
@@ -71,6 +73,7 @@ module-margin-right = 1
 font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
 font-2 = ${fonts.font2}
+font-3 = ${fonts.font3}
 modules-left = cpu memory
 modules-right = xbacklight pulseaudio
 cursor-click = pointer
@@ -192,6 +195,21 @@ label-disconnected = %ifname% disconnected
 format-disconnected-underline = ${colors.bar-foreground-3}
 label-disconnected-foreground = ${colors.bar-foreground-3}
 ramp-signal-0 = 
+ramp-signal-foreground = ${colors.bar-foreground-0}
+
+[module/eth]
+type = internal/network
+interface = enp2s0
+interval = 3.0
+format-connected = <ramp-signal> <label-connected>
+label-connected = %local_ip%
+format-connected-underline = ${colors.bar-foreground-0}
+label-connected-foreground = ${colors.bar-foreground-0}
+format-disconnected = <label-disconnected>
+label-disconnected = %ifname% disconnected
+format-disconnected-underline = ${colors.bar-foreground-3}
+label-disconnected-foreground = ${colors.bar-foreground-3}
+ramp-signal-0 = 🖧
 ramp-signal-foreground = ${colors.bar-foreground-0}
 
 [module/date]

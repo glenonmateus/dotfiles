@@ -1,4 +1,4 @@
-# i3 configuration file
+# ieq configuration file
 
 gaps inner 5
 gaps outer 5
@@ -27,7 +27,7 @@ for_window [title="^htop$"] floating enable, resize set $default_windowsize, mov
 for_window [title="^ranger$"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center
-for_window [class="X-terminal-emulator"] border pixel $default_bordersize
+for_window [class="Terminator"] border pixel $default_bordersize
 for_window [window_type="dialog"] border pixel $default_bordersize, move position center
 
 set $workspace1 "1"  
@@ -79,12 +79,11 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Media Controll
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse set Master 5%+ -q
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse set Master 5%- -q
-bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1- toggle -q
-bindsym $mod+Prior exec --no-startup-id amixer -D pulse set Master 5%+ -q
-bindsym $mod+Next exec --no-startup-id amixer -D pulse set Master 5%- -q
-bindsym $mod+End exec --no-startup-id amixer -D pulse set Master 1- toggle -q
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym $mod+Home exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym $mod+End exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym $mod+a exec pavucontrol
 
 # Backlight Controll
@@ -92,11 +91,16 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # Run Application Binds
-bindsym $mod+Return exec x-terminal-emulator
-bindsym $mod+i exec x-terminal-emulator -T htop -e htop
+bindsym $mod+Return exec terminator
+bindsym $mod+i exec terminator -T htop -e htop
 bindsym $mod+p exec arandr
+<<<<<<< HEAD
 bindsym $mod+r exec x-terminal-emulator -T ranger -e ranger
 bindsym $mod+Shift+w exec x-www-browser
+=======
+bindsym $mod+r exec terminator -T ranger -e ranger
+bindsym $mod+Shift+w exec google-chrome-stable
+>>>>>>> 0b3091541df50e68238250683efd8f054ec4f186
 bindsym $mod+Shift+v exec vlc
 bindsym Print exec flameshot gui
 bindsym $mod+d exec rofi -show run
@@ -124,8 +128,10 @@ bindsym $mod+Shift+7 move container to workspace $workspace7
 bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace0
-workspace $workspace1 output LVDS-1
-workspace $workspace2 output HDMI-1
+
+workspace $workspace1 output HDMI-1
+workspace $workspace2 output VGA-1
+# workspace $workspace2 output LVDS-1
 
 # Resize Controll
 bindsym $mod+Shift+y resize shrink width 10 px
@@ -175,4 +181,4 @@ exec xrdb ~/.Xresources
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id flameshot
-exec --no-startup-id xrandr --output HDMI-1 --primary --right-of VGA-1
+exec --no-startup-id xrandr --output VGA-1 --primary --right-of HDMI-1
