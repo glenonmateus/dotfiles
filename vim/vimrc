@@ -35,7 +35,7 @@ hi CursorLine term=bold cterm=bold ctermbg=236
 hi LineNr cterm=bold ctermfg=grey ctermbg=234
 hi clear SpellBad 
 hi SpellBad cterm=underline,bold ctermfg=red 
-autocmd FileType latex,tex,markdown set spell spelllang=pt 
+autocmd FileType latex,tex,markdown set spell spelllang=pt,en
 
 " Syntastic Configuration
 set statusline+=%#warningmsg#
