@@ -94,13 +94,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym $mod+Return exec terminator
 bindsym $mod+i exec terminator -T htop -e htop
 bindsym $mod+p exec arandr
-<<<<<<< HEAD
-bindsym $mod+r exec x-terminal-emulator -T ranger -e ranger
-bindsym $mod+Shift+w exec x-www-browser
-=======
 bindsym $mod+r exec terminator -T ranger -e ranger
 bindsym $mod+Shift+w exec google-chrome-stable
->>>>>>> 0b3091541df50e68238250683efd8f054ec4f186
 bindsym $mod+Shift+v exec vlc
 bindsym Print exec flameshot gui
 bindsym $mod+d exec rofi -show run
