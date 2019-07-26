@@ -29,6 +29,9 @@ set t_Co=256
 set mouse-=r
 set laststatus=2
 set showtabline=2 
+set tabstop=2
+set shiftwidth=2
+set expandtab
 set noshowmode 
 set cursorline
 hi CursorLine term=bold cterm=bold ctermbg=236
