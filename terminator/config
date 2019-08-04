@@ -1,8 +1,5 @@
 [global_config]
-  window_state = fullscreen
   title_hide_sizetext = True
-[keybindings]
-  hide_window = F12
 [profiles]
   [[default]]
     background_color = "#1d1f21"
