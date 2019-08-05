@@ -40,8 +40,8 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
-set $image ~/Dropbox/Wallpapers/aperture-vintage-346923-unsplash.jpg
-set $fonte pango:Droid Sans Mono for Powerline 9
+set $image ~/Dropbox/Wallpapers/greg-rakozy-38802-unsplash.png
+set $fonte pango:Hack Nerd Font 9
 
 font $fonte
 floating_modifier $mod
