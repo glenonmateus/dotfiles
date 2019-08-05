@@ -31,10 +31,8 @@ bar-foreground-3 = #ff5555
 bar-empty-foreground = #444444
 
 [fonts]
-font0 = Droid Sans Mono for Powerline Bold:style=Bold:pixelsize=8
-font1 = FontAwesome:style=Regular:pixelsize=8
-font2 = Fira Mono for Powerline:pixelsize=8
-font3 = Noto Sans Symbols2:pixelsize=8
+font0 = Hack Nerd Font:style=Bold:pixelsize=8
+font1 = Noto Sans Symbols2:style=Regular:pixelsize=9
 
 [bar/topbar]
 width = 100%
@@ -49,8 +47,6 @@ module-margin-left = 1
 module-margin-right = 1
 font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
-font-2 = ${fonts.font2}
-font-3 = ${fonts.font3}
 modules-left = powermenu i3
 modules-center = date
 modules-right = wlan eth
@@ -72,8 +68,6 @@ module-margin-left = 1
 module-margin-right = 1
 font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
-font-2 = ${fonts.font2}
-font-3 = ${fonts.font3}
 modules-left = cpu memory
 modules-right = xbacklight pulseaudio
 cursor-click = pointer
