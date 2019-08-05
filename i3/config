@@ -5,7 +5,7 @@ gaps outer 5
 
 set $mod Mod4
 set $bg-color #3bc5db
-set $text-color #edf1f2
+set $text-color #383c4a
 set $bg-bar-color #383C4A
 set $inactive-bg-color #383838
 set $inactive-text-color #676E7D
