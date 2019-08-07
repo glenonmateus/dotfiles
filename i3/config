@@ -176,4 +176,4 @@ exec xrdb ~/.Xresources
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
 exec --no-startup-id flameshot
-exec --no-startup-id xrandr --output VGA-1 --primary --right-of HDMI-1
+exec --no-startup-id xrandr --output HDMI-1 --primary --left-of VGA-1
