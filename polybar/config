@@ -31,7 +31,7 @@ bar-foreground-3 = #ff5555
 bar-empty-foreground = #444444
 
 [fonts]
-font0 = Hack Nerd Font:style=Bold:pixelsize=8
+font0 = Hack Nerd Font Mono:style=Bold:pixelsize=9
 font1 = Noto Sans Symbols2:style=Regular:pixelsize=9
 
 [bar/topbar]
@@ -185,10 +185,10 @@ label-connected = %local_ip%
 format-connected-underline = ${colors.bar-foreground-0}
 label-connected-foreground = ${colors.bar-foreground-0}
 format-disconnected = <label-disconnected>
-label-disconnected = %ifname% disconnected
+label-disconnected = 睊%ifname% disconnected
 format-disconnected-underline = ${colors.bar-foreground-3}
 label-disconnected-foreground = ${colors.bar-foreground-3}
-ramp-signal-0 = 
+ramp-signal-0 = 直
 ramp-signal-foreground = ${colors.bar-foreground-0}
 
 [module/eth]
@@ -203,7 +203,7 @@ format-disconnected = <label-disconnected>
 label-disconnected = %ifname% disconnected
 format-disconnected-underline = ${colors.bar-foreground-3}
 label-disconnected-foreground = ${colors.bar-foreground-3}
-ramp-signal-0 = 🖧
+ramp-signal-0 = 囹
 ramp-signal-foreground = ${colors.bar-foreground-0}
 
 [module/date]
@@ -217,11 +217,11 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 format-volume = <ramp-volume> <bar-volume>
-label-muted = muted
+label-muted = 婢 muted
 label-muted-foreground = ${colors.bar-foreground-3}
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.bar-foreground-0}
 bar-volume-indicator =

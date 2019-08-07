@@ -23,10 +23,10 @@ plugins=(
   bgnotify
 )
 
-source $ZSH/oh-my-zsh.sh
 
+source $ZSH/oh-my-zsh.sh
 export LC_CTYPE=$LANG
-[ -f $(which most) ] && export PAGER=most
+[ -f "$(which most)" ] && export PAGER=most
 
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
@@ -35,10 +35,6 @@ alias apt-update="sudo apt update"
 alias apt-upgrade="sudo apt upgrade --auto-remove -y"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Arch Linux Configuration
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 
 # Debian Conigurations
 [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
