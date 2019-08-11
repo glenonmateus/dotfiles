@@ -235,8 +235,7 @@ bar-volume-empty-foreground = ${colors.bar-empty-foreground}
 [module/filesystem]
 type = internal/fs
 mount-0 = /
-mount-1 = /home
-mount-2 = /var
+mount-1 = /files
 interval = 60
 format-mounted = <label-mounted> <bar-used>
 format-unmounted = <label-unmounted>
