@@ -32,7 +32,8 @@ bar-empty-foreground = #444444
 
 [fonts]
 font0 = Hack Nerd Font Mono:style=Bold:pixelsize=8
-font1 = Noto Sans Symbols2:style=Regular:pixelsize=8
+font1 = Noto Sans Symbols2:style=Regular:pixelsize=11
+font2 = Noto Color Emoji:style=Regular:pixelsize=11
 
 [bar/topbar]
 width = 100%
@@ -47,6 +48,7 @@ module-margin-left = 1
 module-margin-right = 1
 font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
+font-2 = ${fonts.font2}
 modules-left = i3 title
 modules-right = wlan eth date
 tray-position = none
@@ -67,6 +69,7 @@ module-margin-left = 1
 module-margin-right = 1
 font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
+font-2 = ${fonts.font2}
 modules-left = cpu memory filesystem
 modules-right = xbacklight pulseaudio
 cursor-click = pointer
@@ -171,7 +174,7 @@ ramp-signal-foreground = ${colors.bar-foreground-0}
 type = internal/network
 interface = enp2s0
 interval = 3.0
-format-connected = <label-connected>
+format-connected = <ramp-signal> <label-connected>
 label-connected = %local_ip%
 format-connected-underline = ${colors.bar-foreground-0}
 label-connected-foreground = ${colors.bar-foreground-0}
@@ -180,6 +183,7 @@ label-disconnected = %ifname% disconnected
 format-disconnected-underline = ${colors.bar-foreground-3}
 label-disconnected-foreground = ${colors.bar-foreground-3}
 ramp-signal-foreground = ${colors.bar-foreground-0}
+ramp-signal-0 = 🖧
 
 [module/date]
 type = internal/date
@@ -191,8 +195,8 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-format-volume = <bar-volume>
-label-muted = muted
+format-volume = <ramp-volume> <bar-volume>
+label-muted = 🔇 muted
 label-muted-foreground = ${colors.bar-foreground-3}
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.bar-foreground-0}
@@ -203,6 +207,9 @@ bar-volume-fill-font = 1
 bar-volume-empty =▐
 bar-volume-empty-font = 1
 bar-volume-empty-foreground = ${colors.bar-empty-foreground}
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
 
 [module/filesystem]
 type = internal/fs
