@@ -214,12 +214,10 @@ ramp-volume-2 = 🔊
 [module/filesystem]
 type = internal/fs
 mount-0 = /
-mount-1 = /home
-mount-2 = /var
 interval = 60
 format-mounted = <label-mounted> <bar-used>
 format-unmounted = <label-unmounted>
-label-mounted = %mountpoint%
+label-mounted = 🖴  %mountpoint%
 bar-used-indicator =
 bar-used-width = 10
 bar-used-fill =▐
@@ -229,9 +227,6 @@ bar-used-foreground-1 = ${colors.bar-foreground-1}
 bar-used-foreground-2 = ${colors.bar-foreground-2}
 bar-used-foreground-3 = ${colors.bar-foreground-3}
 bar-used-empty-foreground = ${colors.bar-empty-foreground}
-
-[module/title]
-type = internal/xwindow
 
 [settings]
 screenchange-reload = true
