@@ -191,8 +191,7 @@ ramp-signal-0 = 🖧
 type = internal/date
 interval = 60
 date = %a, %Y/%m/%d
-;time = %H:%M
-time = %I:%M %p
+time = %H:%M
 label = %date% %time%
 
 [module/pulseaudio]
