@@ -50,7 +50,8 @@ font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
 font-2 = ${fonts.font2}
 modules-left = i3 title
-modules-right = wlan eth date
+modules-center = date
+modules-right = wlan eth
 tray-position = none
 tray-padding = 1
 cursor-click = pointer
@@ -160,7 +161,7 @@ bar-used-empty-foreground = ${colors.bar-empty-foreground}
 
 [module/wlan]
 type = internal/network
-interface = wlan0
+interface = wlp18s0
 interval = 3.0
 format-connected = <label-connected>
 label-connected = %local_ip%
