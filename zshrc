@@ -1,6 +1,5 @@
 export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 export TERM="xterm-256color"
-
 export ZSH=/home/glenon/.oh-my-zsh
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -18,11 +17,8 @@ plugins=(
   minikube
   sudo
   systemd
-  zsh-syntax-highlighting
-  zsh-autosuggestions
   bgnotify
 )
-
 
 source $ZSH/oh-my-zsh.sh
 export LC_CTYPE=$LANG
@@ -34,11 +30,11 @@ alias cfgvim="vim ~/.vim/vimrc"
 alias apt-update="sudo apt update"
 alias apt-upgrade="sudo apt upgrade --auto-remove -y"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Debian Conigurations
 [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
 [ -f /usr/share/zsh/vendor-completions/_fzf ] && source /usr/share/zsh/vendor-completions/_fzf
+[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Virtualwrapper Configuration
 if [ -f "$(which virtualenvwrapper.sh)" ]; then

@@ -50,8 +50,7 @@ font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
 font-2 = ${fonts.font2}
 modules-left = i3
-modules-center = date
-modules-right = wlan eth
+modules-right = wireless wired date
 tray-position = none
 tray-padding = 1
 cursor-click = pointer
@@ -159,7 +158,7 @@ bar-used-fill =▐
 bar-used-empty =▐
 bar-used-empty-foreground = ${colors.bar-empty-foreground}
 
-[module/wlan]
+[module/wireless]
 type = internal/network
 interface = wlp18s0
 interval = 3.0
@@ -173,7 +172,7 @@ format-disconnected-underline = ${colors.bar-foreground-3}
 label-disconnected-foreground = ${colors.bar-foreground-3}
 ramp-signal-foreground = ${colors.bar-foreground-0}
 
-[module/eth]
+[module/wired]
 type = internal/network
 interface = enp2s0
 interval = 3.0
