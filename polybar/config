@@ -72,7 +72,7 @@ font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
 font-2 = ${fonts.font2}
 modules-left = cpu memory filesystem
-modules-right = xbacklight pulseaudio
+modules-right = battery xbacklight pulseaudio
 cursor-click = pointer
 cursor-scroll = ns-resize
 locale = pt_BR.UTF-8
@@ -229,6 +229,23 @@ bar-used-foreground-1 = ${colors.bar-foreground-1}
 bar-used-foreground-2 = ${colors.bar-foreground-2}
 bar-used-foreground-3 = ${colors.bar-foreground-3}
 bar-used-empty-foreground = ${colors.bar-empty-foreground}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ACAD
+format-charging = 🔌 <bar-capacity>
+format-discharging = 🔋<bar-capacity>
+format-full = 🔋<bar-capacity>
+bar-capacity-width = 10
+bar-capacity-indicator =
+bar-capacity-fill = ▐
+bar-capacity-empty =▐
+bar-capacity-empty-foreground = ${colors.bar-empty-foreground}
+bar-capacity-foreground-0 = ${colors.bar-foreground-3}
+bar-capacity-foreground-1 = ${colors.bar-foreground-2}
+bar-capacity-foreground-2 = ${colors.bar-foreground-1}
+bar-capacity-foreground-3 = ${colors.bar-foreground-0}
 
 [settings]
 screenchange-reload = true
