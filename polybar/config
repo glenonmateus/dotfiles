@@ -31,9 +31,9 @@ bar-foreground-3 = #ff5555
 bar-empty-foreground = #444444
 
 [fonts]
-font0 = Hack Nerd Font Mono:style=Bold:pixelsize=9
-font1 = Noto Sans Symbols2:style=Regular:pixelsize=11
-font2 = Noto Color Emoji:style=Regular:pixelsize=11
+font0 = Hack Nerd Font Mono:style=Bold:pixelsize=9;
+font1 = Noto Color Emoji:style=Regular:scale=12;
+font2 = Noto Sans Symbols2:style=Regular:pixelsize=9;
 
 [bar/topbar]
 width = 100%
@@ -50,8 +50,7 @@ font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
 font-2 = ${fonts.font2}
 modules-left = i3
-modules-center = date
-modules-right = wlan eth
+modules-right = wireless wired date
 tray-position = none
 tray-padding = 1
 cursor-click = pointer
@@ -102,7 +101,7 @@ label-urgent-padding = 1
 
 [module/xbacklight]
 type = internal/xbacklight
-format = 🌣 <bar>
+format = <ramp> <bar>
 bar-width = 10
 bar-indicator =
 bar-indicator-foreground = #fff
@@ -113,6 +112,8 @@ bar-fill-foreground = ${colors.bar-foreground-2}
 bar-empty =▐
 bar-empty-font = 1
 bar-empty-foreground = ${colors.foreground-alt}
+ramp-0 = 🔅
+ramp-1 = 🔆
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -159,25 +160,11 @@ bar-used-fill =▐
 bar-used-empty =▐
 bar-used-empty-foreground = ${colors.bar-empty-foreground}
 
-[module/wlan]
+[module/wireless]
 type = internal/network
 interface = wlp3s0
 interval = 3.0
 format-connected = <label-connected>
-label-connected =  %local_ip%
-format-connected-underline = ${colors.bar-foreground-0}
-label-connected-foreground = ${colors.bar-foreground-0}
-format-disconnected = <label-disconnected>
-label-disconnected = %ifname% disconnected
-format-disconnected-underline = ${colors.bar-foreground-3}
-label-disconnected-foreground = ${colors.bar-foreground-3}
-ramp-signal-foreground = ${colors.bar-foreground-0}
-
-[module/eth]
-type = internal/network
-interface = enp0s10
-interval = 3.0
-format-connected = <ramp-signal> <label-connected>
 label-connected = %local_ip%
 format-connected-underline = ${colors.bar-foreground-0}
 label-connected-foreground = ${colors.bar-foreground-0}
@@ -186,7 +173,20 @@ label-disconnected = %ifname% disconnected
 format-disconnected-underline = ${colors.bar-foreground-3}
 label-disconnected-foreground = ${colors.bar-foreground-3}
 ramp-signal-foreground = ${colors.bar-foreground-0}
-ramp-signal-0 = 🖧
+
+[module/wired]
+type = internal/network
+interface = enp0s10
+interval = 3.0
+format-connected = <label-connected>
+label-connected = %local_ip%
+format-connected-underline = ${colors.bar-foreground-0}
+label-connected-foreground = ${colors.bar-foreground-0}
+format-disconnected = <label-disconnected>
+label-disconnected = %ifname% disconnected
+format-disconnected-underline = ${colors.bar-foreground-3}
+label-disconnected-foreground = ${colors.bar-foreground-3}
+ramp-signal-foreground = ${colors.bar-foreground-0}
 
 [module/date]
 type = internal/date
@@ -219,7 +219,7 @@ mount-0 = /
 interval = 60
 format-mounted = <label-mounted> <bar-used>
 format-unmounted = <label-unmounted>
-label-mounted = 🖴  %mountpoint%
+label-mounted = 💽 %mountpoint%
 bar-used-indicator =
 bar-used-width = 10
 bar-used-fill =▐
