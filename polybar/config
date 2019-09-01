@@ -1,21 +1,3 @@
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
-;
-;==========================================================
-
 [colors]
 background = #383C4A
 background-alt = #444
@@ -50,7 +32,8 @@ font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
 font-2 = ${fonts.font2}
 modules-left = i3
-modules-right = wireless wired date
+modules-center = date
+modules-right = wireless wired
 tray-position = none
 tray-padding = 1
 cursor-click = pointer
@@ -162,7 +145,7 @@ bar-used-empty-foreground = ${colors.bar-empty-foreground}
 
 [module/wireless]
 type = internal/network
-interface = wlp3s0
+interface = wlp18s0
 interval = 3.0
 format-connected = <label-connected>
 label-connected = %local_ip%
@@ -172,7 +155,7 @@ ramp-signal-foreground = ${colors.bar-foreground-0}
 
 [module/wired]
 type = internal/network
-interface = enp2s0
+interface = enp19s0
 interval = 3.0
 format-connected = <label-connected>
 label-connected = %local_ip%
@@ -225,7 +208,7 @@ bar-used-empty-foreground = ${colors.bar-empty-foreground}
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter = ACAD
+adapter = AC
 format-charging = 🔌 <bar-capacity>
 format-discharging = 🔋<bar-capacity>
 format-full = 🔋<bar-capacity>
