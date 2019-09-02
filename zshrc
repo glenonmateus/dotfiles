@@ -18,6 +18,8 @@ plugins=(
   sudo
   systemd
   bgnotify
+  ansible
+  ssh-agent
 )
 
 source $ZSH/oh-my-zsh.sh
