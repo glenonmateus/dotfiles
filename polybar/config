@@ -1,5 +1,5 @@
 [colors]
-background = #383C4A
+background = #AA383C4A
 background-alt = #444
 foreground = #edf1f2
 foreground-alt = #555
@@ -134,7 +134,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 format = <label> <bar-used>
 label = RAM
 bar-used-indicator =
-bar-used-width = 15
+bar-used-width = 10
 bar-used-foreground-0 = ${colors.bar-foreground-0}
 bar-used-foreground-1 = ${colors.bar-foreground-1}
 bar-used-foreground-2 = ${colors.bar-foreground-2}
