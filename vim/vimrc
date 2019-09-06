@@ -14,7 +14,6 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'nathanaelkane/vim-indent-guides'
 call vundle#end()
 
 " Vim configuration
@@ -23,13 +22,13 @@ syntax on
 set encoding=utf-8
 set background=dark
 set sps=10
-set incsearch		
+set incsearch
 set sw=1
 set iskeyword+=:
 set t_Co=256
 set mouse-=r
 set laststatus=2
-set showtabline=2 
+set showtabline=2
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -69,8 +68,6 @@ nmap <Leader><Leader>n :NERDTreeToggle<CR>
 " Airline Configuration
 let g:airline_theme='powerlineish'
 let g:airline#extensions#tabline#enabled = 1
-
-let g:indent_guides_enable_on_vim_startup = 1
 
 "Custom Maps
 nnoremap <Leader>o o<Esc>
