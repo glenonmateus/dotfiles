@@ -14,7 +14,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'yggdroot/indentline'
+Plugin 'nathanaelkane/vim-indent-guides'
 call vundle#end()
 
 " Vim configuration
@@ -70,6 +70,8 @@ nmap <Leader><Leader>n :NERDTreeToggle<CR>
 let g:airline_theme='powerlineish'
 let g:airline#extensions#tabline#enabled = 1
 
-" Custom Maps
+let g:indent_guides_enable_on_vim_startup = 1
+
+"Custom Maps
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
