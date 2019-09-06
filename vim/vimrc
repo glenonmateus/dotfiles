@@ -34,8 +34,6 @@ set shiftwidth=2
 set expandtab
 set noshowmode 
 set cursorline
-set list
-set listchars=tab:›\ ,eol:¬,trail:⋅
 hi CursorLine term=bold cterm=bold ctermbg=236
 hi LineNr cterm=bold ctermfg=grey ctermbg=234
 hi clear SpellBad 
