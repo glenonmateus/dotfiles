@@ -145,7 +145,7 @@ bar-used-empty-foreground = ${colors.bar-empty-foreground}
 
 [module/wireless]
 type = internal/network
-interface = wlp18s0
+interface = wlan0
 interval = 3.0
 format-connected = <label-connected>
 label-connected = %local_ip%
@@ -155,7 +155,7 @@ ramp-signal-foreground = ${colors.bar-foreground-0}
 
 [module/wired]
 type = internal/network
-interface = enp19s0
+interface = eth0
 interval = 3.0
 format-connected = <label-connected>
 label-connected = %local_ip%
