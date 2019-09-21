@@ -37,3 +37,7 @@ fi
 if [ -f /etc/bash_completion.d/docker-machine.bash ]; then
  source /etc/bash_completion.d/docker-machine-prompt.bash
 fi
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+  source /etc/profile.d/vte.sh
+fi
