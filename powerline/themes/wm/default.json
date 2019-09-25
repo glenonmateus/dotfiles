@@ -4,26 +4,23 @@
       {
        "function": "powerline.segments.common.net.internal_ip",
        "args": {
-	"interface": "wlan0"
+       "interface": "auto"
        }
       },
       {
        "function": "powerline.segments.common.sys.system_load",
-       "priority": 50,
-       "before": " "
+       "priority": 50
       },
       {
-       "function": "powerline.segments.common.time.date",
-       "before": " "
+       "function": "powerline.segments.common.time.date"
       },
       {
        "function": "powerline.segments.common.time.date",
        "name": "time",
        "args": {
-	"format": "%H:%M",
-	"istime": true
-       },
-       "before": " "
+       "format": "%H:%M",
+       "istime": true
+       }
       }
      ]
     }
