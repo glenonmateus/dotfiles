@@ -4,8 +4,10 @@ gaps inner 5
 gaps outer 5
 
 set $mod Mod4
-set $bg-color #3bc5db
-set $text-color #383c4a
+#set $bg-color #3bc5db
+set $bg-color #0087AF
+#set $text-color #383c4a
+set $text-color #FFFFFF
 set $bg-bar-color #383C4A
 set $inactive-bg-color #383838
 set $inactive-text-color #676E7D
@@ -42,7 +44,7 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
 set $image ~/Dropbox/Wallpapers/stars_space_glow_planet_99744_1920x1080.jpg
-set $fonte pango:Hack Nerd Font 9
+set $fonte pango:Hack Nerd Font Mono Bold 10
 
 font $fonte
 floating_modifier $mod
@@ -149,23 +151,24 @@ mode "$mode_launcher" {
     bindsym Return mode "default"
 }
 
-#bar {
-#        #status_command py3status -c ~/.config/i3/i3status.conf
-#        status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
-#	position top
-#	colors {
-#	     background $bg-bar-color
-#	     statusline #C5C8C699
-#	     separator #75757599
-#	     #                  border             background         text
-#	     focused_workspace  $bg-color          $bg-color          $text-color
-#	     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-#	     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-#             binding_mode       $bg-color          $bg-color          $text-color
-#	}
-#}
+bar {
+  #status_command py3status -c ~/.config/i3/i3status.conf
+  status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
+	#position top
+  tray_output none
+	colors {
+	     background $bg-bar-color
+	     statusline #C5C8C699
+	     separator #75757599
+	     #                  border             background         text
+	     focused_workspace  $bg-color          $bg-color          $text-color
+	     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+	     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+       binding_mode       $bg-color          $bg-color          $text-color
+	}
+}
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Setup Input
 exec setxkbmap -model abnt2 -layout br -variant abnt2
