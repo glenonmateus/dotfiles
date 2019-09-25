@@ -1,9 +1,9 @@
 [colors]
-background = #AA383C4A
+background = #CC383C4A
 background-alt = #444
 foreground = #edf1f2
 foreground-alt = #555
-primary = #3bc5db
+primary = #0087AF
 secondary = #e60053
 alert = #bd2c40
 bar-foreground-0 = #55aa55
@@ -155,7 +155,7 @@ ramp-signal-foreground = ${colors.bar-foreground-0}
 
 [module/wired]
 type = internal/network
-interface = eth0
+interface = enp2s0
 interval = 3.0
 format-connected = <label-connected>
 label-connected = %local_ip%
