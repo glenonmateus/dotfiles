@@ -91,7 +91,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # Run Application Binds
-bindsym F12 exec tilix -q
+bindsym F12 exec tilix -q --full-screen
 bindsym $mod+Return exec terminator
 #bindsym $mod+i exec terminator -T htop -e htop
 bindsym $mod+i exec tilix -e htop
@@ -148,24 +148,24 @@ mode "$mode_launcher" {
     bindsym Return mode "default"
 }
 
-bar {
+#bar {
   #status_command py3status -c ~/.config/i3/i3status.conf
-  status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
+#  status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
 	#position top
-  tray_output none
-	colors {
-	     background $bg-bar-color
-	     statusline #C5C8C699
-	     separator #75757599
+#  tray_output none
+#	colors {
+#	     background $bg-bar-color
+#	     statusline #C5C8C699
+#	     separator #75757599
 	     #                  border             background         text
-	     focused_workspace  $bg-color          $bg-color          $text-color
-	     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-	     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-       binding_mode       $bg-color          $bg-color          $text-color
-	}
-}
+#	     focused_workspace  $bg-color          $bg-color          $text-color
+#	     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#	     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#       binding_mode       $bg-color          $bg-color          $text-color
+#	}
+#}
 
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Setup Input
 exec setxkbmap -model abnt2 -layout br -variant abnt2
