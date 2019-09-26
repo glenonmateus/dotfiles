@@ -2,7 +2,10 @@
 	"segments": {
 		"right": [
       {
-        "function": "powerline.segments.common.net.internal_ip"
+        "function": "powerline.segments.common.net.internal_ip",
+        "args": {
+          "interface": "auto"
+        }
       },
 			{
 				"function": "powerline.segments.common.net.hostname"
