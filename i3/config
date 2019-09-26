@@ -91,7 +91,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # Run Application Binds
-bindsym F12 exec tilix -q --full-screen
+bindsym F12 exec tilix -q
 bindsym $mod+Return exec terminator
 #bindsym $mod+i exec terminator -T htop -e htop
 bindsym $mod+i exec tilix -e htop
