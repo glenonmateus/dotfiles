@@ -91,13 +91,10 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # Run Application Binds
-bindsym F12 exec tilix -q
 bindsym $mod+Return exec terminator
-#bindsym $mod+i exec terminator -T htop -e htop
-bindsym $mod+i exec tilix -e htop
+bindsym $mod+i exec terminator -T htop -e htop
 bindsym $mod+p exec arandr
-#bindsym $mod+r exec terminator -T ranger -e ranger
-bindsym $mod+r exec tilix -e ranger
+bindsym $mod+r exec terminator -T ranger -e ranger
 bindsym $mod+Shift+w exec google-chrome-stable
 bindsym $mod+Shift+v exec vlc
 bindsym Print exec flameshot gui
