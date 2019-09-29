@@ -1,9 +1,7 @@
 # ieq configuration file
 
 set $mod Mod4
-#set $bg-color #3bc5db
 set $bg-color #0087AF
-#set $text-color #383c4a
 set $text-color #FFFFFF
 set $bg-bar-color #383C4A
 set $inactive-bg-color #383838
@@ -22,9 +20,9 @@ default_border pixel $default_bordersize
 for_window [class="Pomello"] floating enable, resize set 230 56, move position 1133 23
 for_window [class="Arandr"] floating enable, resize set 348 249, move position center
 for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center
-# for_window [title="^htop$"] floating enable, resize set $default_windowsize, move position center
-# for_window [title="^ranger$"] floating enable, resize set $default_windowsize, move position center
-# for_window [title="Configuracões do Terminator"] floating enable, resize set $default_windowsize, move position center
+for_window [title="^htop$"] floating enable, resize set $default_windowsize, move position center
+for_window [title="^ranger$"] floating enable, resize set $default_windowsize, move position center
+for_window [title="Configuracões do Terminator"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center
 # for_window [class="Terminator"] border pixel $default_bordersize
@@ -91,6 +89,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # Run Application Binds
+bindsym F12 exec tilix -q
 bindsym $mod+Return exec terminator
 bindsym $mod+i exec terminator -T htop -e htop
 bindsym $mod+p exec arandr
