@@ -9,8 +9,8 @@ primary = #0087AF
 secondary = #e60053
 alert = #bd2c40
 bar-foreground-0 = #55aa55
-bar-foreground-1 = #557755
-bar-foreground-2 = #f5a70a
+bar-foreground-1 = #cce016
+bar-foreground-2 = #ff8000
 bar-foreground-3 = #ff5555
 bar-empty-foreground = #444444
 
