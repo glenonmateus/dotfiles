@@ -1,10 +1,11 @@
 [global_config]
   tab_position = bottom
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
 [keybindings]
 [profiles]
   [[default]]
     background_color = "#1d1f21"
-    background_darkness = 1.0
+    background_darkness = 0.95
     background_type = transparent
     cursor_color = "#c5c8c6"
     font = Hack Nerd Font 10
@@ -13,11 +14,110 @@
     scrollbar_position = hidden
     palette = "#1d1f21:#cc342b:#198844:#fba922:#3971ed:#a36ac7:#3971ed:#c5c8c6:#969896:#cc342b:#198844:#fba922:#3971ed:#a36ac7:#3971ed:#ffffff"
     use_system_font = False
+  [[Molokai]]
+    background_color = "#121212"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#bbbbbb"
+    font = Hack Nerd Font 10
+    foreground_color = "#bbbbbb"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#121212:#fa2573:#98e123:#dfd460:#1080d0:#8700ff:#43a8d0:#bbbbbb:#555555:#f6669d:#b1e05f:#fff26d:#00afff:#af87ff:#51ceff:#ffffff"
+    use_system_font = False
+  [[After Dark]]
+    background_color = "#10111b"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Hack Nerd Font 10
+    foreground_color = "#c5c8c6"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#2e3436:#ef4a9e:#00d2bc:#e7ca7a:#9399fa:#ca5bcc:#86d079:#d3d7cf:#555753:#ef4a9e:#00d2bc:#e7ca7a:#9399fa:#ca5bcc:#86d079:#eeeeec"
+    use_system_font = False
+  [[MaterialDark]]
+    background_color = "#232322"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#16afca"
+    font = Hack Nerd Font 10
+    foreground_color = "#e5e5e5"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#212121:#b7141f:#457b24:#f6981e:#134eb2:#560088:#0e717c:#efefef:#424242:#e83b3f:#7aba3a:#ffea2e:#54a4f3:#aa4dbc:#26bbd1:#d9d9d9"
+    use_system_font = False
+  [[Material]]
+    background_color = "#eaeaea"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#16afca"
+    font = Hack Nerd Font 10
+    foreground_color = "#232322"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#212121:#b7141f:#457b24:#f6981e:#134eb2:#560088:#0e717c:#efefef:#424242:#e83b3f:#7aba3a:#ffea2e:#54a4f3:#aa4dbc:#26bbd1:#d9d9d9"
+    use_system_font = False
+  [[Material colors]]
+    background_color = "#1E282C"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#657B83"
+    font = Hack Nerd Font 10
+    foreground_color = "#C3C7D1"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073641:#EB606B:#C3E88D:#F7EB95:#80CBC3:#FF2490:#AEDDFF:#FFFFFF:#002B36:#EB606B:#C3E88D:#F7EB95:#7DC6BF:#6C71C3:#34434D:#FFFFFF"
+    use_system_font = False
+  [[Solarized Dark]]
+    background_color = "#001e27"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#708284"
+    font = Hack Nerd Font 10
+    foreground_color = "#708284"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#002831:#d11c24:#738a05:#a57706:#2176c7:#c61c6f:#259286:#eae3cb:#001e27:#bd3613:#475b62:#536870:#708284:#5956ba:#819090:#fcf4dc"
+    use_system_font = False
+  [[Aco]]
+    background_color = "#1f1305"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#bae2fb"
+    font = Hack Nerd Font 10
+    foreground_color = "#b4e1fd"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#3f3f3f:#ff0883:#83ff08:#ff8308:#0883ff:#8308ff:#08ff83:#bebebe:#474747:#ff1e8e:#8eff1e:#ff8e1e:#0883ff:#8e1eff:#1eff8e:#c4c4c4"
+    use_system_font = False
+  [[Aci]]
+    background_color = "#0d1926"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#c4e9ff"
+    font = Hack Nerd Font 10
+    foreground_color = "#b4e1fd"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#363636:#ff0883:#83ff08:#ff8308:#0883ff:#8308ff:#08ff83:#b6b6b6:#363636:#ff0883:#83ff08:#ff8308:#0883ff:#8308ff:#08ff83:#b6b6b6"
+    use_system_font = False
+  [[Blitz]]
+    background_color = "#16141e"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#00ecc8"
+    font = Hack Nerd Font 10
+    foreground_color = "#00ecc8"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#2e3436:#f70047:#00ff7d:#fcdd42:#26b3d2:#b055f4:#ff8db4:#d3d7cf:#555753:#ff5555:#55ff55:#ffff55:#729fcf:#ff55ff:#34e2e2:#eeeeec"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
       parent = window0
-      profile = default
+      profile = Molokai
       type = Terminal
     [[[window0]]]
       parent = ""
