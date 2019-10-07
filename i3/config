@@ -84,8 +84,8 @@ bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle; if [ $(wh
 bindsym $mod+a exec pavucontrol
 
 # Backlight Controll
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
 
 # Run Application Binds
 bindsym $mod+Return exec terminator
