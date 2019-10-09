@@ -88,10 +88,11 @@ bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; if [ $(which py3-cmd) ]; th
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
 
 # Run Application Binds
-bindsym $mod+Return exec terminator
-bindsym $mod+i exec terminator -T htop -e htop
+bindsym F12 exec tilix -q
+bindsym $mod+Return exec tilix
+bindsym $mod+i exec tilix -t htop -e htop
 bindsym $mod+p exec arandr
-bindsym $mod+r exec terminator -T ranger -e ranger
+bindsym $mod+r exec tilix -t ranger -e ranger
 bindsym $mod+Shift+w exec google-chrome-stable
 bindsym $mod+Shift+v exec vlc
 bindsym Print exec flameshot gui
