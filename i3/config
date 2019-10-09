@@ -22,6 +22,7 @@ for_window [class="Arandr"] floating enable, resize set 348 249, move position c
 for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center
 for_window [title="^htop$"] floating enable, resize set $default_windowsize, move position center
 for_window [title="^ranger$"] floating enable, resize set $default_windowsize, move position center
+for_window [title="^Hangouts"] floating enable, resize set $default_windowsize, move position center
 for_window [title="Configuracões do Terminator"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center
@@ -37,7 +38,7 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
-set $image ~/Dropbox/Wallpapers/stars_space_glow_planet_99744_1920x1080.jpg
+set $image ~/Dropbox/Wallpapers/greg-rakozy-38802-unsplash.png
 set $fonte pango:Hack Nerd Font Mono Bold 10
 
 font $fonte
@@ -167,6 +168,7 @@ exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[
 
 # Autostart
 exec dunst -conf ~/.config/i3/dunstrc
+exec --no-startup-id xrandr --output eDP-1 --primary --right-of VGA-1
 exec feh --bg-scale $image 
 exec xcompmgr -c -f -n
 exec xrdb ~/.Xresources
@@ -175,4 +177,3 @@ exec --no-startup-id megasync
 exec --no-startup-id parcellite
 exec --no-startup-id flameshot
 exec --no-startup-id wicd-gtk -t
-exec --no-startup-id xrandr --output HDMI-1 --primary --left-of VGA-1
