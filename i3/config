@@ -146,9 +146,6 @@ mode "$mode_launcher" {
 
 bar {
   status_command py3status -c ~/.config/i3/i3status.conf
-  #status_command python3 /usr/share/powerline/bindings/i3/powerline-i3.py
-	position top
-# tray_output none
 	colors {
 	     background $bg-bar-color
 	     statusline #C5C8C699
