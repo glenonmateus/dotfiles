@@ -15,5 +15,5 @@ tags
 vim/bundle/*
 fonts/.uuid
 fonts/fonts.dir
-ranger/plugins/
-terminator/plugins/
+ranger/plugins/*
+terminator/plugins/*
