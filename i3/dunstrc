@@ -11,7 +11,6 @@
     timeout = 5
     ignore_newline = no
     frame_width = 2
-    ;frame_color = "#3bc5db"
     frame_color = "#0087AF"
     geometry = "250x5-0+20"
     shrink = no
