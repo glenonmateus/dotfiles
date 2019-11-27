@@ -164,7 +164,7 @@ exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[
 
 # Autostart
 exec dunst -conf ~/.config/i3/dunstrc
-exec --no-startup-id xrandr --output eDP-1 --primary --right-of VGA-1
+exec --no-startup-id xrandr --output eDP1 --primary --right-of VGA1
 exec feh --bg-scale $image 
 exec xcompmgr -c -f -n
 exec xrdb ~/.Xresources
