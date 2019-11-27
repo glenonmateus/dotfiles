@@ -1,5 +1,5 @@
 [global]
-    font = Hack Nerd Font Mono Bold 9
+    font = Hack Nerd Font Bold 9
     markup = yes
     format = "<b>%s %p</b>\n%b"
     sort = yes
@@ -12,7 +12,7 @@
     ignore_newline = no
     frame_width = 2
     frame_color = "#0087AF"
-    geometry = "250x5-0+20"
+    geometry = "250x5-0+0"
     shrink = no
     transparency = 10
     idle_threshold = 0
