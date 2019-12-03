@@ -37,3 +37,12 @@ fi
 if [ -f /etc/bash_completion.d/docker-machine.bash ]; then
  source /etc/bash_completion.d/docker-machine-prompt.bash
 fi
+
+# Powerline
+if [ $(which powerline-daemon -q) ]
+then
+  powerline-daemon -q
+  POWERLINE_BASH_CONTINUATION=1
+  POWERLINE_BASH_SELECT=1
+  . /usr/share/powerline/bindings/bash/powerline.sh
+fi
