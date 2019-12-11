@@ -69,6 +69,3 @@ if ! shopt -oq posix; then
 fi
 
 [ -e ~/.bash_profile ]; source ~/.bash_profile
-
-[ -f /usr/share/bash-completion/completions/fzf ] && source /usr/share/bash-completion/completions/fzf
-[ -f /usr/share/doc/fzf/examples/key-bindings.bash ] && source /usr/share/doc/fzf/examples/key-bindings.bash

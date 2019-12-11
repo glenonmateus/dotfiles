@@ -10,6 +10,10 @@ if [ -d "$HOME/.local/bin"  ] ; then
      PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "/snap/bin/" ]; then
+  PATH="/snap/bin:$PATH"
+fi
+
 COLOR_RED="\033[38;5;9m"
 COLOR_YELLOW="\033[38;5;11m"
 COLOR_GREEN="\033[0;32m"
@@ -46,3 +50,7 @@ then
   POWERLINE_BASH_SELECT=1
   . /usr/share/powerline/bindings/bash/powerline.sh
 fi
+
+# FZF configuration
+[ -f /usr/share/bash-completion/completions/fzf ] && source /usr/share/bash-completion/completions/fzf
+[ -f /usr/share/doc/fzf/examples/key-bindings.bash ] && source /usr/share/doc/fzf/examples/key-bindings.bash
