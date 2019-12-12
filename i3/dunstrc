@@ -12,7 +12,7 @@
     ignore_newline = no
     frame_width = 2
     frame_color = "#0087AF"
-    geometry = "250x5-0+0"
+    geometry = "250x5-0+20"
     shrink = no
     transparency = 10
     idle_threshold = 0
@@ -30,7 +30,6 @@
     startup_notification = false
     browser = /usr/bin/google-chrome
     icon_position = left
-    icon_path = /usr/share/icons/Numix/16/status/:/usr/share/icons/Numix/16/devices/
     max_icon_size = 40
 [shortcuts]
     close = ctrl+space

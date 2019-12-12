@@ -18,8 +18,9 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 default_border pixel $default_bordersize
 for_window [class="Arandr"] floating enable, resize set 348 249, move position center
+for_window [class="Nm-connection-editor"] floating enable, resize set 348 249, move position center
 for_window [title="VLSub*"] floating enable, resize set $default_windowsize, move position center
-for_window [class="Nautilus"] floating enable, resize set $default_windowsize, move position center
+for_window [title="ranger"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center
 for_window [window_type="dialog"] border pixel $default_bordersize, move position center
@@ -42,8 +43,8 @@ floating_modifier $mod
 
 # Basics Controll
 bindsym $mod+q kill
-bindsym $mod+Delete exec i3lock-fancy
-bindsym $mod+Shift+Delete exec i3lock-fancy && systemctl suspend
+bindsym $mod+Delete exec i3lock -c '#000000'
+bindsym $mod+Shift+Delete exec i3lock -c '#000000' && systemctl suspend
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -85,10 +86,9 @@ bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; if [ $(which py3-cmd) ]; th
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
 
 # Run Application Binds
-bindsym F12 exec tilix -q
-bindsym $mod+Return exec tilix
+bindsym $mod+Return exec terminator
 bindsym $mod+p exec arandr
-bindsym $mod+r exec nautilus
+bindsym $mod+r exec terminator -e ranger -T ranger
 bindsym $mod+Shift+w exec google-chrome-stable
 bindsym $mod+Shift+v exec vlc
 bindsym Print exec flameshot gui
@@ -143,6 +143,7 @@ mode "$mode_launcher" {
 bar {
   status_command py3status -c ~/.config/i3/i3status.conf
   tray_output primary
+  position top
 	colors {
 	     background $bg-bar-color
 	     statusline #C5C8C699
@@ -164,7 +165,7 @@ exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[
 
 # Autostart
 exec dunst -conf ~/.config/i3/dunstrc
-exec --no-startup-id xrandr --output eDP1 --primary --right-of VGA1
+exec --no-startup-id xrandr --output eDP-1 --primary --right-of VGA-1
 exec feh --bg-scale $image 
 exec xcompmgr -c -f -n
 exec xrdb ~/.Xresources
