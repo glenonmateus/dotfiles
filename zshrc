@@ -20,7 +20,9 @@ plugins=(
   minikube
   sudo
   systemd
-  ansible
+  aws
+  bgnotify
+  fzf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -32,10 +34,6 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cfgvim="vim ~/.vim/vimrc"
 alias apt-update="sudo apt update"
 alias apt-upgrade="sudo apt upgrade --auto-remove -y"
-
-# fzf configuration
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 
 # zsh plugins configuration
 [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
