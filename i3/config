@@ -140,23 +140,23 @@ mode "$mode_launcher" {
     bindsym Return mode "default"
 }
 
-bar {
-  status_command py3status -c ~/.config/i3/i3status.conf
-  tray_output primary
-  position top
-	colors {
-	     background $bg-bar-color
-	     statusline #C5C8C699
-	     separator #75757599
+#bar {
+#  status_command py3status -c ~/.config/i3/i3status.conf
+#  tray_output primary
+#  position top
+#	colors {
+#	     background $bg-bar-color
+#	     statusline #C5C8C699
+#	     separator #75757599
 	     #                  border             background         text
-	     focused_workspace  $bg-color          $bg-color          $text-color
-	     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-	     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-       binding_mode       $bg-color          $bg-color          $text-color
-	}
-}
+#	     focused_workspace  $bg-color          $bg-color          $text-color
+#	     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#	     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#	     binding_mode       $bg-color          $bg-color          $text-color
+#	}
+#}
 
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Setup Input
 exec setxkbmap -model abnt2 -layout br -variant abnt2
