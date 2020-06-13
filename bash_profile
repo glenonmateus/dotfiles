@@ -1,5 +1,11 @@
 export TERM='xterm-256color'
 
+if [ -n "BASH_VERSION" ]; then
+    if [ -f "$HOME/.bashrc" ]; then
+        source "$HOME/.bashrc"
+    fi
+fi
+
 if [ $(which most) ]; then
     export PAGER=most
 else 
@@ -43,13 +49,13 @@ if [ -f /etc/bash_completion.d/docker-machine.bash ]; then
 fi
 
 # Powerline
-if [ $(which powerline-daemon -q) ]
-then
-  powerline-daemon -q
-  POWERLINE_BASH_CONTINUATION=1
-  POWERLINE_BASH_SELECT=1
-  . /usr/share/powerline/bindings/bash/powerline.sh
-fi
+#if [ $(which powerline-daemon -q) ]
+#then
+#  powerline-daemon -q
+#  POWERLINE_BASH_CONTINUATION=1
+#  POWERLINE_BASH_SELECT=1
+#  . /usr/share/powerline/bindings/bash/powerline.sh
+#fi
 
 # FZF configuration
 [ -f /usr/share/bash-completion/completions/fzf ] && source /usr/share/bash-completion/completions/fzf

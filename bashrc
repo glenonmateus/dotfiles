@@ -68,4 +68,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -e ~/.bash_profile ]; source ~/.bash_profile
+#[ -e ~/.bash_profile ]; source ~/.bash_profile
