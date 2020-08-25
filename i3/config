@@ -1,7 +1,11 @@
 # i3 configuration file
 
+gaps inner 5
+gaps outer 5
+
 set $mod Mod4
-set $bg-color #0087AF
+#set $bg-color #0087AF
+set $bg-color #16A085
 set $text-color #FFFFFF
 set $bg-bar-color #383C4A
 set $inactive-bg-color #383838
@@ -36,7 +40,8 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
 set $image ~/Dropbox/Wallpapers/matrix.png
-set $fonte pango:Hack Nerd Font Bold 9
+#set $fonte pango:Hack Nerd Font Bold 9
+set $fonte pango:MesloLGS Bold 9
 
 font $fonte
 floating_modifier $mod
@@ -160,8 +165,10 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Setup Input
 exec setxkbmap -model abnt2 -layout br -variant abnt2
-exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[' -f 1) "libinput Tapping Enabled" 1
-exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[' -f 1) "libinput Accel Speed" 0.5
+#exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[' -f 1) "libinput Tapping Enabled" 1
+#exec xinput set-prop $(xinput list | grep Synaptics | cut -d '=' -f 2 | cut -d'[' -f 1) "libinput Accel Speed" 0.5
+exec xinput set-prop $(xinput list | grep Touchpad | cut -d '=' -f 2 | cut -d'[' -f 1) "libinput Tapping Enabled" 1
+exec xinput set-prop $(xinput list | grep Touchpad | cut -d '=' -f 2 | cut -d'[' -f 1) "libinput Accel Speed" 0.5
 
 # Autostart
 exec dunst -conf ~/.config/i3/dunstrc
