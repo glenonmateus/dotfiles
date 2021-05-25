@@ -23,28 +23,36 @@ plugins=(
   aws
   bgnotify
   fzf
+  ssh-agent
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
 export LC_CTYPE=$LANG
+export BROWSER=/usr/bin/google-chrome-stable
 [ -f "$(which most)" ] && export PAGER=most
 
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cfgvim="vim ~/.vim/vimrc"
-alias apt-update="sudo apt update"
-alias apt-upgrade="sudo apt upgrade --auto-remove -y"
 
 # zsh plugins configuration
-[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Virtualwrapper Configuration
-if [ -f "$(which virtualenvwrapper.sh)" ]; then
- export WORKON_HOME=$HOME/.virtualenvs
- export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
- source $(which virtualenvwrapper.sh)
+ZSH_AUTOSUGGESTION=/usr/share/zsh/plugins/zsh-autosuggestions
+if [ -f $ZSH_AUTOSUGGESTION/zsh-autosuggestions.zsh ]; then
+    . $ZSH_AUTOSUGGESTION/zsh-autosuggestions.zsh
+    # change suggestion color
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
+
+ZSH_SYNTAX_HIGHLIGHTING=/usr/share/zsh/plugins/zsh-syntax-highlighting
+[ -f $ZSH_SYNTAX_HIGHLIGHTING/zsh-syntax-highlighting.zsh ] && source $ZSH_SYNTAX_HIGHLIGHTING/zsh-syntax-highlighting.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/vault vault
+
+complete -o nospace -C /usr/bin/consul consul
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
