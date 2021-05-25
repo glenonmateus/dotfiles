@@ -9,7 +9,7 @@ export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 export TERM="xterm-256color"
 export ZSH=/home/glenon/.oh-my-zsh
 
-ZSH_THEME="powerlevel10k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
   git
@@ -29,22 +29,22 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 export LC_CTYPE=$LANG
-export BROWSER=/usr/bin/google-chrome-stable
 [ -f "$(which most)" ] && export PAGER=most
 
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cfgvim="vim ~/.vim/vimrc"
+alias ip="ip --color=auto"
 
 # zsh plugins configuration
-ZSH_AUTOSUGGESTION=/usr/share/zsh/plugins/zsh-autosuggestions
+ZSH_AUTOSUGGESTION=/usr/share/zsh-autosuggestions
 if [ -f $ZSH_AUTOSUGGESTION/zsh-autosuggestions.zsh ]; then
     . $ZSH_AUTOSUGGESTION/zsh-autosuggestions.zsh
     # change suggestion color
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
 
-ZSH_SYNTAX_HIGHLIGHTING=/usr/share/zsh/plugins/zsh-syntax-highlighting
+ZSH_SYNTAX_HIGHLIGHTING=/usr/share/zsh-syntax-highlighting
 [ -f $ZSH_SYNTAX_HIGHLIGHTING/zsh-syntax-highlighting.zsh ] && source $ZSH_SYNTAX_HIGHLIGHTING/zsh-syntax-highlighting.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
