@@ -4,8 +4,9 @@ gaps inner 5
 gaps outer 5
 
 set $mod Mod4
+set $bg-color #2777FF
 #set $bg-color #0087AF
-set $bg-color #16A085
+#set $bg-color #16A085
 set $text-color #FFFFFF
 set $bg-bar-color #383C4A
 set $inactive-bg-color #383838
@@ -41,7 +42,7 @@ set $workspace9 "9"
 set $workspace0 "0"
 set $image ~/Dropbox/Wallpapers/matrix.png
 #set $fonte pango:Hack Nerd Font Bold 9
-set $fonte pango:MesloLGS Bold 9
+set $fonte pango:MesloLGS Bold 10
 
 font $fonte
 floating_modifier $mod
@@ -87,18 +88,21 @@ bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle; if [ $(wh
 bindsym $mod+a exec pavucontrol
 
 # Backlight Controll
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
+#bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
+#bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
+bindsym XF86MonBrightnessUp exec "light -A 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
+bindsym XF86MonBrightnessDown exec "light -U 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
 
 # Run Application Binds
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+p exec arandr
 bindsym $mod+r exec terminator -e ranger -T ranger
-bindsym $mod+Shift+w exec google-chrome-stable
-bindsym $mod+Shift+v exec vlc
+bindsym $mod+Shift+w exec x-www-browser
+#bindsym $mod+Shift+v exec vlc
+bindsym $mod+Shift+v exec parole
 bindsym Print exec flameshot gui
 bindsym $mod+Shift+c exec code
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun -show-icons
 
 # Workspaces Controll
 bindsym $mod+Tab workspace next

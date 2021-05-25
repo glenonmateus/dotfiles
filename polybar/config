@@ -1,12 +1,14 @@
 ## Polybar Configuration
 
 [colors]
-background = #CC383C4A
+#background = #CC383C4A
+background = #CC23252E
 background-alt = #444
 foreground = #edf1f2
 foreground-alt = #555
+primary = #2777FF
 #primary = #0087AF
-primary = #16A085
+#primary = #16A085
 secondary = #e60053
 alert = #bd2c40
 bar-foreground-0 = #55aa55
@@ -17,28 +19,25 @@ bar-empty-foreground = #444444
 
 [fonts]
 #font0 = Hack Nerd Font Mono:style=Bold:pixelsize=9;
-font0 = MesloLGS NF:style=Bold:pixelsize=9;
+font0 = MesloLGS NF:style=Bold:pixelsize=10;
 font1 = Noto Color Emoji:style=Regular:scale=12;
-font2 = Noto Sans Symbols2:style=Regular:pixelsize=9;
+font2 = Noto Sans Symbols2:style=Regular:pixelsize=10;
 
 [bar/topbar]
 width = 100%
-height = 26
+height = 22
 fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 line-size = 4
-padding-left = 1
-padding-right = 1
-module-margin-left = 1
-module-margin-right = 1
+padding = 1
+module-margin = 1
 font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
 font-2 = ${fonts.font2}
 modules-left = i3
-modules-center = date
-tray-position = right
-tray-padding = 1
+modules-right = wireless wired date
+tray-position = none
 cursor-click = pointer
 cursor-scroll = ns-resize
 locale = pt_BR.UTF-8
@@ -50,10 +49,8 @@ bottom = true
 fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
-padding-left = 1
-padding-right = 1
-module-margin-left = 1
-module-margin-right = 1
+padding = 1
+module-margin = 1
 font-0 = ${fonts.font0}
 font-1 = ${fonts.font1}
 font-2 = ${fonts.font2}
@@ -63,11 +60,23 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 locale = pt_BR.UTF-8
 
+[module/title]
+type = internal/xwindow
+format = <label>
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-padding = 1
+label = %title%
+label-maxlen = 50
+label-empty = 
+label-empty-foreground = #707880
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+ws-icon-default = 🔷
 label-mode-padding = 1
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
@@ -75,18 +84,19 @@ label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1
-label-unfocused = %index%
+label-unfocused = ${self.label-focused} 
 label-unfocused-padding = 1
-label-visible = %index%
+label-visible = ${self.label-focused}
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
-label-urgent = %index%
+label-urgent = ${self.label-focused}
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
 [module/xbacklight]
-type = internal/xbacklight
+type = internal/backlight
+card = intel_backlight
 format = <ramp> <bar>
 bar-width = 10
 bar-indicator =
@@ -151,14 +161,17 @@ type = internal/network
 interface = wlan0
 interval = 3.0
 format-connected = <label-connected>
-label-connected = %local_ip%
-format-connected-underline = ${colors.bar-foreground-0}
-label-connected-foreground = ${colors.bar-foreground-0}
+#label-connected = %local_ip%
+label-connected = 📶 %essid% 📥 %downspeed% 📤 %upspeed%
+#format-connected-underline = ${colors.bar-foreground-0}
+label-connected-background = ${colors.bar-foreground-0}
+#label-connected-foreground = ${colors.bar-foreground-0}
+label-connected-foreground = ${colors.foreground}
 ramp-signal-foreground = ${colors.bar-foreground-0}
 
 [module/wired]
 type = internal/network
-interface = enp2s0
+interface = eth0
 interval = 3.0
 format-connected = <label-connected>
 label-connected = %local_ip%
@@ -169,9 +182,13 @@ ramp-signal-foreground = ${colors.bar-foreground-0}
 [module/date]
 type = internal/date
 interval = 60
-date = %a, %Y/%m/%d
+#date = %d/%m/%Y
+#date = %a, %Y/%m/%d
 time = %H:%M
-label = %date% %time%
+#label = %date% %time%
+label = %time%
+format-background = ${colors.bar-foreground-1}
+format-foreground = ${colors.background}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -210,8 +227,8 @@ bar-used-empty-foreground = ${colors.bar-empty-foreground}
 
 [module/battery]
 type = internal/battery
-battery = BAT0
-adapter = AC
+battery = BAT1
+adapter = ACAD
 format-charging = 🔌 <bar-capacity>
 format-discharging = 🔋<bar-capacity>
 format-full = 🔋<bar-capacity>
