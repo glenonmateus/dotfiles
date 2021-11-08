@@ -15,16 +15,13 @@ plugins=(
   git
   docker
   docker-compose
-  docker-machine
-  kubectl
-  minikube
   sudo
   systemd
   aws
-  bgnotify
   fzf
   ssh-agent
   z
+  gh
 )
 
 source $ZSH/oh-my-zsh.sh
