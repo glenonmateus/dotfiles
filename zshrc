@@ -34,14 +34,14 @@ alias cfgvim="vim ~/.vim/vimrc"
 alias ip="ip --color=auto"
 
 # zsh plugins configuration
-ZSH_AUTOSUGGESTION=/usr/share/zsh-autosuggestions
+ZSH_AUTOSUGGESTION=/usr/share/zsh/plugins/zsh-autosuggestions
 if [ -f $ZSH_AUTOSUGGESTION/zsh-autosuggestions.zsh ]; then
     . $ZSH_AUTOSUGGESTION/zsh-autosuggestions.zsh
     # change suggestion color
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
 
-ZSH_SYNTAX_HIGHLIGHTING=/usr/share/zsh-syntax-highlighting
+ZSH_SYNTAX_HIGHLIGHTING=/usr/share/zsh/plugins/zsh-syntax-highlighting
 if [ -f $ZSH_SYNTAX_HIGHLIGHTING/zsh-syntax-highlighting.zsh ]; then
     source $ZSH_SYNTAX_HIGHLIGHTING/zsh-syntax-highlighting.zsh
     ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
