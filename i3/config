@@ -40,7 +40,7 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
 set $image ~/Dropbox/Wallpapers/matrix.png
-set $fonte pango:Roboto Medium 10
+set $fonte pango:Roboto Medium 11
 
 font $fonte
 floating_modifier $mod
@@ -147,6 +147,7 @@ mode "$mode_launcher" {
 bar {
   status_command i3blocks -c ~/.config/i3/i3blocks.conf
   tray_output primary
+  output primary
   position top
 	colors {
 	     background $bg-bar-color
