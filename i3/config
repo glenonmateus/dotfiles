@@ -27,6 +27,7 @@ for_window [title="ranger"] floating enable, resize set $default_windowsize, mov
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set $default_windowsize, move position center
 for_window [window_role="vlc-preferences"] floating enable, resize set $default_windowsize, move position center
 for_window [window_type="dialog"] border pixel $default_bordersize, move position center
+for_window [class="copyq"] floating enable, resize set $default_windowsize, border pixel $default_bordersize, move position center
 
 set $workspace1 "1"  
 set $workspace2 "2"
@@ -97,6 +98,7 @@ bindsym $mod+Shift+v exec parole
 bindsym Print exec flameshot gui
 bindsym $mod+Shift+c exec code
 bindsym $mod+d exec rofi -show drun -show-icons
+bindsym $mod+ccedilla exec copyq toggle
 
 # Workspaces Controll
 bindsym $mod+Tab workspace next
@@ -150,7 +152,7 @@ bar {
 	     background $bg-bar-color
 	     statusline #C5C8C699
 	     separator #75757599
-            #                   border             background         text
+       #                  border             background         text
 	     focused_workspace  $bg-color          $bg-color          $text-color
 	     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 	     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
@@ -173,7 +175,7 @@ exec xcompmgr -c -f -n
 exec xrdb ~/.Xresources
 exec --no-startup-id dropbox start
 exec --no-startup-id megasync 
-exec --no-startup-id parcellite
 exec --no-startup-id flameshot
-exec nm-applet
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id copyq
+exec --no-startup-id nm-applet
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
