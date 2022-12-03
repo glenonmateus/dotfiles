@@ -5,8 +5,6 @@ gaps outer 2
 
 set $mod Mod4
 set $bg-color #2777FF
-#set $bg-color #0087AF
-#set $bg-color #16A085
 set $text-color #FFFFFF
 set $bg-bar-color #383C4A
 set $inactive-bg-color #383838
@@ -41,8 +39,7 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace0 "0"
 set $image ~/Dropbox/Wallpapers/matrix.png
-#set $fonte pango:Hack Nerd Font Bold 9
-set $fonte pango:MesloLGS Bold 10
+set $fonte pango:Roboto Medium 10
 
 font $fonte
 floating_modifier $mod
@@ -80,25 +77,22 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Media Controll
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%; if [ $(which py3-cmd) ]; then py3-cmd refresh volume_status; fi"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%; if [ $(which py3-cmd) ]; then py3-cmd refresh volume_status; fi"
-bindsym $mod+Home exec "pactl set-sink-volume @DEFAULT_SINK@ +5%; if [ $(which py3-cmd) ]; then py3-cmd refresh volume_status; fi"
-bindsym $mod+End exec "pactl set-sink-volume @DEFAULT_SINK@ -5%; if [ $(which py3-cmd) ]; then py3-cmd refresh volume_status; fi"
-bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle; if [ $(which py3-cmd) ]; then py3-cmd refresh volume_status; fi"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym $mod+Home exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym $mod+End exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 bindsym $mod+a exec pavucontrol
 
 # Backlight Controll
-#bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
-#bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
-bindsym XF86MonBrightnessUp exec "light -A 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
-bindsym XF86MonBrightnessDown exec "light -U 5; if [ $(which py3-cmd) ]; then py3-cmd refresh blacklight; fi"
+bindsym XF86MonBrightnessUp exec "light -A 5"
+bindsym XF86MonBrightnessDown exec "light -U 5"
 
 # Run Application Binds
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+p exec arandr
 bindsym $mod+r exec terminator -e ranger -T ranger
 bindsym $mod+Shift+w exec x-www-browser
-#bindsym $mod+Shift+v exec vlc
 bindsym $mod+Shift+v exec parole
 bindsym Print exec flameshot gui
 bindsym $mod+Shift+c exec code
@@ -130,7 +124,6 @@ bindsym $mod+Shift+0 move container to workspace $workspace0
 
 workspace $workspace1 output HDMI-1
 workspace $workspace2 output VGA-1
-# workspace $workspace2 output LVDS-1
 
 # Resize Controll
 bindsym $mod+Shift+y resize shrink width 10 px
@@ -150,23 +143,20 @@ mode "$mode_launcher" {
 }
 
 bar {
-  status_command py3status -c ~/.config/i3/i3status.conf
-  #status_command i3blocks #-c ~/.config/i3/i3blocks.conf
+  status_command i3blocks -c ~/.config/i3/i3blocks.conf
   tray_output primary
   position top
 	colors {
 	     background $bg-bar-color
 	     statusline #C5C8C699
 	     separator #75757599
-            #                  border             background         text
+            #                   border             background         text
 	     focused_workspace  $bg-color          $bg-color          $text-color
 	     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 	     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	     binding_mode       $bg-color          $bg-color          $text-color
 	}
 }
-
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Setup Input
 exec setxkbmap -model abnt2 -layout br -variant abnt2
