@@ -3,8 +3,10 @@ export TERM="xterm-256color"
 export ZSH=/home/glenon/.oh-my-zsh
 export PATH=~/.npm-global/bin:$PATH
 export EDITOR=vim
+export NPM_CONFIG_PREFIX=~/.npm-global
 
 plugins=(
+  tmux
   kubectl
   git
   docker
@@ -20,15 +22,11 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 export LC_CTYPE=$LANG
-[ -f "$(which most)" ] && export PAGER=most
 
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cfgvim="vim ~/.config/nvim/"
 alias ip="ip --color=auto"
-if [[ $(which kubectl) && $(which kubecolor) ]]; then
-alias kubectl="kubecolor"
-fi
 
 # zsh plugins configuration
 ZSH_AUTOSUGGESTION=/usr/share/zsh/plugins/zsh-autosuggestions
