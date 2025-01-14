@@ -25,9 +25,10 @@ setopt INC_APPEND_HISTORY # write to the history file immediately, not when the 
 setopt SHARE_HISTORY
 
 # aliases
-alias zshconfig="$EDITOR ~/.zshrc"
-alias sshconfig="$EDITOR ~/.ssh"
-alias tmuxconfig="$EDITOR ~/.config/tmux/tmux.conf"
+alias zsh-config="$EDITOR ~/.zshrc"
+alias ssh-config="$EDITOR ~/.ssh"
+alias tmux-config="$EDITOR ~/.config/tmux/tmux.conf"
+alias nvim-config="$EDITOR ~/.config/nvim"
 alias cat='bat'
 alias ls="ls -F --color=auto"
 alias ip="ip --color=auto"
@@ -36,6 +37,7 @@ ZSH_PLUGINS=(
   "/usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
   "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
   "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
+  "/usr/share/z/z.sh"
   )
 
 for PLUGIN in "$ZSH_PLUGINS[@]"; do
