@@ -1,100 +1,49 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+autoload -Uz compinit
+compinit
 
-export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
-export TERM="xterm-256color"
-export ZSH=/home/glenon/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/.local/bin:$PATH
+export EDITOR=nvim
 
-ZSH_THEME="spaceship"
+# zsh history configuration
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt APPEND_HISTORY # append to history file
+setopt EXTENDED_HISTORY # write the history file in the ':start:elapsed;command' format
+unsetopt HIST_BEEP # don't beep when attempting to access a missing history entry
+setopt HIST_EXPIRE_DUPS_FIRST # expire duplicate entries first when trimming history
+setopt HIST_FIND_NO_DUPS # do not display a previously found event
+setopt HIST_IGNORE_ALL_DUPS # delete an old recorded event if a new event is a duplicate
+setopt HIST_IGNORE_DUPS # don't record an event that was just recorded again
+setopt HIST_IGNORE_SPACE # don't record an event starting with a space
+setopt HIST_NO_STORE # don't store history command
+setopt HIST_REDUCE_BLANKS # remove superfluous blanks from each command line being added to history
+setopt HIST_SAVE_NO_DUPS # don't write duplicate events to the history file
+setopt HIST_VERIFY # don't execute immediately upon history expansion
+setopt INC_APPEND_HISTORY # write to the history file immediately, not when the shell exits
+setopt SHARE_HISTORY
 
-plugins=(
-  git
-  docker
-  docker-compose
-  sudo
-  systemd
-  aws
-  fzf
-  ssh-agent
-  z
-  gh
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
-
-source $ZSH/oh-my-zsh.sh
-#export LC_CTYPE=$LANG
-
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias cfgvim="vim ~/.vim/vimrc"
+# aliases
+alias zshconfig="$EDITOR ~/.zshrc"
+alias sshconfig="$EDITOR ~/.ssh"
+alias tmuxconfig="$EDITOR ~/.config/tmux/tmux.conf"
+alias cat='bat'
+alias ls="ls -F --color=auto"
 alias ip="ip --color=auto"
 
-# zsh plugins configuration
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-ZSH_HIGHLIGHT_STYLES[default]=none
-ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
-ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=cyan,bold
-ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=green,underline
-ZSH_HIGHLIGHT_STYLES[global-alias]=fg=magenta
-ZSH_HIGHLIGHT_STYLES[precommand]=fg=green,underline
-ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=green,underline
-ZSH_HIGHLIGHT_STYLES[path]=underline
-ZSH_HIGHLIGHT_STYLES[path_pathseparator]=
-ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]=
-ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[command-substitution]=none
-ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]=fg=magenta
-ZSH_HIGHLIGHT_STYLES[process-substitution]=none
-ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]=fg=magenta
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=magenta
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=magenta
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=yellow
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow
-ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]=fg=yellow
-ZSH_HIGHLIGHT_STYLES[rc-quote]=fg=magenta
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=magenta
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta
-ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=fg=magenta
-ZSH_HIGHLIGHT_STYLES[assign]=none
-ZSH_HIGHLIGHT_STYLES[redirection]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[comment]=fg=black,bold
-ZSH_HIGHLIGHT_STYLES[named-fd]=none
-ZSH_HIGHLIGHT_STYLES[numeric-fd]=none
-ZSH_HIGHLIGHT_STYLES[arg0]=fg=green
-ZSH_HIGHLIGHT_STYLES[bracket-error]=fg=red,bold
-ZSH_HIGHLIGHT_STYLES[bracket-level-1]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[bracket-level-2]=fg=green,bold
-ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=magenta,bold
-ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=yellow,bold
-ZSH_HIGHLIGHT_STYLES[bracket-level-5]=fg=cyan,bold
-ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
+ZSH_PLUGINS=(
+  "/usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
+  "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
+  "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
+  )
 
-# Color man pages
-export LESS_TERMCAP_mb=$'\E[01;32m'
-export LESS_TERMCAP_md=$'\E[01;32m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;47;34m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;36m'
-export LESS=-R
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+for PLUGIN in "$ZSH_PLUGINS[@]"; do
+  [[ -f "$PLUGIN" ]] && source $PLUGIN
+done
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/vault vault
+complete -o nospace -C /usr/bin/terraform terraform
+complete -C /usr/bin/aws_completer aws
 
-complete -o nospace -C /usr/bin/consul consul
-
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+eval "$(starship init zsh)"
