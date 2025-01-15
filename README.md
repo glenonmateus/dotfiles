@@ -1,3 +1,22 @@
+# Nix - Arch
+
+## Install
+
+```bash
+sudo pacman -Syu nix
+```
+
+add your user to nix-users group (permission denied error)
+
+```bash
+usermod -aG nix-users $USER
+```
+
+enable and start nix-daemon
+
+```bash
+sudo systemctl enable --now nix-daemon
+```
 
 ## Set overview shortcut
 
