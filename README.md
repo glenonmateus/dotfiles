@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-sudo pacman -Syu nix
+sudo pacman -S nix
 ```
 
 add your user to nix-users group (permission denied error)
