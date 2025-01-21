@@ -8,6 +8,7 @@ export EDITOR=nvim
 
 # aliases
 alias vim='nvim'
+alias bash-config='$EDITOR ~/.bashrc'
 if [ -x "/usr/bin/dircolors" ]; then
   alias ls='ls --color=auto'
   alias grep='grep --color=auto'
