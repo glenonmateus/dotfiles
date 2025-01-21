@@ -24,7 +24,7 @@ BASH_EXTRAS=(
   "/usr/share/z/z.sh"
   )
 for EXTRA in "${BASH_EXTRAS[@]}"; do
-  [[ -f "$EXTRA" ]] && source $EXTRA
+  [[ -r "$EXTRA" ]] && source "$EXTRA"
 done
 
 # avoid duplicates..
