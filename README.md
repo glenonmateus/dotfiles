@@ -2,8 +2,10 @@
 
 ## Install
 
+### Multi-user
+
 ```bash
-sudo pacman -S nix
+curl -L https://nixos.org/nix/install | sh -s -- --daemon
 ```
 
 add your user to nix-users group (permission denied error)
@@ -11,6 +13,8 @@ add your user to nix-users group (permission denied error)
 ```bash
 usermod -aG nix-users $USER
 ```
+
+reboot to take effect
 
 enable and start nix-daemon
 
