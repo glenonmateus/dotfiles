@@ -18,10 +18,12 @@ for PLUGIN in "$ZSH_PLUGINS[@]"; do
 done
 
 # zsh history configuration
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
-setopt APPEND_HISTORY # append to history file
+setopt EXTENDED_HISTORY
 
 # aliases
 alias zsh-config="$EDITOR ~/.zshrc"
@@ -39,3 +41,8 @@ complete -C /usr/bin/aws_completer aws
 
 # load prompt
 eval "$(starship init zsh)"
+
+zvm_after_init_commands+=(
+'[[ -f "/usr/share/fzf/completion.zsh" ]] && source "/usr/share/fzf/completion.zsh"'
+'[[ -f "/usr/share/fzf/key-bindings.zsh" ]] && source "/usr/share/fzf/key-bindings.zsh"'
+)
