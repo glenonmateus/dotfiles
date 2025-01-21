@@ -41,6 +41,6 @@ case "${TERM}" in
 esac
 
 # completions
-eval "$(gh completion -s bash)"
-complete -C /usr/bin/terraform terraform
-complete -C /usr/bin/aws_completer aws
+[ "$(command -v gh)" ] && eval "$(gh completion -s bash)"
+[ "$(command -v terraform)" ] && complete -C /usr/bin/terraform terraform
+[ "$(command -v aws_completer)" ] && complete -C /usr/bin/aws_completer aws
