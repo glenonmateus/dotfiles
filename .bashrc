@@ -10,6 +10,8 @@ export EDITOR=nvim
 alias vim='nvim'
 alias bash-config='$EDITOR ~/.bashrc'
 alias tmux-config='$EDITOR ~/.config/tmux/tmux.conf'
+alias myipv4='curl -4 ip.me'
+alias myipv6='curl -6 ip.me'
 if [ -x "/usr/bin/dircolors" ]; then
   alias ls='ls --color=auto'
   alias grep='grep --color=auto'
