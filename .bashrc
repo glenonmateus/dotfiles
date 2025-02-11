@@ -11,7 +11,7 @@ alias vim='nvim'
 alias bash-config='$EDITOR ~/.bashrc'
 alias tmux-config='$EDITOR ~/.config/tmux/tmux.conf'
 alias myip='curl -4 ip.me && curl ip.me'
-[[ $(command -v bat) ]] && alias cat='bat'
+[[ $(command -v bat) ]] && alias cat='bat -p'
 if [ -x "/usr/bin/dircolors" ]; then
   alias ls='ls --color=auto'
   alias grep='grep --color=auto'
