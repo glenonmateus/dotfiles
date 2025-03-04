@@ -40,7 +40,7 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # prompt
 PS1='[\u@\h \W]\$ '
 case "${TERM}" in
-  xterm-ghostty|xterm-color|*-256color) eval "$(starship init bash)";;
+	xterm-ghostty|xterm-color|*-256color) [ "$(command -v starship)" ] && eval "$(starship init bash)";;
 esac
 
 # completions
