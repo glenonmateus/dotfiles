@@ -2,12 +2,13 @@
 # ~/.bashrc
 #
 export PATH=$PATH:$HOME/.local/bin/
-export EDITOR=nvim
+[[ -d "/usr/local/bin/go/bin" ]] && export PATH=$PATH:/usr/local/bin/go/bin
+[[ -d "/opt/nvim-linux-x86_64/bin/" ]] && export PATH=$PATH:/opt/nvim-linux-x86_64/bin/
+[ $(command -v nvim) ] && export EDITOR=nvim
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 # aliases
-alias vim='nvim'
 alias bash-config='$EDITOR ~/.bashrc'
 alias tmux-config='$EDITOR ~/.config/tmux/tmux.conf'
 alias myip='curl -4 ip.me && curl ip.me'
