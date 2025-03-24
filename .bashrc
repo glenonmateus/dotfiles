@@ -48,3 +48,4 @@ esac
 [ "$(command -v gh)" ] && eval "$(gh completion -s bash)"
 [ "$(command -v terraform)" ] && complete -C /usr/bin/terraform terraform
 [ "$(command -v aws_completer)" ] && complete -C /usr/bin/aws_completer aws
+[ "$(command -v terraform-docs)" ] && source <(terraform-docs completion bash)
