@@ -49,3 +49,19 @@ esac
 [ "$(command -v terraform)" ] && complete -C /usr/bin/terraform terraform
 [ "$(command -v aws_completer)" ] && complete -C /usr/bin/aws_completer aws
 [ "$(command -v terraform-docs)" ] && source <(terraform-docs completion bash)
+[ "$(command -v register-python-argcomplete)" ] && {
+  ANSIBLE_COMPLETIONS=(
+    ansible
+    ansible-config
+    ansible-console
+    ansible-doc
+    ansible-galaxy
+    ansible-inventory 
+    ansible-playbook 
+    ansible-pull 
+    ansible-vault
+  )
+  for COMPLETION in "${ANSIBLE_COMPLETIONS[@]}"; do
+    eval $(register-python-argcomplete "${COMPLETION}")
+  done
+}
