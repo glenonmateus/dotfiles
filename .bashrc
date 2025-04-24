@@ -56,12 +56,13 @@ esac
     ansible-console
     ansible-doc
     ansible-galaxy
-    ansible-inventory 
-    ansible-playbook 
-    ansible-pull 
+    ansible-inventory
+    ansible-playbook
+    ansible-pull
     ansible-vault
   )
   for COMPLETION in "${ANSIBLE_COMPLETIONS[@]}"; do
     eval $(register-python-argcomplete "${COMPLETION}")
   done
 }
+[ "$(command -v girus)" ] && eval "$(girus completion bash)"
