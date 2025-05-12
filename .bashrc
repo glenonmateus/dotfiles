@@ -1,6 +1,7 @@
 #
 # ~/.bashrc
 #
+export PHP_CS_FIXER_IGNORE_ENV=1
 export PATH=$PATH:$HOME/.local/bin/
 [[ -d "/usr/local/bin/go/bin" ]] && export PATH=$PATH:/usr/local/bin/go/bin
 [[ -d "/opt/nvim-linux-x86_64/bin/" ]] && export PATH=$PATH:/opt/nvim-linux-x86_64/bin/
