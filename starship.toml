@@ -1,4 +1,18 @@
-palette = 'catppuccin_macchiato'
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$lua\
+$php\
+$python\
+$terraform\
+$docker_context\
+$aws\
+$line_break\
+$character"""
+
+palette = 'catppuccin_mocha'
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"
@@ -113,31 +127,25 @@ mantle = "#181825"
 crust = "#11111b"
 
 [directory]
-format = '\[[$path$read_only]($style)\]'
 truncation_length = 3
-truncation_symbol = "…/"
 style = "bold blue"
 read_only = " 󰌾"
 
 [git_branch]
-format = '\[[$symbol$branch]($style)\]'
 style = "bold flamingo"
 symbol = " "
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style))'
 style = "bold red"
 
 [aws]
-format = '\[[$symbol($profile)(\[$duration\])]($style)\]'
-symbol = " "
+format = 'on [$symbol($profile)(\[$duration\] )]($style)'
+symbol = " "
 
 [aws.profile_aliases]
-"" = ""
 
 [kubernetes]
 symbol = " "
-format = '\[[$symbol$context( \($namespace\))]($style)\]'
 style = "bold lavender"
 disabled = false
 detect_env_vars = ["AWS_SESSION_TOKEN"]
@@ -146,35 +154,32 @@ detect_env_vars = ["AWS_SESSION_TOKEN"]
 context_pattern = ""
 context_alias = ""
 
-[[kubernetes.contexts]]
-context_pattern = ""
-context_alias = ""
-
 [terraform]
 symbol = " "
-format = '\[[$symbol$workspace]($style)\]'
 style = "bold mauve"
 
 [docker_context]
-format = '\[[$symbol$context]($style)\]'
 symbol = " "
 style = "bold sky"
 
 [shell]
-disabled = false
-style = "bold teal"
+disabled = true
 
 [package]
 disabled = true
+symbol = "󰏗 "
 
 [php]
-disabled = true
+disabled = false
+symbol = " "
 
 [python]
-disabled = true
+disabled = false
+symbol = " "
 
 [nodejs]
 disabled = true
+symbol = " "
 
 [helm]
 disabled = true
@@ -184,3 +189,6 @@ disabled = true
 
 [vagrant]
 disabled = true
+
+[lua]
+symbol = " "
