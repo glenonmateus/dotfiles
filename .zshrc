@@ -21,8 +21,8 @@ export PATH=$PATH:$HOME/.local/bin/
 # vi mode
 bindkey -v
 
-# emacs keymap (ctrl e, ctrl a)
-bindkey -e
+# crtl + e
+bindkey '^e' autosuggest-accept
 
 # aliases
 alias zsh-config='$EDITOR ~/.zshrc'
