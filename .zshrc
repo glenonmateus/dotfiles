@@ -54,7 +54,7 @@ ZSH_PLUGIN_SYNTAXHIGHLIGHTING=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh
 [ "$(command -v terraform)" ] && complete -o nospace -C /usr/bin/terraform terraform
 [ "$(command -v terraform-docs)" ] && source <(terraform-docs completion zsh)
 [ "$(command -v gh)" ] && eval "$(gh completion -s zsh)"
-[ "$(command -v zoxide)" ] && eval "$(zoxide init zsh)"
+[ "$(command -v zoxide)" ] && eval "$(zoxide init --cmd cd zsh)"
 [ "$(command -v fzf)" ] && source <(fzf --zsh)
 [ "$(command -v aws_completer)" ] && complete -C /usr/bin/aws_completer aws
 # activate-global-python-argcomplete --user
