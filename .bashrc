@@ -47,6 +47,7 @@ case "${TERM}" in
 esac
 
 # completions
+[ "$(command -v zoxide)" ] && eval "$(zoxide init bash)"
 [ "$(command -v gh)" ] && eval "$(gh completion -s bash)"
 [ "$(command -v terraform)" ] && complete -C /usr/bin/terraform terraform
 [ "$(command -v aws_completer)" ] && complete -C /usr/bin/aws_completer aws
