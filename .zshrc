@@ -25,6 +25,7 @@ bindkey -v
 bindkey '^e' autosuggest-accept
 
 # aliases
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 alias zsh-config='$EDITOR ~/.zshrc'
 alias tmux-config='$EDITOR ~/.config/tmux/tmux.conf'
 alias myip='curl -4 ip.me && curl ip.me'
