@@ -10,6 +10,8 @@ SAVEHIST=10000
 setopt APPEND_HISTORY
 setopt SHARE_HISTORY
 
+export TERM=xterm-256color
+export XDEBUG_SESSION=1
 export PATH=$PATH:$HOME/.local/bin/
 [[ -d "/usr/local/bin/go/bin" ]] && export PATH=$PATH:/usr/local/bin/go/bin
 [[ -d "/opt/nvim-linux-x86_64/bin/" ]] && export PATH=$PATH:/opt/nvim-linux-x86_64/bin/
