@@ -50,6 +50,7 @@ ZSH_PLUGIN_SYNTAXHIGHLIGHTING=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh
 [[ -f "${ZSH_PLUGIN_SYNTAXHIGHLIGHTING}" ]] && source ${ZSH_PLUGIN_SYNTAXHIGHLIGHTING}
 
 # completions
+[ "$(command -v k9s)" ] && eval "$(k9s completion zsh)"
 [ "$(command -v girus)" ] && eval "$(girus completion zsh)"
 [ "$(command -v terraform)" ] && complete -o nospace -C /usr/bin/terraform terraform
 [ "$(command -v terraform-docs)" ] && source <(terraform-docs completion zsh)
