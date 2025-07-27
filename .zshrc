@@ -10,6 +10,8 @@ SAVEHIST=10000
 setopt APPEND_HISTORY
 setopt SHARE_HISTORY
 
+export TERM=xterm-256color
+export XDEBUG_SESSION=1
 export PATH=$PATH:$HOME/.local/bin/
 [[ -d "/usr/local/bin/go/bin" ]] && export PATH=$PATH:/usr/local/bin/go/bin
 [[ -d "/opt/nvim-linux-x86_64/bin/" ]] && export PATH=$PATH:/opt/nvim-linux-x86_64/bin/
@@ -25,6 +27,7 @@ bindkey -v
 bindkey '^e' autosuggest-accept
 
 # aliases
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 alias zsh-config='$EDITOR ~/.zshrc'
 alias tmux-config='$EDITOR ~/.config/tmux/tmux.conf'
 alias myip='curl -4 ip.me && curl ip.me'
@@ -50,6 +53,7 @@ ZSH_PLUGIN_SYNTAXHIGHLIGHTING=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh
 [[ -f "${ZSH_PLUGIN_SYNTAXHIGHLIGHTING}" ]] && source ${ZSH_PLUGIN_SYNTAXHIGHLIGHTING}
 
 # completions
+[ "$(command -v k9s)" ] && eval "$(k9s completion zsh)"
 [ "$(command -v girus)" ] && eval "$(girus completion zsh)"
 [ "$(command -v terraform)" ] && complete -o nospace -C /usr/bin/terraform terraform
 [ "$(command -v terraform-docs)" ] && source <(terraform-docs completion zsh)
