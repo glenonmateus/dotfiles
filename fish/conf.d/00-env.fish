@@ -5,5 +5,6 @@ if type -q nvim
 end
 
 if type -q more
+    set -gx AWS_PAGER more
     set -gx PAGER more
 end
