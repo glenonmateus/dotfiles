@@ -1,5 +1,3 @@
-fish_add_path -a ~/.local/bin
-
 function fish_prompt -d "Write out the prompt"
     # This shows up as USER@HOST /home/user/ >, with the directory colored
     # $USER and $hostname are set by fish, so you can just use them
@@ -25,9 +23,12 @@ for CONFIG in ~/.config/fish/conf.d/*.fish
     source $CONFIG
 end
 
+if test -d ~/.local/bin
+    fish_add_path -a ~/.local/bin
+end
 # pnpm
 set -gx PNPM_HOME "/home/glenon/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
