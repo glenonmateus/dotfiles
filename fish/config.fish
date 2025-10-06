@@ -19,6 +19,10 @@ if type -q starship
     starship init fish | source
 end
 
+if test -f ~/.config/fish/conf.d/themes/tokyonight_night.fish
+    source ~/.config/fish/conf.d/themes/tokyonight_night.fish
+end
+
 for CONFIG in ~/.config/fish/conf.d/*.fish
     source $CONFIG
 end
@@ -26,6 +30,11 @@ end
 if test -d ~/.local/bin
     fish_add_path -a ~/.local/bin
 end
+
+if test -d ~/.config/composer/vendor/bin
+    fish_add_path -a ~/.config/composer/vendor/bin
+end
+
 # pnpm
 set -gx PNPM_HOME "/home/glenon/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
