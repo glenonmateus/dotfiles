@@ -15,12 +15,12 @@ if type -q zoxide
     zoxide init --cmd cd fish | source
 end
 
-if type -q starship
-    starship init fish | source
+if type -q glab
+    glab completion -s fish | source
 end
 
-if test -f ~/.config/fish/conf.d/themes/tokyonight_night.fish
-    source ~/.config/fish/conf.d/themes/tokyonight_night.fish
+if type -q starship
+    starship init fish | source
 end
 
 for CONFIG in ~/.config/fish/conf.d/*.fish
