@@ -18,3 +18,5 @@ fonts/fonts.dir
 ranger/plugins/*
 terminator/plugins/*
 tmux/plugins/*
+
+personal.fish
