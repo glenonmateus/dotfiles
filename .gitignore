@@ -20,3 +20,5 @@ terminator/plugins/*
 tmux/plugins/*
 
 personal.fish
+
+.php-cs-fixer.cache
