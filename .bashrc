@@ -5,7 +5,7 @@ export PHP_CS_FIXER_IGNORE_ENV=1
 export XDEBUG_SESSION=1
 export PATH=$PATH:$HOME/.local/bin/
 [[ -d "/usr/local/bin/go/bin" ]] && export PATH=$PATH:/usr/local/bin/go/bin
-[[ -d "/opt/nvim-linux-x86_64/bin/" ]] && export PATH=$PATH:/opt/nvim-linux-x86_64/bin/
+[[ -d "/opt/nvim-linux-x86_64/bin" ]] && export PATH=$PATH:/opt/nvim-linux-x86_64/bin
 [ "$(command -v nvim)" ] && export EDITOR=nvim
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -25,9 +25,8 @@ if [ -x "/usr/bin/dircolors" ]; then
 fi
 
 BASH_EXTRAS=(
-  "/usr/share/fzf/completion.bash"
-  "/usr/share/fzf/key-bindings.bash"
-  "/usr/share/z/z.sh"
+  "/usr/share/bash-completion/completions/fzf"
+  "/usr/share/doc/fzf/examples/fzf/key-bindings.bash"
   )
 for EXTRA in "${BASH_EXTRAS[@]}"; do
   [[ -r "$EXTRA" ]] && source "$EXTRA"
@@ -47,7 +46,7 @@ case "${TERM}" in
 esac
 
 # completions
-[ "$(command -v zoxide)" ] && eval "$(zoxide init bash)"
+[ "$(command -v zoxide)" ] && eval "$(zoxide init --cmd cd bash)"
 [ "$(command -v gh)" ] && eval "$(gh completion -s bash)"
 [ "$(command -v terraform)" ] && complete -C /usr/bin/terraform terraform
 [ "$(command -v aws_completer)" ] && complete -C /usr/bin/aws_completer aws
