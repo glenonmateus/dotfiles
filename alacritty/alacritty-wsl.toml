@@ -1,0 +1,14 @@
+[general]
+import = ["tokyo-night-default.toml"]
+
+[window]
+startup_mode = "Maximized"
+
+[terminal]
+shell = { program = "debian" }
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+
+[font]
+normal = { family = "CaskaydiaCove Nerd Font", style = "Regular" }
