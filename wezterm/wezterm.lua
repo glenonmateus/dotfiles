@@ -1,17 +1,20 @@
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 local config = {}
 
-config.font = wezterm.font('IosevkaTerm Nerd Font', { weight = 'Medium' })
+config.font = wezterm.font("IosevkaTerm Nerd Font", { weight = "Medium" })
 config.font_size = 13
-config.default_prog = { 'debian' }
-config.color_scheme = 'Tokyo Night'
+config.default_prog = { "debian" }
+config.color_scheme = "Tokyo Night"
 config.enable_tab_bar = false
+config.default_cursor_style = "BlinkingBlock"
+config.cursor_blink_rate = 500
 
 local mux = wezterm.mux
 
 wezterm.on("gui-startup", function(cmd)
-  local tab, pane, window = mux.spawn_window(cmd or {})
-  window:gui_window():maximize()
+	local tab, pane, window = mux.spawn_window(cmd or {})
+	window:gui_window():maximize()
 end)
 
 return config
+
